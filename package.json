@@ -1,0 +1,15 @@
+{
+  "name": "hello-world-js-rendering",
+  "private": true,
+  "version": "0.1.0",
+  "devDependencies": {
+    "@hubspot/prettier-plugin-hubl": "0.2.2",
+    "eslint": "^8.18.0",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "@hubspot/cms-components": "1.0.8",
+    "@hubspot/cms-dev-server": "/Users/jmaltese/src/cms-js-platform/cms-dev-server/hubspot-cms-dev-server-0.1.8.tgz",
+    "@hubspot/cms-js-internal": "1.0.4"
+  }
+}
