@@ -1,19 +1,17 @@
-// http://883342099.hs-sitesqa.com.localhost:3000/partial/About
 import { IslandRoot } from '@hubspot/cms-components';
 import Button from '../islands/Button.jsx?island';
+import Link from '../Link';
 
 function About() {
   return (
     <>
       <div>All About Me...</div>
       <div className='buttons'>
-        <Button/>
         <IslandRoot
           lazyModule={Button}
-          hydateOn="load"
-        ></IslandRoot>
+          hydateOn="load"/>
       </div>
-      <a href="./Home.jsx">Home.</a>
+      <Link href="./Home.jsx" title="title"/>
     </>
   )
 }
