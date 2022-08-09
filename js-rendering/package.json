@@ -1,7 +1,10 @@
 {
   "name": "hello-world-js-rendering",
-  "private": true,
   "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": "16.13.2"
+  },
   "devDependencies": {
     "@hubspot/prettier-plugin-hubl": "0.2.2",
     "eslint": "^8.18.0",
