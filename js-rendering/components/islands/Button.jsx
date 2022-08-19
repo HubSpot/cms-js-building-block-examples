@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
+import styles from "../../styles/style.module.css";
 
 function Button(props) {
-  const [count, setCount] = useState(0)
   return (
     <span>
-      <button onClick={() => setCount(count + 1)}>You've clicked me {count} times...</button>
+      <button className={styles.button} onClick={props.onClick}>
+        {props.text}
+      </button>
     </span>
-  )
+  );
 }
-
 
 export default Button;
