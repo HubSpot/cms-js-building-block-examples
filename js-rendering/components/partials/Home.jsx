@@ -4,10 +4,9 @@ function Home() {
   return (
     <>
       <div>Hello World!</div>
-      <a href="./About.jsx">About.</a>
+      <a href="./Main.jsx">Main</a>
     </>
-
-  )
+  );
 }
 
 export default Home;
