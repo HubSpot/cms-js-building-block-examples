@@ -105,9 +105,6 @@ const TodoList = (props) => {
   const { todoList, addTodo } = useContext(TodoListContext);
   const [input, setInput] = useState("");
 
-  //const { todo_list } = props;
-  console.log(props);
-
   const handleClick = () => {
     const todo = { text: input, completed: false };
     addTodo(todo);
@@ -145,6 +142,19 @@ export const meta = {
   label: `Todo List Module`,
 };
 
-export const Component = () => {
-  return <TodoList />;
+export const Component = (fieldValues) => {
+  console.log(fieldValues);
+  return (
+    <>
+      <p>
+        Bonbon chupa chups soufflé ice cream gummi bears topping sugar
+        marshmallow halvah. croissant candy canes jelly-o cotton candy tart
+        gummi bears tootsie roll lemon drops biscuit caramels sugar topping.
+        snaps gummi bears marshmallow gummi bears. sesame gingerbread powder
+        danish lemon drops. oat cake croissant topping fruitcake chocolate bar
+        tart. snaps chocolate fruitcake tootsie roll marshmallow bear claw.
+        candy canes oat cake dessert bear claw fruitcake.
+      </p>{" "}
+    </>
+  );
 };
