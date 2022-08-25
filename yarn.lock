@@ -289,30 +289,22 @@
     table "^6.6.0"
     unixify "1.0.0"
 
-"@hubspot/cms-components@*":
-  version "1.0.11"
-  resolved "https://npm.hubteam.com/@hubspot%2fcms-components/-/cms-components-1.0.11.tgz#b37c280488c43d432d46fb67f9356ba8304a916c"
-  integrity sha512-XgGTJW+ovQUtz6PfT8NWSSpVtaFDrvcJXaVYC6pCsYQC/onVPFp3bxRSzVRhKRnUNVKNZo8QAJ2Huw7QA/DCDA==
+"@hubspot/cms-components@^1.0.17", "@hubspot/cms-components@latest":
+  version "1.0.17"
+  resolved "https://npm.hubteam.com/@hubspot%2fcms-components/-/cms-components-1.0.17.tgz#a569014e9c1a860427b5fd44c6cf4a8dbfbf8233"
+  integrity sha512-KaSdvjnJ/QEwwtF3u4XzFVwBld94S1UcFXumbmMbajF+hE0e9eMcxPMdAgP1nCtH0vje7LogNllR0TY+C3OO5A==
   dependencies:
     react "^18.1.0"
     react-dom "^18.1.0"
 
-"@hubspot/cms-components@1.0.10":
-  version "1.0.10"
-  resolved "https://npm.hubteam.com/@hubspot%2fcms-components/-/cms-components-1.0.10.tgz#36edbf9dda8cbca223846994873806fee9f0f486"
-  integrity sha512-PDDBWTz8WBnC9KPEzZuyO3/k4eUhLJOc2eJa9kVJVt0am6cEo+CNSegtVzgyZUDGB3vM/yfmiXn0qifbpKF28w==
-  dependencies:
-    react "^18.1.0"
-    react-dom "^18.1.0"
-
-"@hubspot/cms-dev-server@*":
-  version "0.1.12"
-  resolved "https://npm.hubteam.com/@hubspot%2fcms-dev-server/-/cms-dev-server-0.1.12.tgz#67ffbe2c38e62b92f4fc9e769648806d67dc27a2"
-  integrity sha512-M3Z+UhBzO4Z063TSe1vfG+OPibeqAqmcYmFDaJqLZ2MyrV4EEHn4zCj2W92sjGDNkjDuWF+MYiEtyxXDjCsK7Q==
+"@hubspot/cms-dev-server@latest":
+  version "1.0.17"
+  resolved "https://npm.hubteam.com/@hubspot%2fcms-dev-server/-/cms-dev-server-1.0.17.tgz#b4ab3df753837fcba671e8fd9b3212e35e8ef22b"
+  integrity sha512-hO5MYART39cJQhJ0Yn0mq4a9qWwAocsbHyGCJyN1tui1YtkR8m4VxaLsg0h0uv7S/Ely5wZWiaojJXuAccCX2w==
   dependencies:
     "@hubspot/cli-lib" "^3.0.12"
-    "@hubspot/cms-components" "1.0.10"
-    "@hubspot/cms-js-internal" "1.0.6"
+    "@hubspot/cms-components" "^1.0.17"
+    "@hubspot/cms-js-internal" "^1.0.17"
     "@vitejs/plugin-react" "^2.0.0"
     express "^4.17.3"
     react "^18.1.0"
@@ -321,10 +313,10 @@
     vite "^3.0.2"
     vite-plugin-inspect "^0.4.3"
 
-"@hubspot/cms-js-internal@1.0.6":
-  version "1.0.6"
-  resolved "https://npm.hubteam.com/@hubspot%2fcms-js-internal/-/cms-js-internal-1.0.6.tgz#c3a2c62284d2d2464940c303f3fb352261c5043a"
-  integrity sha512-NKWIyaQOR3w4LCpJaEOaU3z9raLd5d1ZtC1iP0einRYJSZcn6Rgt1/lwmatSWYH5lrB2m7Xk8I7Xrv6NCeT6Ig==
+"@hubspot/cms-js-internal@^1.0.17":
+  version "1.0.17"
+  resolved "https://npm.hubteam.com/@hubspot%2fcms-js-internal/-/cms-js-internal-1.0.17.tgz#819fbb36a8b89b5266bd5b2eaa742372c6ee54df"
+  integrity sha512-eUejndSsGL0dXKXLT/M0lLvsezaPpzpqARtUnTN9hxqcMHTtKUdX8iUfKsXqNsvJCJ6J9Q4KmE4M6+jTAWwKyw==
   dependencies:
     react "^18.1.0"
     react-dom "^18.1.0"

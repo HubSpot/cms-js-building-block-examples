@@ -1,6 +1,5 @@
 import { IslandRoot } from "@hubspot/cms-components";
 import HubSpotSprocket from "../../HubSpotSprocket";
-import TodoList from "../islands/TodoList.jsx?island";
 import styles from "../../styles/style.module.css";
 
 function Main() {
@@ -14,7 +13,6 @@ function Main() {
         <div className={styles.logo}>
           <HubSpotSprocket className={styles.logo} />
         </div>
-        <IslandRoot lazyModule={TodoList} hydrateOn="idle" />
       </div>
     </body>
   );

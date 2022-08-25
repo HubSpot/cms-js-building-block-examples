@@ -1,6 +1,6 @@
 import React, { useState, createContext, useContext, useEffect } from "react";
-import Button from "../islands/Button";
-import styles from "../../styles/style.module.css";
+import Button from "../../islands/Button";
+import styles from "../../../styles/style.module.css";
 
 const TodoListContext = createContext(null);
 let id = 0;
@@ -101,9 +101,12 @@ function Todo(props) {
   );
 }
 
-function TodoListDetails() {
+const TodoList = (props) => {
   const { todoList, addTodo } = useContext(TodoListContext);
   const [input, setInput] = useState("");
+
+  //const { todo_list } = props;
+  console.log(props);
 
   const handleClick = () => {
     const todo = { text: input, completed: false };
@@ -111,36 +114,37 @@ function TodoListDetails() {
     setInput("");
     return todo;
   };
-
-  return (
-    <div className={styles.todoListContainer}>
-      <Button onClick={handleClick} text="Add Todo" />
-      <input
-        className={styles.todoInput}
-        placeholder="Add a todo..."
-        value={input}
-        onInput={(e) => setInput(e.target.value)}
-      />
-      <ul className={styles.todoList}>
-        {todoList.map((todo) => (
-          <Todo
-            id={todo.id}
-            key={todo.id}
-            text={todo.text}
-            completed={todo.completed}
-          />
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function TodoList(props) {
   return (
     <TodoListProvider>
-      <TodoListDetails {...props} />
+      <div className={styles.todoListContainer}>
+        <Button onClick={handleClick} text="Add Todo" />
+        <input
+          className={styles.todoInput}
+          placeholder="Add a todo..."
+          value={input}
+          onInput={(e) => setInput(e.target.value)}
+        />
+        <ul className={styles.todoList}>
+          {todoList.map((todo) => (
+            <Todo
+              id={todo.id}
+              key={todo.id}
+              text={todo.text}
+              completed={todo.completed}
+            />
+          ))}
+        </ul>
+      </div>
     </TodoListProvider>
   );
-}
+};
 
-export default TodoList;
+export { default as fields } from "./fields.jsx";
+
+export const meta = {
+  label: `Todo List Module`,
+};
+
+export const Component = () => {
+  return <TodoList />;
+};
