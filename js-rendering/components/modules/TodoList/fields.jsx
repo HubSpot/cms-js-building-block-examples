@@ -9,10 +9,37 @@ import {
 export default (
   <ModuleFields>
     <FieldGroup
+      name="todo_group"
+      label="Todo Group"
+      children={[
+        <TextField
+          label="Todo"
+          name="todo_text"
+          default="Todo Test 1"
+          required
+        />,
+        <BooleanField
+          label="Todo Completed"
+          name="completed"
+          default={false}
+        />,
+      ]}
+    />
+  </ModuleFields>
+);
+
+/*
+* TODO: Use this FieldGroup once FieldGroups with occurrence are supported in modules
+<FieldGroup
+      key="todo_list"
       name="todo_list"
       label="Todo List"
+      occurrence={{
+        min: 0,
+        max: null,
+      }}
       children={[
-        <TextField label="Todo" name="todo_text" required />,
+        <TextField label="Todo" name="todo_text" default="" required />,
         <BooleanField
           label="Todo Completed"
           name="todo_completed"
@@ -21,14 +48,13 @@ export default (
       ]}
       default={[
         {
-          todo_text: "Read the JS Rendering Docs",
-          completed: false,
+          todo_text: "Todo Test 1",
+          todo_completed: false,
         },
         {
-          todo_text: "Upload this to HubSpot",
-          completed: true,
+          todo_text: "Todo Test 2",
+          todo_completed: true,
         },
       ]}
     />
-  </ModuleFields>
-);
+*/
