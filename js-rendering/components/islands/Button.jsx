@@ -4,7 +4,11 @@ import styles from "../../styles/style.module.css";
 function Button(props) {
   return (
     <span>
-      <button className={styles.button} onClick={props.onClick}>
+      <button
+        disabled={props.disabled}
+        className={styles.button}
+        onClick={props.onClick}
+      >
         {props.text}
       </button>
     </span>

@@ -1,10 +1,10 @@
 @font-face {
   font-family: LexendDeca;
-  src: url('../../assets/LexendDeca-Regular.ttf');
+  src: url('https://883465289.fs1.hubspotusercontentqa-na1.net/hubfs/883465289/LexendDeca-Regular.ttf');
 }
 @font-face {
   font-family: LexendDeca;
-  src: url('../../assets/LexendDeca-Bold.ttf');
+  src: url('https://883465289.fs1.hubspotusercontentqa-na1.net/hubfs/883465289/LexendDeca-Bold.ttf');
   font-weight: bold;
 }
 
@@ -37,15 +37,22 @@
   font-weight: 600;
   text-align: center;
   text-decoration: none;
-  transition: 0.15s background-color linear, 0.15s color linear;
+
+  transition-property: background-color, color, opacity;
+  transition-duration: 0.10s;
+  transition-timing-function: linear;
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 
-.button:hover {
+.button:hover:enabled {
   background-color: #ffcec2;
 }
 
-.button:active {
+.button:active:enabled {
   background-color: #d44325;
 }
 

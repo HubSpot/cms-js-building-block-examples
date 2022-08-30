@@ -9,9 +9,11 @@ function Main() {
         <div className={styles.header}>
           <h1>HubSpot JS Rendering</h1>
         </div>
-
         <div className={styles.logo}>
-          <HubSpotSprocket className={styles.logo} />
+          <HubSpotSprocket
+            link={"https://hubspot.com"}
+            className={styles.logo}
+          />
         </div>
       </div>
     </body>
