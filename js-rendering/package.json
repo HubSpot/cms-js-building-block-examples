@@ -2,16 +2,18 @@
   "name": "hello-world-js-rendering",
   "version": "0.1.0",
   "type": "module",
+  "scripts": {
+    "start": "hs-cms-dev-server ."
+  },
   "devDependencies": {
+    "@hubspot/cms-dev-server": "latest",
     "@hubspot/prettier-plugin-hubl": "0.2.2",
     "eslint": "^8.18.0",
     "prettier": "^2.7.1"
   },
   "dependencies": {
     "@hubspot/cms-components": "latest",
-    "@hubspot/cms-dev-server": "latest",
     "prop-types": "^15.8.1",
-    "react": "^18.1.0",
-    "react-json-view": "^1.21.3"
+    "react": "^18.1.0"
   }
 }
