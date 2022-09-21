@@ -1,0 +1,14 @@
+@font-face {
+    font-family: LexendDeca;
+    src: url('https://883465289.fs1.hubspotusercontentqa-na1.net/hubfs/883465289/LexendDeca-Regular.ttf');
+  }
+  @font-face {
+    font-family: LexendDeca;
+    src: url('https://883465289.fs1.hubspotusercontentqa-na1.net/hubfs/883465289/LexendDeca-Bold.ttf');
+    font-weight: bold;
+  }
+  
+
+:global(body) {
+    font-family: LexendDeca;
+}
