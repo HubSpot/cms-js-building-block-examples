@@ -1,10 +1,10 @@
-// http://883342099.hs-sitesqa.com.localhost:3000/partial/Home
+import homStyles from  '../../styles/home.module.css'
 
 function Home() {
   return (
     <>
       <div>Hello World!</div>
-      <a href="./Main.jsx">Main</a>
+      <a href="/hello-world-main">Main</a>
     </>
   );
 }
