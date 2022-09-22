@@ -6,14 +6,15 @@
     "start": "hs-cms-dev-server ."
   },
   "devDependencies": {
+    "@hubspot/cms-components": "^1.0.24",
     "@hubspot/cms-dev-server": "latest",
     "@hubspot/prettier-plugin-hubl": "0.2.2",
-    "@hubspot/cms-components": "^1.0.24",
     "eslint": "^8.18.0",
     "prettier": "^2.7.1"
   },
   "dependencies": {
     "@hubspot/cms-components": "latest",
+    "@reach/visually-hidden": "^0.17.0",
     "prop-types": "^15.8.1",
     "react": "^18.1.0"
   }

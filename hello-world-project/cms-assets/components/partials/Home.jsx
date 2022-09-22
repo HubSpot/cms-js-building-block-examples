@@ -1,11 +1,12 @@
-import homStyles from  '../../styles/home.module.css'
+import homeStyles from  '../../styles/home.module.css'
+import Layout from "../Layout";
+
 
 function Home() {
   return (
-    <>
-      <div>Hello World!</div>
-      <a href="/hello-world-main">Main</a>
-    </>
+    <Layout>
+      <h2>Home</h2>
+    </Layout>
   );
 }
 

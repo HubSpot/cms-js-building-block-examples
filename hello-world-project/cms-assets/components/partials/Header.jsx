@@ -7,9 +7,12 @@ export default function Header() {
                 Hello World
             </h1>
             <p>
-                The world sends greetings.
+                The world sends greetings
             </p>
             <nav className={headerStyles.nav}>
+                <a href="/hello-world-home">
+                    Home
+                </a>
                 <a href="/hello-world-main">
                     Main
                 </a>
