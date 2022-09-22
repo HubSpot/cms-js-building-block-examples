@@ -1,0 +1,23 @@
+:global(html) {
+    height: 100%;
+}
+
+:global(body) {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:global(.body-wrapper) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.layout {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

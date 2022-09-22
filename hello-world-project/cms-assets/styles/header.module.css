@@ -4,6 +4,21 @@
     font-size: 2em;
 }
 
+.header h1 {
+    margin-top: 0;
+}
+
 .nav {
     display: flex;
 }
+
+.nav a {
+    flex: 0;
+    margin: 10px;
+    padding: 10px;
+    border:  0 solid #FF7A59;
+    border-bottom-width: 1px;
+    color: #FF7A59;
+    text-decoration: none;
+}
+

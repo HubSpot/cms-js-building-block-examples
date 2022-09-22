@@ -1,4 +1,4 @@
-import styles from "../../styles/style.module.css";
+import styles from "../../styles/main.module.css";
 
 function Button(props) {
   return (
@@ -8,7 +8,7 @@ function Button(props) {
         className={styles.button}
         onClick={props.onClick}
       >
-        {props.text}
+       {props.children}
       </button>
     </span>
   );

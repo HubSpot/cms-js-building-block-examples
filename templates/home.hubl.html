@@ -8,11 +8,13 @@
 {% block body %} 
 
 {% js_partial
-    path="@projects/hello-world-project/cms-assets/components/partials/Home.jsx" 
+    path="@projects/hello-world-project/cms-assets/components/partials/Home.jsx"
+    no_wrapper=True
 %} 
 
 {% js_module
   path="@projects/hello-world-project/cms-assets/components/modules/TodoList"
+  no_wrapper=True
 %} 
 
 
