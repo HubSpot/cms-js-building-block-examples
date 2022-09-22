@@ -2,7 +2,7 @@ import { useState, createContext, useContext, useEffect } from "react";
 import VisiallyHidden from "@reach/visually-hidden";
 
 import Button from "./Button";
-import styles from "../../styles/main.module.css";
+import styles from "../../styles/todo.module.css";
 
 let id = 0;
 const TodoListContext = createContext({ todoList: [] });

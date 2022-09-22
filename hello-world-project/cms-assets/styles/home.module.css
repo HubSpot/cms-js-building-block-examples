@@ -1,14 +1,19 @@
-@font-face {
-    font-family: LexendDeca;
-    src: url('https://883465289.fs1.hubspotusercontentqa-na1.net/hubfs/883465289/LexendDeca-Regular.ttf');
-  }
-  @font-face {
-    font-family: LexendDeca;
-    src: url('https://883465289.fs1.hubspotusercontentqa-na1.net/hubfs/883465289/LexendDeca-Bold.ttf');
-    font-weight: bold;
-  }
-  
+.logo {
+  margin: auto;
+  height: auto;
+  width: 40vw;
 
-:global(body) {
-    font-family: LexendDeca;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate3d(0, 1, 0, 0deg);
+  }
+  to {
+      transform:rotate3d(0, 1, 0, 360deg);
+  }
 }
