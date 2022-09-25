@@ -1,5 +1,5 @@
 import { useState, createContext, useContext, useEffect } from "react";
-import VisiallyHidden from "@reach/visually-hidden";
+import { DateTime } from 'luxon'
 
 import Button from "./Button";
 import styles from "../../styles/todo.module.css";
@@ -44,32 +44,39 @@ const TodoList = () => {
   const [input, setInput] = useState("");
 
   const handleClick = () => {
-    const todo = { todo_text: input, completed: false };
+    const dt = DateTime.fromObject({day: 22, hour: 12 }, { zone: 'America/New_York'})
+    const todo_text = `${input}: ${dt.toLocaleString()}`
+
+    const todo = { todo_text, completed: false };
     addTodo(todo);
     setInput("");
     return todo;
   };
   return (
     <div className={styles.todoListContainer}>
-      <Button onClick={handleClick} disabled={!input}>
-        <VisiallyHidden>Add ToDo</VisiallyHidden>
-        <svg
-          aria-hidden
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />{" "}
-        </svg>
-      </Button>
-      <input
-        className={styles.todoInput}
-        placeholder="Add a todo..."
-        value={input}
-        onInput={(e) => setInput(e.target.value)}
-      />
+      <div className={styles.toDoForm}>
+        <input
+          className={styles.todoInput}
+          placeholder="Add a todo..."
+          value={input}
+          onInput={(e) => setInput(e.target.value)}
+        />
+
+        <Button onClick={handleClick} disabled={!input}>
+          <svg
+            aria-hidden
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />{" "}
+          </svg>
+        </Button>      
+      </div>
+
+      
       <ul className={styles.todoList}>
         {todoList.map((todo) => (
           <Todo
