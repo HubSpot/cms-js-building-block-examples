@@ -5,7 +5,7 @@
   color: white;
   background-color: #FF7A59;
 
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0;
   border: 1px solid;
   border-radius: 3px;
   cursor: pointer;
@@ -14,6 +14,7 @@
   font-weight: 600;
   text-align: center;
   text-decoration: none;
+  width: 60px;
 
   transition-property: background-color, color, opacity;
   transition-duration: 0.10s;
@@ -47,34 +48,43 @@
 /* TODO */
 
 .todoListContainer {
-  margin: auto;
-  height: auto;
   width: 25vw;
+  min-width: 400px;
 }
-.todoList {
-  display: flex;
-  flex-flow: row wrap;
+
+.todoList,
+.todoContainer {
   list-style: none;
 }
 
+.todoList {
+  margin: 0;
+  padding: 0;
+}
+
 .todoContainer {
-  width: fit-content;
-  height: 5vh;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .todo, .notComplete {
-  margin: 10px;
-  padding: 10px 15px 10px 10px;
-  display: inline;
-  min-width: 15vw;
-  float: left;
+  margin: 0 10px 0 0;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 10px;
+  display: flex;
   cursor: pointer;
-
   background: #eAf0f6;
   border: solid #b6C7d6 1px;
   box-shadow: 0px 1px 5px rgba(33, 51, 67, 0.12);
   border-radius: 3px;
+  flex: 1;
+}
+
+.todo input {
+  margin-right: 10px;
 }
 
 .todoContainer:hover > .todoRemove {
@@ -89,7 +99,8 @@
   cursor: pointer;
   top: 13%;
   position: relative;
-  float: right;
+  width: 60px;
+  text-align: center;
 }
 
 .todo.complete {
@@ -98,14 +109,20 @@
   border-color: #b6C7d6;
 }
 
+.toDoForm {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 .todoInput {
   padding: 8px 8px;
-  margin-left: 15px;
   border: 1px solid #b6C7d6;
   border-radius: 3px;
-  background-color: white;
   outline: none;
   line-height: 1.5;
+  flex: 1;
+  margin-right: 10px;
 }
 
 .todoInput:focus {

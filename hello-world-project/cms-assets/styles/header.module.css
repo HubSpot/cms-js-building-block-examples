@@ -1,10 +1,11 @@
 .header {
     text-align: center;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.6em;
 }
 
 .header h1 {
+    font-size: 2em;
     margin-top: 0;
 }
 
