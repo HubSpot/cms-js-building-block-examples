@@ -1,0 +1,22 @@
+.cars {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+}
+
+.carGrid {
+    width: calc(100%/2);
+    flex-shrink: 0;
+}
+
+.car {
+    margin: 5px;
+    border: 2px solid #FF7A59;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.car h2 {
+    font-size: 1em;
+}

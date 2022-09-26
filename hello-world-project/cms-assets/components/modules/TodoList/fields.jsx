@@ -14,7 +14,7 @@ export default (
       children={[
         <TextField
           label="Todo"
-          name="todo_text"
+          name="text"
           default="Todo Test 1"
           required
         />,

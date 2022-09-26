@@ -87,6 +87,11 @@
   margin-right: 10px;
 }
 
+.todo .todoDateAdded {
+  margin-left: auto;
+  color: gray;
+}
+
 .todoContainer:hover > .todoRemove {
   opacity: 100%;
 }
