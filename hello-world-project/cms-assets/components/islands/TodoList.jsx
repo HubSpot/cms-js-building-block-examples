@@ -31,6 +31,9 @@ function Todo(props) {
       >
         <input type="checkbox" checked={todo.completed} onChange={() => {}} />
         {todo.text}
+        {todo.dateAdded ? (
+          <span className={styles.todoDateAdded}>{todo.dateAdded}</span>
+        ): ''}
       </div>
       <div className={styles.todoRemove} onClick={handleTodoRemoveClick}>
         -
@@ -45,10 +48,9 @@ const TodoList = () => {
 
   const handleClick = () => {
     const dt = DateTime.fromObject({day: 22, hour: 12 }, { zone: 'America/New_York'})
-    const todo_text = `${input}: ${dt.toLocaleString()}`
+    const dateAdded = dt.toLocaleString()
 
-    const todo = { todo_text, completed: false };
-    addTodo(todo);
+    addTodo({ text: input, dateAdded, completed: false });
     setInput("");
     return todo;
   };
@@ -82,7 +84,8 @@ const TodoList = () => {
           <Todo
             id={todo.id}
             key={todo.id}
-            text={todo.todo_text}
+            text={todo.text}
+            dateAdded={todo.dateAdded}
             completed={todo.completed}
           />
         ))}

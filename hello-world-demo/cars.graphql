@@ -1,0 +1,24 @@
+query CarQuery {
+  CRM {
+    p_car_collection {
+      items {
+        color
+        condition
+        make
+        mileage
+        hs_object_id
+        price
+        year
+        model
+        associations {
+          contact_collection__car_to_contact {
+            items {
+              firstname
+              lastname
+            }
+          }
+        }
+      }
+    }
+  }
+}
