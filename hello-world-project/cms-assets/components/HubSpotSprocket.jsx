@@ -1,7 +1,11 @@
+import { VisuallyHidden } from "@reach/visually-hidden";
+
 function HubSpotSprocket(props) {
   return (
     <a href={props.link}>
-      <svg width="100%" viewBox="0 0 200 200">
+      <VisuallyHidden>Sproket</VisuallyHidden>
+
+      <svg aria-hidden="true" width="100%" viewBox="0 0 200 200">
         <g fill="none" fillRule="evenodd">
           <path
             fill="#FF7A59"

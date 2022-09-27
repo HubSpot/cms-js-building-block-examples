@@ -50,7 +50,9 @@ const TodoList = () => {
     const dt = DateTime.fromObject({day: 22, hour: 12 }, { zone: 'America/New_York'})
     const dateAdded = dt.toLocaleString()
 
-    addTodo({ text: input, dateAdded, completed: false });
+    const todo = { text: input, dateAdded, completed: false }
+
+    addTodo(todo);
     setInput("");
     return todo;
   };

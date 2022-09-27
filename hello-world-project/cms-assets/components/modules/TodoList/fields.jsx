@@ -11,20 +11,20 @@ export default (
     <FieldGroup
       name="todo_group"
       label="Todo Group"
-      children={[
-        <TextField
-          label="Todo"
-          name="text"
-          default="Todo Test 1"
-          required
-        />,
-        <BooleanField
-          label="Todo Completed"
-          name="completed"
-          default={false}
-        />,
-      ]}
-    />
+      
+    >
+      <TextField
+        label="Todo"
+        name="text"
+        default="Todo Test 1"
+        required
+      />
+      <BooleanField
+        label="Todo Completed"
+        name="completed"
+        default={false}
+      />
+    </FieldGroup>
   </ModuleFields>
 );
 
