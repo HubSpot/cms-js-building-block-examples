@@ -1,7 +1,7 @@
-import homeStyles from  '../../styles/home.module.css'
-import Layout from "../Layout";
-import HubSpotSprocket from '../HubSpotSprocket';
+import homeStyles from "../../styles/home.module.css";
 
+import Layout from "../Layout";
+import HubSpotSprocket from "../HubSpotSprocket";
 
 function Home() {
   return (
