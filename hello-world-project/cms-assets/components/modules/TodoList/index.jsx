@@ -1,5 +1,5 @@
 import { Island } from "@hubspot/cms-components";
-import TodoListProvider from "../../islands/TodoList.jsx?island";
+import TodoListIsland from "../../islands/TodoList.jsx?island";
 export { default as fields } from "./fields.jsx";
 
 import Layout from "../../Layout";
@@ -15,7 +15,7 @@ export const Component = (fieldValues) => {
     <Layout>
       <Island
         id={`todo-list-island`}
-        module={TodoListProvider}
+        module={TodoListIsland}
         hydrateOn="load"
         todos={[fieldValues.todo_group]}
       />
