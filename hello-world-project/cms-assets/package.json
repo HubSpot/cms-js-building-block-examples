@@ -6,11 +6,7 @@
     "start": "hs-cms-dev-server ."
   },
   "devDependencies": {
-    "@hubspot/cms-components": "^1.0.24",
-    "@hubspot/cms-dev-server": "latest",
-    "@hubspot/prettier-plugin-hubl": "0.2.2",
-    "eslint": "^8.18.0",
-    "prettier": "^2.7.1"
+    "@hubspot/cms-dev-server": "latest"
   },
   "dependencies": {
     "@hubspot/cms-components": "latest",

@@ -1,5 +1,5 @@
-import headerStyles from "../../styles/header.module.css";
-import { usePageUrl } from "@hubspot/cms-components";
+import headerStyles from '../../styles/header.module.css';
+import { usePageUrl } from '@hubspot/cms-components';
 
 export default function Header(props) {
   const { origin } = usePageUrl();

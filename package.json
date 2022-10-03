@@ -1,0 +1,13 @@
+{
+    "name": "js-building-blocks-hello-world",
+    "description": "JS Building Blocks Hello World",
+    "devDependencies": {
+        "@hubspot/prettier-plugin-hubl": "^0.2.4",
+        "eslint": "^8.24.0",
+        "prettier": "^2.7.1"
+    },
+    "scripts": {
+        "start": "npm start --prefix hello-world-project/cms-assets",
+    },
+    "dependencies": {}
+}
