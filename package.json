@@ -7,7 +7,7 @@
         "prettier": "^2.7.1"
     },
     "scripts": {
-        "start": "npm start --prefix hello-world-project/cms-assets",
+        "start": "npm start --prefix hello-world-project/cms-assets"
     },
     "dependencies": {}
 }
