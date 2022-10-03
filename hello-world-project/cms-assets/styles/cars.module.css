@@ -14,9 +14,23 @@
     margin: 5px;
     border: 2px solid #FF7A59;
     border-radius: 4px;
-    padding: 5px;
+    padding: 14px 7px;
+    display: flex;
 }
 
 .car h2 {
     font-size: 1em;
 }
+
+.carDetails {
+    height: 100px;
+    margin-left: auto;
+}
+
+.carDetails>p,
+.carDetails>p>img {
+    margin: 0;
+    height: 100%;
+    width: auto;
+}
+

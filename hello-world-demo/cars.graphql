@@ -10,6 +10,7 @@ query CarQuery {
         price
         year
         model
+        details
         associations {
           contact_collection__car_to_contact {
             items {
