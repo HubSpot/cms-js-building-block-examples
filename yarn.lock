@@ -17,7 +17,7 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@hubspot/prettier-plugin-hubl@^0.2.4":
+"@hubspot/prettier-plugin-hubl@latest":
   version "0.2.4"
   resolved "https://npm.hubteam.com/@hubspot%2fprettier-plugin-hubl/-/prettier-plugin-hubl-0.2.4.tgz#1c88313b7884417d270bc67b3dca317d5022a924"
   integrity sha512-TnlHIv8KFM1ShmwYFf1ZCw2NF5rflljEzJ15tjp37tLRbCS2gXnC4+VqX5nHt2xB9iKEp1hiVB3LcksJQ6vq+w==
