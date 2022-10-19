@@ -2,17 +2,13 @@
   templateType: page
   isAvailableForNewContent: true
   label: Hello World - Cars
-  dataQueryPath: ./cars.graphql
 -->
-{% set car_collection = data_query.data.CRM.p_car_collection.items %}
-
 {% extends "./layouts/base.hubl.html" %}
 
 {% block body %}
 
   {% js_partial
     path="@projects/hello-world-project/cms-assets/components/partials/Cars.jsx",
-    carCollection="{{ car_collection|tojson }}",
     no_wrapper=True %}
 
 {% endblock body %}
