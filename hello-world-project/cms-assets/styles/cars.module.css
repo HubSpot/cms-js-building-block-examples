@@ -27,8 +27,7 @@
     margin-left: auto;
 }
 
-.carDetails>p,
-.carDetails>p>img {
+.carDetails img {
     margin: 0;
     height: 100%;
     width: auto;
