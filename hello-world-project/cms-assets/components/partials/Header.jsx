@@ -1,7 +1,7 @@
 import headerStyles from '../../styles/header.module.css';
 import { usePageUrl } from '@hubspot/cms-components';
 
-export default function Header(props) {
+export default function Header() {
   const { origin } = usePageUrl();
   const pageUrlHome = `${origin}/hello-world-home`;
   const pageUrlTodo = `${origin}/hello-world-todo`;
@@ -9,7 +9,7 @@ export default function Header(props) {
 
   return (
     <header className={headerStyles.header}>
-      <h1>Hello {props.headerTitle}</h1>
+      <h1>Hello World</h1>
       <p>The World Sends Greetings!</p>
       <nav className={headerStyles.nav}>
         <a href={pageUrlHome}>Home</a>
