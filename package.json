@@ -10,7 +10,10 @@
     },
     "scripts": {
         "start": "npm start --prefix hello-world-project/cms-assets",
-        "lint:js": "eslint . --ext .js,.jsx"
+        "lint:js": "eslint . --ext .js,.jsx",
+        "watch:hubl": "hs watch hello-world-demo hello-world-demo",
+        "upload:hubl": "hs upload hello-world-demo hello-world-demo",
+        "deploy": "hs project upload hello-world-project"
     },
     "dependencies": {}
 }
