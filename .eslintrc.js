@@ -1,0 +1,20 @@
+module.exports = {
+  parserOptions: {
+    sourceType: 'module',
+  },
+  env: {
+    node: true,
+    es2021: true,
+  },
+  extends: ['eslint:recommended', 'prettier', 'plugin:react/recommended'],
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+  },
+  ignorePatterns: ['hello-world-project/cms-assets/dist/*'],
+  settings: {
+    react: {
+      version: '18.1',
+    },
+  },
+};

@@ -5,12 +5,10 @@
 -->
 {% extends "./layouts/base.hubl.html" %}
 
-{% block body %} 
+{% block body %}
 
-{% js_partial
-    path="@projects/hello-world-project/cms-assets/components/partials/Home.jsx"
-    no_wrapper=True
-%} 
-
+  {% js_partial
+    path="@projects/hello-world-project/cms-assets/components/partials/Home.jsx",
+    no_wrapper=True %}
 
 {% endblock body %}

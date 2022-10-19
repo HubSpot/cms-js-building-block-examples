@@ -1,8 +1,8 @@
-import { useState, createContext, useContext, useEffect } from "react";
-import { DateTime } from 'luxon'
+import { useState, createContext, useContext, useEffect } from 'react';
+import { DateTime } from 'luxon';
 
-import Button from "./Button";
-import styles from "../../styles/todo.module.css";
+import Button from './Button';
+import styles from '../../styles/todo.module.css';
 
 let id = 0;
 const TodoListContext = createContext({ todoList: [] });
@@ -33,7 +33,9 @@ function Todo(props) {
         {todo.text}
         {todo.dateAdded ? (
           <span className={styles.todoDateAdded}>{todo.dateAdded}</span>
-        ): ''}
+        ) : (
+          ''
+        )}
       </div>
       <div className={styles.todoRemove} onClick={handleTodoRemoveClick}>
         -
@@ -44,16 +46,19 @@ function Todo(props) {
 
 const TodoList = () => {
   const { todoList, addTodo } = useContext(TodoListContext);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
 
   const handleClick = () => {
-    const dt = DateTime.fromObject({day: 22, hour: 12 }, { zone: 'America/New_York'})
-    const dateAdded = dt.toLocaleString()
+    const dt = DateTime.fromObject(
+      { day: 22, hour: 12 },
+      { zone: 'America/New_York' },
+    );
+    const dateAdded = dt.toLocaleString();
 
-    const todo = { text: input, dateAdded, completed: false }
+    const todo = { text: input, dateAdded, completed: false };
 
     addTodo(todo);
-    setInput("");
+    setInput('');
     return todo;
   };
   return (
@@ -75,12 +80,11 @@ const TodoList = () => {
             fill="currentColor"
             viewBox="0 0 16 16"
           >
-            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />{" "}
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />{' '}
           </svg>
-        </Button>      
+        </Button>
       </div>
 
-      
       <ul className={styles.todoList}>
         {todoList.map((todo) => (
           <Todo
@@ -96,7 +100,7 @@ const TodoList = () => {
   );
 };
 
-export default ({ todos }) => {
+const TodoListContainer = ({ todos }) => {
   const [todoList, setTodoList] = useState([]);
 
   useEffect(() => {
@@ -143,8 +147,8 @@ export default ({ todos }) => {
   };
 
   const addTodo = (todo) => {
-    todo["id"] = id;
-    todo["key"] = id;
+    todo['id'] = id;
+    todo['key'] = id;
     id += 1;
     setTodoList((prevList) => [...prevList, todo].sort(todoCompare));
   };
@@ -157,3 +161,5 @@ export default ({ todos }) => {
     </TodoListContext.Provider>
   );
 };
+
+export default TodoListContainer;
