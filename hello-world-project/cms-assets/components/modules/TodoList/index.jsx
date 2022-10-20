@@ -8,9 +8,10 @@ export const meta = {
 };
 
 export const Component = (fieldValues) => {
+  console.log('fieldValues', fieldValues);
   return (
     <Layout>
-      <TodoList todos={fieldValues.todo_group} />
+      <TodoList initialTodos={[fieldValues.default_todo]} />
     </Layout>
   );
 };
