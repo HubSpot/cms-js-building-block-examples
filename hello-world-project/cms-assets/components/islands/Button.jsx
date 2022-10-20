@@ -1,4 +1,4 @@
-import styles from "../../styles/todo.module.css";
+import styles from '../../styles/todo.module.css';
 
 function Button(props) {
   return (
@@ -6,6 +6,7 @@ function Button(props) {
       disabled={props.disabled}
       className={styles.button}
       onClick={props.onClick}
+      style={props.style}
     >
       {props.children}
     </button>
