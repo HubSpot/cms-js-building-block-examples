@@ -8,7 +8,6 @@ export const meta = {
 };
 
 export const Component = (fieldValues) => {
-  console.log('fieldValues', fieldValues);
   return (
     <Layout>
       <TodoList initialTodos={[fieldValues.default_todo]} />
