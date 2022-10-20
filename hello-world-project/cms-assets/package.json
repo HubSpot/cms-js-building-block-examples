@@ -2,12 +2,6 @@
   "name": "hello-world-js-rendering",
   "version": "0.1.0",
   "type": "module",
-  "scripts": {
-    "start": "hs-cms-dev-server ."
-  },
-  "devDependencies": {
-    "@hubspot/cms-dev-server": "latest"
-  },
   "dependencies": {
     "@hubspot/cms-components": "latest",
     "@reach/visually-hidden": "^0.17.0",

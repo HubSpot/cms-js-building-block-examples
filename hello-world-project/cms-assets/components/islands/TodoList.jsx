@@ -100,18 +100,16 @@ const TodoList = () => {
   );
 };
 
-const TodoListContainer = ({ todos }) => {
-  const [todoList, setTodoList] = useState([]);
-
-  useEffect(() => {
-    todos.forEach((todo) => {
-      addTodo(todo);
-    });
-  }, []);
-
-  useEffect(() => {
-    sortTodoList();
-  });
+const TodoListContainer = ({ initialTodos = [] }) => {
+  const [todoList, setTodoList] = useState(
+    initialTodos.map((initialTodo, i) => {
+      return {
+        id: `default-${i}`,
+        key: `default-${i}`,
+        ...initialTodo,
+      };
+    }),
+  );
 
   const todoCompare = (todoA, todoB) => {
     if (todoA.completed && todoB.completed) {
@@ -142,9 +140,9 @@ const TodoListContainer = ({ todos }) => {
     });
   };
 
-  const sortTodoList = () => {
-    setTodoList((prevList) => prevList.sort(todoCompare));
-  };
+  // const sortTodoList = () => {
+  //   setTodoList((prevList) => prevList.sort(todoCompare));
+  // };
 
   const addTodo = (todo) => {
     todo['id'] = id;
