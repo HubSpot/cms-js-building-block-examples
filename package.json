@@ -2,6 +2,8 @@
     "name": "js-building-blocks-hello-world",
     "description": "JS Building Blocks Hello World",
     "devDependencies": {
+        "@hubspot/cli": "^4.0.1",
+        "@hubspot/cms-dev-server": "^1.0.27",
         "@hubspot/prettier-plugin-hubl": "latest",
         "eslint": "^8.24.0",
         "eslint-config-prettier": "^8.5.0",
@@ -9,8 +11,9 @@
         "prettier": "^2.7.1"
     },
     "scripts": {
-        "start": "npm start --prefix hello-world-project/cms-assets",
+        "start": "hs-cms-dev-server hello-world-project/cms-assets",
         "lint:js": "eslint . --ext .js,.jsx",
+        "postinstall": "bend yarn --cwd hello-world-project/cms-assets install",
         "watch:hubl": "hs watch hello-world-demo hello-world-demo",
         "upload:hubl": "hs upload hello-world-demo hello-world-demo",
         "deploy": "hs project upload hello-world-project"
