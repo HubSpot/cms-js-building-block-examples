@@ -1,4 +1,5 @@
-import TodoList from '../../islands/TodoList.jsx';
+import { Island } from '@hubspot/cms-components';
+import TodoList from '../../islands/TodoList.jsx?island';
 export { default as fields } from './fields.jsx';
 
 import Layout from '../../Layout';
@@ -10,7 +11,12 @@ export const meta = {
 export const Component = (fieldValues) => {
   return (
     <Layout>
-      <TodoList initialTodos={[fieldValues.default_todo]} />
+      <Island
+        module={TodoList}
+        initialTodos={[fieldValues.default_todo]}
+        id="todo-list-island"
+        hydrateOn="load"
+      />
     </Layout>
   );
 };
