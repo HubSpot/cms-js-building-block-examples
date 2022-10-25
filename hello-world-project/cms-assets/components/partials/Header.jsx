@@ -1,25 +1,19 @@
 import headerStyles from '../../styles/header.module.css';
-import { usePageUrl } from '@hubspot/cms-components';
 
 export default function Header(props) {
-  const { origin } = usePageUrl();
-  const pageUrlHome = `${origin}/hello-world-home`;
-  const pageUrlTodo = `${origin}/hello-world-todo`;
-  const pageUrlCars = `${origin}/hello-world-cars`;
-
   const brandColor = JSON.parse(props.brandColor);
 
   const navLinks = [
     {
-      href: pageUrlHome,
+      href: '/hello-world-home',
       label: 'Home',
     },
     {
-      href: pageUrlTodo,
+      href: '/hello-world-todo',
       label: 'Todo',
     },
     {
-      href: pageUrlCars,
+      href: '/hello-world-cars',
       label: 'Cars',
     },
   ];
