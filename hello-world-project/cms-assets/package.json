@@ -10,7 +10,7 @@
   "devDependencies": {
     "@testing-library/react": "^13.4.0",
     "@vitejs/plugin-react": "^2.1.0",
-    "happy-dom": "^7.6.4",
+    "jsdom": "^20.0.1",
     "vitest": "^0.24.3"
   },
   "scripts": {
