@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 
 import Button from './Button';
 import styles from '../../styles/todo.module.css';
@@ -13,6 +13,13 @@ const todoSortByCompleted = (todoA, todoB) => {
   if (todoB.completed) return -1;
   return todoA.id - todoB.id;
 };
+
+const initialTodosMapped = (todos) =>
+  todos.map((initialTodo, i) => ({
+    id: `default-${i}`,
+    key: `default-${i}`,
+    ...initialTodo,
+  }));
 
 function TodoItem({ todo, onRemove, onUpdate }) {
   const handleTodoCompleteClick = () => {
@@ -48,16 +55,9 @@ function TodoItem({ todo, onRemove, onUpdate }) {
 }
 
 export default function TodoList({ initialTodos = [] }) {
-  const initialTodosMapped = useMemo(() => {
-    return initialTodos.map((initialTodo, i) => {
-      return {
-        id: `default-${i}`,
-        key: `default-${i}`,
-        ...initialTodo,
-      };
-    });
-  });
-  const [todoList, setTodoList] = useState(initialTodosMapped);
+  const [todoList, setTodoList] = useState(() =>
+    initialTodosMapped(initialTodos),
+  );
   const [todoInput, setTodoInput] = useState('');
 
   const addTodo = (todo) => {
@@ -65,26 +65,19 @@ export default function TodoList({ initialTodos = [] }) {
     todo['key'] = id;
     id += 1;
 
-    setTodoList((prevList) => [...prevList, todo].sort(todoSortByCompleted));
+    setTodoList([...todoList, todo].sort(todoSortByCompleted));
   };
 
   const handleRemoveTodo = (todoId) => {
-    const removeIndex = todoList.map((todo) => todo.id).indexOf(todoId);
-    setTodoList((prevList) => {
-      let updatedList = [...prevList];
-      updatedList.splice(removeIndex, 1);
-      return updatedList;
-    });
+    setTodoList(todoList.filter((todo) => todo.id !== todoId));
   };
 
   const handleUpdateTodo = (updatedTodo) => {
-    const updatedId = updatedTodo.id;
-    const updateIndex = todoList.map((todo) => todo.id).indexOf(updatedId);
-    setTodoList((prevList) => {
-      let updatedList = [...prevList];
-      updatedList[updateIndex] = updatedTodo;
-      return updatedList.sort(todoSortByCompleted);
-    });
+    setTodoList(
+      todoList
+        .map((todo) => (todo.id === updatedTodo.id ? updatedTodo : todo))
+        .sort(todoSortByCompleted),
+    );
   };
 
   const handleAddTodoClick = () => {
