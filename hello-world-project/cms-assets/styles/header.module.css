@@ -1,25 +1,24 @@
 .header {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.6em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6em;
 }
 
 .header h1 {
-    font-size: 2em;
-    margin-top: 0;
+  font-size: 2em;
+  margin-top: 0;
 }
 
 .nav {
-    display: flex;
+  display: flex;
 }
 
 .nav a {
-    flex: 0;
-    margin: 10px;
-    padding: 10px;
-    border:  0 solid #FF7A59;
-    border-bottom-width: 1px;
-    color: #FF7A59;
-    text-decoration: none;
+  flex: 0;
+  margin: 10px;
+  padding: 10px;
+  border-width: 0;
+  border-style: solid;
+  border-bottom-width: 1px;
+  text-decoration: none;
 }
-

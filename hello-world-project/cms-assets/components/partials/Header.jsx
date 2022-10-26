@@ -1,5 +1,12 @@
 import headerStyles from '../../styles/header.module.css';
 
+Header.defaultProps = {
+  brandColor: {
+    opacity: 100,
+    color: '#FF7A59',
+  },
+};
+
 export default function Header({ brandColor }) {
   const navLinks = [
     {

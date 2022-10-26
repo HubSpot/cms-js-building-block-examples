@@ -1,9 +1,9 @@
-/* Buton */
+/* Button */
 
 .button {
   border-color: transparent;
   color: white;
-  background-color: #FF7A59;
+  background-color: #ff7a59;
 
   padding: 0.5rem 0;
   border: 1px solid;
@@ -17,7 +17,7 @@
   width: 60px;
 
   transition-property: background-color, color, opacity;
-  transition-duration: 0.10s;
+  transition-duration: 0.1s;
   transition-timing-function: linear;
 }
 
@@ -42,10 +42,10 @@
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
 }
 
-/* TODO */
+/* ToDo List */
 
 .todoListContainer {
   width: 25vw;
@@ -69,15 +69,16 @@
   margin-bottom: 10px;
 }
 
-.todo, .notComplete {
+.todo,
+.notComplete {
   margin: 0 10px 0 0;
   height: 3rem;
   line-height: 3rem;
   padding: 0 10px;
   display: flex;
   cursor: pointer;
-  background: #eAf0f6;
-  border: solid #b6C7d6 1px;
+  background: #eaf0f6;
+  border: solid #b6c7d6 1px;
   box-shadow: 0px 1px 5px rgba(33, 51, 67, 0.12);
   border-radius: 3px;
   flex: 1;
@@ -97,7 +98,7 @@
 }
 
 .todoRemove {
-  transition: 0.10s opacity linear, 0.10s color linear;
+  transition: 0.1s opacity linear, 0.1s color linear;
   font-size: 2em;
   color: grey;
   opacity: 0%;
@@ -111,7 +112,7 @@
 .todo.complete {
   opacity: 50%;
   background-color: #dbe4ed;
-  border-color: #b6C7d6;
+  border-color: #b6c7d6;
 }
 
 .toDoForm {
@@ -122,7 +123,7 @@
 
 .todoInput {
   padding: 8px 8px;
-  border: 1px solid #b6C7d6;
+  border: 1px solid #b6c7d6;
   border-radius: 3px;
   outline: none;
   line-height: 1.5;

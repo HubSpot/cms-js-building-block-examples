@@ -1,23 +1,24 @@
 {
-    "name": "js-building-blocks-hello-world",
-    "description": "JS Building Blocks Hello World",
-    "devDependencies": {
-        "@hubspot/cli": "^4.0.1",
-        "@hubspot/cms-dev-server": "latest",
-        "@hubspot/prettier-plugin-hubl": "latest",
-        "eslint": "^8.24.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-react": "^7.31.10",
-        "prettier": "^2.7.1"
-    },
-    "scripts": {
-        "start": "hs-cms-dev-server hello-world-project/cms-assets",
-        "lint:js": "eslint . --ext .js,.jsx",
-        "postinstall": "npm install --prefix ./hello-world-project/cms-assets",
-        "watch:hubl": "hs watch hello-world-demo hello-world-demo",
-        "upload:hubl": "hs upload hello-world-demo hello-world-demo",
-        "deploy": "hs project upload hello-world-project",
-        "test": "npm run test --prefix ./hello-world-project/cms-assets"
-    },
-    "dependencies": {}
+  "name": "js-building-blocks-hello-world",
+  "description": "JS Building Blocks Hello World",
+  "devDependencies": {
+    "@hubspot/cli": "^4.0.1",
+    "@hubspot/cms-dev-server": "latest",
+    "@hubspot/prettier-plugin-hubl": "latest",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.10",
+    "prettier": "^2.7.1"
+  },
+  "scripts": {
+    "start": "hs-cms-dev-server hello-world-project/cms-assets",
+    "lint:js": "eslint . --ext .js,.jsx",
+    "prettier": "prettier . --check",
+    "postinstall": "npm install --prefix ./hello-world-project/cms-assets",
+    "watch:hubl": "hs watch hello-world-demo hello-world-demo",
+    "upload:hubl": "hs upload hello-world-demo hello-world-demo",
+    "deploy": "hs project upload hello-world-project",
+    "test": "npm run test --prefix ./hello-world-project/cms-assets"
+  },
+  "dependencies": {}
 }

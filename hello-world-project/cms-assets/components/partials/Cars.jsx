@@ -22,7 +22,7 @@ const cars = [
   {
     year: 1979,
     make: 'MBTA',
-    model: 'Organe Line',
+    model: 'Orange Line',
     id: 2,
     img: orangeLine,
     contact: {
