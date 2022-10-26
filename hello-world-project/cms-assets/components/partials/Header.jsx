@@ -1,8 +1,6 @@
 import headerStyles from '../../styles/header.module.css';
 
-export default function Header(props) {
-  const brandColor = JSON.parse(props.brandColor);
-
+export default function Header({ brandColor }) {
   const navLinks = [
     {
       href: '/hello-world-home',
@@ -28,6 +26,7 @@ export default function Header(props) {
             style={{
               color: brandColor.color,
               borderColor: brandColor.color,
+              opacity: brandColor.opacity / 100,
             }}
             key={navLink.label}
             href={navLink.href}
