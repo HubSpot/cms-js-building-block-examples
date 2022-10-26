@@ -88,6 +88,13 @@ export default function TodoList({ initialTodos = [] }) {
     return todo;
   };
 
+  const handleTodoInput = (e) => setTodoInput(e.target.value);
+  const handleTodoKeyDown = (e) => {
+    if (e.key === 'Enter' && todoInput) {
+      handleAddTodoClick();
+    }
+  };
+
   return (
     <div className={styles.todoListContainer}>
       <div className={styles.toDoForm}>
@@ -95,7 +102,8 @@ export default function TodoList({ initialTodos = [] }) {
           className={styles.todoInput}
           placeholder="Add a todo..."
           value={todoInput}
-          onInput={(e) => setTodoInput(e.target.value)}
+          onInput={handleTodoInput}
+          onKeyDown={handleTodoKeyDown}
         />
 
         <Button onClick={handleAddTodoClick} disabled={!todoInput}>
