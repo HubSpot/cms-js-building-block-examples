@@ -4,9 +4,16 @@
   "type": "module",
   "dependencies": {
     "@hubspot/cms-components": "latest",
-    "@reach/visually-hidden": "^0.17.0",
-    "luxon": "^3.0.4",
     "prop-types": "^15.8.1",
     "react": "^18.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^13.4.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "jsdom": "^20.0.1",
+    "vitest": "^0.24.3"
+  },
+  "scripts": {
+    "test": "vitest"
   }
 }

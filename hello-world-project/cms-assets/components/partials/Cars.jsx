@@ -22,7 +22,7 @@ const cars = [
   {
     year: 1979,
     make: 'MBTA',
-    model: 'Organe Line',
+    model: 'Orange Line',
     id: 2,
     img: orangeLine,
     contact: {
@@ -57,7 +57,7 @@ const cars = [
 function Cars() {
   return (
     <Layout>
-      <h2>My Teamates Cars</h2>
+      <h2>My Teammates' Cars</h2>
       <div className={styles.cars}>
         {cars.map((car) => {
           return (

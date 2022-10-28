@@ -1,24 +1,34 @@
-import { useState, createContext, useContext, useEffect } from 'react';
-import { DateTime } from 'luxon';
+import { useState } from 'react';
 
 import Button from './Button';
 import styles from '../../styles/todo.module.css';
 
 let id = 0;
-const TodoListContext = createContext({ todoList: [] });
+const todoSortByCompleted = (todoA, todoB) => {
+  if (todoA.completed && todoB.completed) {
+    // Earlier IDs correspond to higher place in the list
+    return todoA.id - todoB.id;
+  }
+  if (todoA.completed) return 1;
+  if (todoB.completed) return -1;
+  return todoA.id - todoB.id;
+};
 
-function Todo(props) {
-  const { updateTodo, removeTodo } = useContext(TodoListContext);
-  const [todo, setTodo] = useState(props);
+const initialTodosMapped = (todos) =>
+  todos.map((initialTodo, i) => ({
+    id: `default-${i}`,
+    key: `default-${i}`,
+    ...initialTodo,
+  }));
 
+function TodoItem({ todo, onRemove, onUpdate }) {
   const handleTodoCompleteClick = () => {
     const updatedTodo = { ...todo, completed: !todo.completed };
-    updateTodo(updatedTodo);
-    setTodo(updatedTodo);
+    onUpdate(updatedTodo);
   };
 
   const handleTodoRemoveClick = () => {
-    removeTodo(todo.id);
+    onRemove(todo.id);
   };
 
   return (
@@ -44,34 +54,59 @@ function Todo(props) {
   );
 }
 
-const TodoList = () => {
-  const { todoList, addTodo } = useContext(TodoListContext);
-  const [input, setInput] = useState('');
+export default function TodoList({ initialTodos = [] }) {
+  const [todoList, setTodoList] = useState(() =>
+    initialTodosMapped(initialTodos),
+  );
+  const [todoInput, setTodoInput] = useState('');
 
-  const handleClick = () => {
-    const dt = DateTime.fromObject(
-      { day: 22, hour: 12 },
-      { zone: 'America/New_York' },
+  const addTodo = (todo) => {
+    todo['id'] = id;
+    todo['key'] = id;
+    id += 1;
+
+    setTodoList([...todoList, todo].sort(todoSortByCompleted));
+  };
+
+  const handleRemoveTodo = (todoId) => {
+    setTodoList(todoList.filter((todo) => todo.id !== todoId));
+  };
+
+  const handleUpdateTodo = (updatedTodo) => {
+    setTodoList(
+      todoList
+        .map((todo) => (todo.id === updatedTodo.id ? updatedTodo : todo))
+        .sort(todoSortByCompleted),
     );
-    const dateAdded = dt.toLocaleString();
+  };
 
-    const todo = { text: input, dateAdded, completed: false };
+  const handleAddTodoClick = () => {
+    const todo = { text: todoInput, completed: false };
 
     addTodo(todo);
-    setInput('');
+    setTodoInput('');
     return todo;
   };
+
+  const handleTodoInput = (e) => setTodoInput(e.target.value);
+  const handleTodoKeyDown = (e) => {
+    if (e.key === 'Enter' && todoInput) {
+      handleAddTodoClick();
+    }
+  };
+
   return (
     <div className={styles.todoListContainer}>
       <div className={styles.toDoForm}>
         <input
           className={styles.todoInput}
           placeholder="Add a todo..."
-          value={input}
-          onInput={(e) => setInput(e.target.value)}
+          value={todoInput}
+          onInput={handleTodoInput}
+          onKeyDown={handleTodoKeyDown}
         />
 
-        <Button onClick={handleClick} disabled={!input}>
+        <Button onClick={handleAddTodoClick} disabled={!todoInput}>
           <svg
             aria-hidden
             xmlns="http://www.w3.org/2000/svg"
@@ -87,77 +122,14 @@ const TodoList = () => {
 
       <ul className={styles.todoList}>
         {todoList.map((todo) => (
-          <Todo
-            id={todo.id}
+          <TodoItem
+            todo={todo}
             key={todo.id}
-            text={todo.text}
-            dateAdded={todo.dateAdded}
-            completed={todo.completed}
+            onRemove={handleRemoveTodo}
+            onUpdate={handleUpdateTodo}
           />
         ))}
       </ul>
     </div>
   );
-};
-
-const TodoListContainer = ({ initialTodos = [] }) => {
-  const [todoList, setTodoList] = useState(
-    initialTodos.map((initialTodo, i) => {
-      return {
-        id: `default-${i}`,
-        key: `default-${i}`,
-        ...initialTodo,
-      };
-    }),
-  );
-
-  const todoCompare = (todoA, todoB) => {
-    if (todoA.completed && todoB.completed) {
-      // Earlier IDs correspond to higher place in the list
-      return todoA.id - todoB.id;
-    }
-    if (todoA.completed) return 1;
-    if (todoB.completed) return -1;
-    return todoA.id - todoB.id;
-  };
-
-  const removeTodo = (todoId) => {
-    const removeIndex = todoList.map((todo) => todo.id).indexOf(todoId);
-    setTodoList((prevList) => {
-      let updatedList = [...prevList];
-      updatedList.splice(removeIndex, 1);
-      return updatedList;
-    });
-  };
-
-  const updateTodo = (updatedTodo) => {
-    const updatedId = updatedTodo.id;
-    const updateIndex = todoList.map((todo) => todo.id).indexOf(updatedId);
-    setTodoList((prevList) => {
-      let updatedList = [...prevList];
-      updatedList[updateIndex] = updatedTodo;
-      return updatedList.sort(todoCompare);
-    });
-  };
-
-  // const sortTodoList = () => {
-  //   setTodoList((prevList) => prevList.sort(todoCompare));
-  // };
-
-  const addTodo = (todo) => {
-    todo['id'] = id;
-    todo['key'] = id;
-    id += 1;
-    setTodoList((prevList) => [...prevList, todo].sort(todoCompare));
-  };
-
-  return (
-    <TodoListContext.Provider
-      value={{ todoList, addTodo, updateTodo, removeTodo }}
-    >
-      <TodoList />
-    </TodoListContext.Provider>
-  );
-};
-
-export default TodoListContainer;
+}

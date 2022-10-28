@@ -19,6 +19,7 @@
       {% block header %}
         {% js_partial
           path="@projects/hello-world-project/cms-assets/components/partials/Header.jsx",
+          brandColor="{{ theme.brand_color }}",
           no_wrapper=True %}
       {% endblock header %}
 

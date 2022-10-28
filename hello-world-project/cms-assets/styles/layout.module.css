@@ -1,36 +1,24 @@
-@font-face {
-    font-family: LexendDeca;
-    src: url('https://883465289.fs1.hubspotusercontentqa-na1.net/hubfs/883465289/LexendDeca-Regular.ttf');
-  }
-@font-face {
-    font-family: LexendDeca;
-    src: url('https://883465289.fs1.hubspotusercontentqa-na1.net/hubfs/883465289/LexendDeca-Bold.ttf');
-    font-weight: bold;
-}
-
-
 :global(html) {
-    height: 100%;
+  height: 100%;
 }
 
 :global(body) {
-    font-family: LexendDeca;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 :global(.body-wrapper) {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-
 .layout {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

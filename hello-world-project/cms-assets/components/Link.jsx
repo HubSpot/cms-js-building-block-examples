@@ -1,9 +1,5 @@
-
-
 function Link(props) {
-  return (
-    <a href={props.href}>{props.title}</a>
-  )
+  return <a href={props.href}>{props.title}</a>;
 }
 
-export default Link
+export default Link;
