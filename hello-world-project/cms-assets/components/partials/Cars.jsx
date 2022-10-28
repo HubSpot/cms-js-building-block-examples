@@ -57,7 +57,7 @@ const cars = [
 function Cars() {
   return (
     <Layout>
-      <h2>My Teamates Cars</h2>
+      <h2>My Teammates' Cars</h2>
       <div className={styles.cars}>
         {cars.map((car) => {
           return (
