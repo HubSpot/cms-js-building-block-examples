@@ -6,6 +6,10 @@ import {
   TextField,
 } from '@hubspot/cms-components/fields';
 
+/**
+ * Here we are defining module fields that will show up for marketers in the page editor so they can customize the module
+ * We also define default field values
+ */
 export default (
   <ModuleFields>
     <FieldGroup name="default_todo" label="Default Todo">

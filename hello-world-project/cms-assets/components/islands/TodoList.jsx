@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Button from './Button';
+import Button from './Button.jsx';
 import styles from '../../styles/todo.module.css';
 
 let id = 0;
@@ -54,7 +54,7 @@ function TodoItem({ todo, onRemove, onUpdate }) {
   );
 }
 
-export default function TodoList({ initialTodos = [] }) {
+function TodoList({ initialTodos = [] }) {
   const [todoList, setTodoList] = useState(() =>
     initialTodosMapped(initialTodos),
   );
@@ -133,3 +133,5 @@ export default function TodoList({ initialTodos = [] }) {
     </div>
   );
 }
+
+export default TodoList;

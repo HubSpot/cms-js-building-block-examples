@@ -1,5 +1,7 @@
 import layoutStyles from '../styles/layout.module.css';
 
-export default function Layout({ children }) {
+function Layout({ children }) {
   return <div className={layoutStyles.layout}>{children}</div>;
 }
+
+export default Layout;
