@@ -7,7 +7,7 @@ Header.defaultProps = {
   },
 };
 
-export default function Header({ brandColor }) {
+function Header({ brandColor }) {
   const navLinks = [
     {
       href: '/hello-world-home',
@@ -45,3 +45,5 @@ export default function Header({ brandColor }) {
     </header>
   );
 }
+
+export default Header;
