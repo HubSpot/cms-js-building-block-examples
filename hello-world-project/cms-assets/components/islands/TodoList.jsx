@@ -54,7 +54,7 @@ function TodoItem({ todo, onRemove, onUpdate }) {
   );
 }
 
-function TodoList({ initialTodos = [] }) {
+function TodoList({ initialTodos = [], buttonColor }) {
   const [todoList, setTodoList] = useState(() =>
     initialTodosMapped(initialTodos),
   );
@@ -106,7 +106,13 @@ function TodoList({ initialTodos = [] }) {
           onKeyDown={handleTodoKeyDown}
         />
 
-        <Button onClick={handleAddTodoClick} disabled={!todoInput}>
+        <Button
+          style={{
+            backgroundColor: buttonColor.color,
+          }}
+          onClick={handleAddTodoClick}
+          disabled={!todoInput}
+        >
           <svg
             aria-hidden
             xmlns="http://www.w3.org/2000/svg"
