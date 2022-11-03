@@ -1,13 +1,12 @@
 import headerStyles from '../../styles/header.module.css';
 
-Header.defaultProps = {
-  brandColor: {
+function Header({
+  brandColor = {
     opacity: 100,
     color: '#FF7A59',
   },
-};
-
-function Header({ brandColor }) {
+  text = 'Hello from React!',
+}) {
   const navLinks = [
     {
       href: '/hello-world-home',
@@ -25,8 +24,7 @@ function Header({ brandColor }) {
 
   return (
     <header className={headerStyles.header}>
-      <h1>Hello World</h1>
-      <p>The World Sends Greetings!</p>
+      <h1>{text}</h1>
       <nav className={headerStyles.nav}>
         {navLinks.map((navLink) => (
           <a

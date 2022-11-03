@@ -1,17 +1,13 @@
 import { Island } from '@hubspot/cms-components';
 import TodoList from '../../islands/TodoList.jsx?island';
-export { default as fields } from './fields.jsx';
-
 import Layout from '../../Layout.jsx';
 
-export const meta = {
-  label: `Todo List Module`,
-};
-
 /**
- * 'fieldValues' represents the resolved values from the defined module fields (./fields.jsx)
+ * Here we are exporting the 3 requirements of a module: Component, fields, and meta
+ *
+ * 'props' contains the resolved values from the defined module fields (./fields.jsx)
  * This will be the value provided by a marketer in the page editor, or will fallback to the defined default value
- * e.g., fieldValues = {
+ * e.g., props = {
  *   "default_todo": {"text": "Todo Test 1", "completed": false}
  * }
  *
@@ -19,9 +15,10 @@ export const meta = {
  * the `hydrateOn` prop allows customization of hydration, i.e., hydrate on page load, or hydrate when the component first becomes visible
  *
  * The Island component takes on the props of the component it is wrapping
- * Only serializable props are supported
+ * Note: only props that can be serialized are supported
  */
-export const Component = (fieldValues) => {
+export const Component = (props) => {
+  const { default_todo: defaultTodos, button_color: buttonColor } = props;
   return (
     <Layout>
       <Island
@@ -29,8 +26,13 @@ export const Component = (fieldValues) => {
         id="todo-list-island"
         hydrateOn="load"
         // TodoList props:
-        initialTodos={[fieldValues.default_todo]}
+        initialTodos={[defaultTodos]}
+        buttonColor={buttonColor}
       />
     </Layout>
   );
+};
+export { fields } from './fields.jsx';
+export const meta = {
+  label: `Todo List Module`,
 };
