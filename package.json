@@ -14,11 +14,14 @@
     "start": "hs-cms-dev-server hello-world-project/cms-assets",
     "lint:js": "eslint . --ext .js,.jsx",
     "prettier": "prettier . --check",
-    "postinstall": "npm install --prefix ./hello-world-project/cms-assets",
+    "postinstall": "cd ./hello-world-project/cms-assets; $npm_execpath install",
     "watch:hubl": "hs watch hello-world-theme hello-world-theme",
     "upload:hubl": "hs upload hello-world-theme hello-world-theme",
     "deploy": "hs project upload hello-world-project",
-    "test": "npm run test --prefix ./hello-world-project/cms-assets"
+    "test": "cd ./hello-world-project/cms-assets; $npm_execpath run test"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
 }
