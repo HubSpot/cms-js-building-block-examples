@@ -15,8 +15,8 @@
     "lint:js": "eslint . --ext .js,.jsx",
     "prettier": "prettier . --check",
     "postinstall": "npm install --prefix ./hello-world-project/cms-assets",
-    "watch:hubl": "hs watch hello-world-demo hello-world-demo",
-    "upload:hubl": "hs upload hello-world-demo hello-world-demo",
+    "watch:hubl": "hs watch hello-world-theme hello-world-theme",
+    "upload:hubl": "hs upload hello-world-theme hello-world-theme",
     "deploy": "hs project upload hello-world-project",
     "test": "npm run test --prefix ./hello-world-project/cms-assets"
   },
