@@ -1,6 +1,7 @@
 {
   "name": "js-building-blocks-hello-world",
   "description": "JS Building Blocks Hello World",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@hubspot/cli": "^4.0.1",
     "@hubspot/cms-dev-server": "latest",
