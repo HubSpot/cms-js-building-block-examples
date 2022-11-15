@@ -15,6 +15,8 @@
   flex-direction: column;
 }
 
+
+:global(.todo-js-module),
 .layout {
   flex: 1;
   display: flex;
