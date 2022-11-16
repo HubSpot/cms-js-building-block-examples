@@ -7,8 +7,8 @@
 
 {% block body %}
 
-  {% js_module
-    path="@projects/hello-world-project/cms-assets/components/modules/TodoList",
-    no_wrapper=True %}
+  {% js_module "todo_js_module"
+    extra_classes="todo-js-module",
+    path="@projects/hello-world-project/cms-assets/components/modules/TodoList" %}
 
 {% endblock body %}
