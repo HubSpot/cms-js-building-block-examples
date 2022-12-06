@@ -39,7 +39,7 @@ function TodoItem({ todo, onRemove, onUpdate }) {
           todo.completed ? styles.complete : styles.notComplete
         }`}
       >
-        <input type="checkbox" checked={todo.completed} onChange={() => {}} />
+        <input type="checkbox" defaultChecked={todo.completed} />
         {todo.text}
         {todo.dateAdded ? (
           <span className={styles.todoDateAdded}>{todo.dateAdded}</span>
@@ -47,9 +47,9 @@ function TodoItem({ todo, onRemove, onUpdate }) {
           ''
         )}
       </div>
-      <div className={styles.todoRemove} onClick={handleTodoRemoveClick}>
-        -
-      </div>
+      <button className={styles.todoRemove} onClick={handleTodoRemoveClick}>
+        ×
+      </button>
     </li>
   );
 }
