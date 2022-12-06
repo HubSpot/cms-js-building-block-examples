@@ -18,7 +18,11 @@ import Layout from '../../Layout.jsx';
  * Note: only props that can be serialized are supported
  */
 export const Component = (props) => {
-  const { default_todo: defaultTodos, button_color: buttonColor } = props;
+  const {
+    default_todo: defaultTodos,
+    button_color: buttonColor,
+    complete_todo_opacity: completeTodoOpacity,
+  } = props;
   return (
     <Layout>
       <Island
@@ -28,6 +32,7 @@ export const Component = (props) => {
         // TodoList props:
         initialTodos={[defaultTodos]}
         buttonColor={buttonColor}
+        completeTodoOpacity={completeTodoOpacity}
       />
     </Layout>
   );
