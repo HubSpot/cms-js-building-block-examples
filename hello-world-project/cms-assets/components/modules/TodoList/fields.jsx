@@ -5,6 +5,7 @@ import {
   BooleanField,
   TextField,
   ColorField,
+  NumberField,
 } from '@hubspot/cms-components/fields';
 
 /**
@@ -13,7 +14,7 @@ import {
  */
 export const fields = (
   <ModuleFields>
-    <FieldGroup name="default_todo" label="Default Todo">
+    <FieldGroup name="default_todo" label="Default Todo" expanded={false}>
       <TextField
         label="Todo title"
         name="text"
@@ -22,6 +23,19 @@ export const fields = (
       />
       <BooleanField label="Todo Completed" name="completed" default={false} />
     </FieldGroup>
-    <ColorField name="button_color" default={{ color: '#F7761F' }} />
+    <ColorField
+      label="Button color"
+      name="button_color"
+      default={{ color: '#F7761F' }}
+    />
+    <NumberField
+      label="Complete todo opacity"
+      name="complete_todo_opacity"
+      displayWidth="half_width"
+      default={50}
+      min={0}
+      max={100}
+      suffix="%"
+    />
   </ModuleFields>
 );

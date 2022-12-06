@@ -3,6 +3,13 @@ import { useState } from 'react';
 import Button from './Button.jsx';
 import styles from '../../styles/todo.module.css';
 
+// This TodoList component highlights a few different things:
+//  - A component to be used as an Island for client-side interactivity
+//  - Picking up a default or initial value that is server rendered, but in the
+//    browser is merely the initial state value that is changed by interaction
+//  - Examples of various ways to do conditional styling based on incoming props
+//    or module fields (inline comments below)
+
 let id = 0;
 const todoSortByCompleted = (todoA, todoB) => {
   if (todoA.completed && todoB.completed) {
@@ -36,6 +43,8 @@ function TodoItem({ todo, onRemove, onUpdate }) {
       <div
         onClick={handleTodoCompleteClick}
         className={`${styles.todo} ${
+          // Example of using a className to dynamically toggle a dynamic style
+          // (via state, prop, or module field value)
           todo.completed ? styles.complete : styles.notComplete
         }`}
       >
@@ -54,7 +63,7 @@ function TodoItem({ todo, onRemove, onUpdate }) {
   );
 }
 
-function TodoList({ initialTodos = [], buttonColor }) {
+function TodoList({ initialTodos = [], buttonColor, completeTodoOpacity }) {
   const [todoList, setTodoList] = useState(() =>
     initialTodosMapped(initialTodos),
   );
@@ -95,8 +104,16 @@ function TodoList({ initialTodos = [], buttonColor }) {
     }
   };
 
+  // Example of setting a CSS custom property value that is picked up by other CSS
+  // This is a great way to keep more styling logic inside your CSS file and "pass"
+  // a dynamic property or module field value into that CSS file (see
+  // --todo-complete-opacity referenced in todo.module.css)
+  const customCssProperties = {
+    '--todo-complete-opacity': completeTodoOpacity / 100,
+  };
+
   return (
-    <div className={styles.todoListContainer}>
+    <div className={styles.todoListContainer} style={customCssProperties}>
       <div className={styles.toDoForm}>
         <input
           className={styles.todoInput}
@@ -107,9 +124,9 @@ function TodoList({ initialTodos = [], buttonColor }) {
         />
 
         <Button
-          style={{
-            backgroundColor: buttonColor.color,
-          }}
+          // Example of using inline style attribute (with React's style syntax)
+          // to directly set a dynamic style on an element
+          style={{ backgroundColor: buttonColor.color }}
           onClick={handleAddTodoClick}
           disabled={!todoInput}
         >

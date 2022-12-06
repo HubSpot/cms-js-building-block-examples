@@ -119,7 +119,7 @@
 }
 
 .todo.complete {
-  opacity: 50%;
+  opacity: var(--todo-complete-opacity);
   background-color: #dbe4ed;
   border-color: #b6c7d6;
 }
