@@ -21,7 +21,7 @@
     "upload:hubl": "hs upload hello-world-theme hello-world-theme",
     "deploy": "hs project upload hello-world-project",
     "test": "cd hello-world-project && cd cms-assets && yarpm run test"
-  },,
+  },
   "dependencies": {},
   "engines": {
     "node": ">=16.0.0"
