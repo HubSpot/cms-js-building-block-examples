@@ -9,17 +9,18 @@
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.10",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "yarpm": "^1.2.0"
   },
   "scripts": {
     "start": "hs-cms-dev-server hello-world-project/cms-assets",
     "lint:js": "eslint . --ext .js,.jsx",
     "prettier": "prettier . --check",
-    "postinstall": "cd ./hello-world-project/cms-assets; $npm_execpath install",
+    "postinstall": "cd hello-world-project && cd cms-assets && yarpm install",
     "watch:hubl": "hs watch hello-world-theme hello-world-theme",
     "upload:hubl": "hs upload hello-world-theme hello-world-theme",
     "deploy": "hs project upload hello-world-project",
-    "test": "cd ./hello-world-project/cms-assets; $npm_execpath run test"
+    "test": "cd hello-world-project && cd cms-assets && yarpm run test"
   },
   "dependencies": {},
   "engines": {
