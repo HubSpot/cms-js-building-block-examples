@@ -12,7 +12,7 @@
     "yarpm": "^1.2.0"
   },
   "scripts": {
-    "start": "yarn --cwd hello-world-project/cms-assets start",
+    "start": "cd hello-world-project/cms-assets && yarpm start",
     "postinstall": "cd hello-world-project/cms-assets && yarpm install",
     "lint:js": "eslint . --ext .js,.jsx",
     "prettier": "prettier . --check",
