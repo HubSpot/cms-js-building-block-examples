@@ -4,7 +4,6 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@hubspot/cli": "^4.0.1",
-    "@hubspot/cms-dev-server": "latest",
     "@hubspot/prettier-plugin-hubl": "latest",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
@@ -13,10 +12,10 @@
     "yarpm": "^1.2.0"
   },
   "scripts": {
-    "start": "hs-cms-dev-server hello-world-project/cms-assets",
+    "start": "cd hello-world-project/cms-assets && yarpm start",
+    "postinstall": "cd hello-world-project/cms-assets && yarpm install",
     "lint:js": "eslint . --ext .js,.jsx",
     "prettier": "prettier . --check",
-    "postinstall": "cd hello-world-project && cd cms-assets && yarpm install",
     "watch:hubl": "hs watch hello-world-theme hello-world-theme",
     "upload:hubl": "hs upload hello-world-theme hello-world-theme",
     "deploy": "hs project upload hello-world-project",
