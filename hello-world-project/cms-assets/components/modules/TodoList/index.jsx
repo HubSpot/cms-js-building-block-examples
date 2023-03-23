@@ -27,7 +27,6 @@ export const Component = (props) => {
     <Layout>
       <Island
         module={TodoList}
-        id="todo-list-island"
         hydrateOn="load"
         // TodoList props:
         initialTodos={[defaultTodos]}
