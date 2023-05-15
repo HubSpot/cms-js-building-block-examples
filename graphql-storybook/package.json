@@ -1,6 +1,6 @@
 {
-  "name": "js-building-blocks-hello-world",
-  "description": "JS Building Blocks Hello World",
+  "name": "js-building-blocks-graphql-storybook",
+  "description": "JS Building Blocks GrapQL and Storybook",
   "license": "Apache-2.0",
   "devDependencies": {
     "@hubspot/cli": "^4.0.1",

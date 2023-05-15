@@ -1,5 +1,5 @@
 {
-  "name": "gql-storybook-example",
+  "name": "gql-storybook-app",
   "version": "0.1.0",
   "type": "module",
   "dependencies": {
