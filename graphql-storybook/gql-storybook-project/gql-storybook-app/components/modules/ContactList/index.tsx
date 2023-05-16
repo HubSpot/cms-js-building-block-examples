@@ -12,9 +12,13 @@ import {
 } from '@mui/material';
 
 type Contact = {
-  name: string;
-  id: string;
-  completed: boolean;
+  firstname: string;
+  lastname: string;
+  email: string;
+  company: string;
+  _metadata: {
+    id: string;
+  };
 };
 
 type ContactList = [Contact];
