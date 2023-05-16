@@ -1,8 +1,6 @@
 import { Island } from '@hubspot/cms-components';
 
 import ButtonCounterIsland from '../ButtonCounter?island';
-// Note, `?island` is a temp workaround, and `ButtonCounter.island.tsx` will be
-// able to be used by our custom Vite build plugin after a bug is fixed upstream
 
 const IslandsTester = ({
   numIslands = 1,
