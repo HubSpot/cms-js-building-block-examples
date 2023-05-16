@@ -1,4 +1,4 @@
-import { IslandRoot } from '@hubspot/cms-components';
+import { Island } from '@hubspot/cms-components';
 
 import ButtonCounterIsland from '../ButtonCounter?island';
 // Note, `?island` is a temp workaround, and `ButtonCounter.island.tsx` will be
@@ -22,7 +22,7 @@ const IslandsTester = ({
     const islandId = `${islandIdPrefix}island-${i}`;
 
     return (
-      <IslandRoot
+      <Island
         id={islandId}
         key={islandId}
         module={ButtonCounterIsland}

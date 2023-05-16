@@ -1,6 +1,5 @@
 import { useState, CSSProperties } from 'react';
-import { useIsAfterHydrationMount } from '@hubspot/cms-components';
-import { Header } from '@hubspot/cms-components/modules';
+import { useAfterIslandHydration } from '@hubspot/cms-components';
 import {
   button as buttonClass,
   hydrated as hydratedClass,
@@ -23,7 +22,7 @@ type DisabledProps = {
 const ButtonCounter = (props: ButtonCounterProps) => {
   const { defaultCount = 0, style } = props;
   const [count, setCount] = useState(defaultCount);
-  const afterHydration = useIsAfterHydrationMount();
+  const afterHydration = useAfterIslandHydration();
 
   let disabledProps: DisabledProps = { disabled: true };
 
@@ -33,7 +32,7 @@ const ButtonCounter = (props: ButtonCounterProps) => {
 
   return (
     <>
-      <Header headerContent="This is a Button!" headingLevel={3} />
+      <h3>This is a button!</h3>
       <p className={afterHydration ? hydratedClass : ''} style={style}>
         <button
           type="button"
