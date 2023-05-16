@@ -18,8 +18,7 @@
     "prettier": "prettier . --check",
     "watch:hubl": "hs watch hello-world-theme hello-world-theme",
     "upload:hubl": "hs upload hello-world-theme hello-world-theme",
-    "deploy": "hs project upload hello-world-project",
-    "test": "cd hello-world-project && cd hello-world-app && yarpm run test"
+    "deploy": "hs project upload hello-world-project"
   },
   "dependencies": {},
   "engines": {
