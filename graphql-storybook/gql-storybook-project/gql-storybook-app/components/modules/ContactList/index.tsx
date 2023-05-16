@@ -11,7 +11,29 @@ import {
   CardContent,
 } from '@mui/material';
 
-const ContactTable = ({ contacts }) => {
+type Contact = {
+  name: string;
+  id: string;
+  completed: boolean;
+};
+
+type ContactList = [Contact];
+
+type ContactListProps = {
+  contacts: ContactList;
+  dataQueryResult: {
+    data: {
+      CRM: {
+        contact_collection: {
+          items: ContactList;
+        };
+      };
+    };
+  };
+  layout: string;
+};
+
+const ContactTable = ({ contacts }: { contacts: ContactList }) => {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -43,7 +65,7 @@ const ContactTable = ({ contacts }) => {
   );
 };
 
-const ContactCards = ({ contacts }) => {
+const ContactCards = ({ contacts }: { contacts: ContactList }) => {
   return (
     <Grid container spacing={2}>
       {contacts.map((contact) => {
@@ -67,7 +89,7 @@ const ContactCards = ({ contacts }) => {
   );
 };
 
-export const Component = (props) => {
+export const Component = (props: ContactListProps) => {
   const contacts = props.dataQueryResult.data.CRM.contact_collection.items;
   const layout = props.layout || 'Table';
 
