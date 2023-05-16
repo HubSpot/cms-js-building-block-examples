@@ -7,11 +7,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules"
-      }
-    ]
+    "moduleResolution": "node16"
   },
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Recommended"
