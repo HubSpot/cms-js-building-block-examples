@@ -15,7 +15,7 @@ function CSSPropertiesPartial({
       }}
     >
       <h2 style={{ margin: 0, marginBottom: sharedMargin }}>
-        CSSModulesPartial
+        InlineStylesPartial
       </h2>
       <p>
         Muffin cake candy cookie fruitcake wafer gummies macaroon. sesame

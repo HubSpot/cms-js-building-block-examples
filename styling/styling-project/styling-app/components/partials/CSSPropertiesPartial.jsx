@@ -18,7 +18,7 @@ function CSSPropertiesPartial({
         ['--shared-margin']: sharedMargin,
       }}
     >
-      <h2>CSSModulesPartial</h2>
+      <h2>CSSPropertiesPartial</h2>
       <p>
         Muffin cake candy cookie fruitcake wafer gummies macaroon. sesame
         jujubes powder gummies cupcake macaroon brownie apple pie fruitcake.
