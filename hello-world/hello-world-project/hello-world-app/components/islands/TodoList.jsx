@@ -65,7 +65,7 @@ function TodoItem({ todo, onRemove, onUpdate }) {
 
 function TodoList({ initialTodos = [], buttonColor, completeTodoOpacity }) {
   const [todoList, setTodoList] = useState(() =>
-    initialTodosMapped(initialTodos),
+    initialTodosMapped(initialTodos)
   );
   const [todoInput, setTodoInput] = useState('');
 
