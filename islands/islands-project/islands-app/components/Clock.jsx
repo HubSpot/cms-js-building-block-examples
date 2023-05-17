@@ -1,4 +1,3 @@
-// import { useAfterIslandHydration } from '@hubspot/cms-components';
 import { useEffect, useState } from 'react';
 
 export default function Clock({ startTimestamp, enabled = true }) {
