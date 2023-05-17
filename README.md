@@ -10,7 +10,7 @@ JavaScript modules and partials are new building blocks you can use to write Rea
 
 ## Building Block Examples
 
-In this repository is example usage of some of key features of JS Building Blocks. These examples are are best understood alongside our office [documentation](docs).
+In this repository is example usage of some of key features of JS Building Blocks. These examples are are best understood alongside our official [documentation](docs).
 
 ### [Styling](styling)
 
