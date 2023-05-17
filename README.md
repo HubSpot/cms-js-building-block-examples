@@ -26,7 +26,7 @@ The "Hello World" example combines CSS modules for styling, partials, modules an
 
 ### [Graphql + Storybook](graphql-storybook)
 
-GraphQL is the future for querying HubSpot data in your CMS pages. As part of JS Modules, all a developer need to is export a GraphQL query string, and the Module's top level component will then be provided with the query result. Additionally we show here how a Module that uses GraphQL can be developed using our integration with Storybook. This integration will automatically understand the field types of a module and create controls for a Storybook story.
+GraphQL is the future for querying HubSpot data in your CMS pages. As part of JS Modules, a developer can export a GraphQL query string and the Module's root component will then be passed the query result. Additionally we show how a Module that uses GraphQL can be developed using our Storybook integration. This integration will automatically understand the field types of a module and generate controls for a Storybook story.
 
 ### [Todo MVC](todo-mvc)
 
