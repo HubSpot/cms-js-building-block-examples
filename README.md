@@ -14,7 +14,7 @@ In this repository is example usage of some of key features of JS Building Block
 
 ### [Styling](styling)
 
-In this example, we take a look a three different approaches to styling your JS Building Blocks. This is not an exaustive list and there are many ways that styles can be organized and implemented.
+In this example, we take a look a three different approaches to styling JS Building Blocks. This is not an exhaustive list and there are many ways that styles can be organized and implemented.
 
 ### [Islands](islands)
 
