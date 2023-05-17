@@ -1,14 +1,6 @@
 import { useState, CSSProperties } from 'react';
 import { useAfterIslandHydration } from '@hubspot/cms-components';
-import {
-  button as buttonClass,
-  hydrated as hydratedClass,
-  hydrationText as hyrdationTextClass,
-} from './ButtonCounter.module.css';
-
-// Note changing ^ to `import classes from './ButtonCounter.module.css'` does _not_ work right now.
-// It fails with an error around default not being exported, but only in RTP (something with a production
-// build and the too basic `empty-css-imports` plugin in `resolveModulesPlugin.ts`?)
+import classes from './ButtonCounter.module.css';
 
 type ButtonCounterProps = {
   defaultCount: number;
@@ -33,16 +25,16 @@ const ButtonCounter = (props: ButtonCounterProps) => {
   return (
     <>
       <h3>This is a button!</h3>
-      <p className={afterHydration ? hydratedClass : ''} style={style}>
+      <p className={afterHydration ? classes.hydrated : ''} style={style}>
         <button
           type="button"
-          className={buttonClass}
+          className={classes.button}
           onClick={() => setCount((count) => count + 1)}
           {...disabledProps}
         >
           count is: {count}
         </button>
-        <span className={hyrdationTextClass}>hydrated</span>
+        <span className={classes.hydrationText}>hydrated</span>
       </p>
     </>
   );
