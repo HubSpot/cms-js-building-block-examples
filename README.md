@@ -22,7 +22,7 @@ Islands are a key concept for JS Building Blocks in HubSpot. In addition to stit
 
 ### [Hello World](hello-world)
 
-The "Hello World" example combines CSS modules for styling, partials, modules and islands to show a more cohesive yet straighforward example of how various parts of the new Building Blocks work together.
+The "Hello World" example combines CSS modules for styling, partials, modules and islands to show a more cohesive yet straightforward example of how various parts of the new Building Blocks work together.
 
 ### [Graphql + Storybook](graphql-storybook)
 
