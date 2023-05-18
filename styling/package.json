@@ -21,7 +21,6 @@
     "deploy": "hs project upload styling-project",
     "test": "cd styling-project && cd styling-app && yarpm run test"
   },
-  "dependencies": {},
   "engines": {
     "node": ">=16.0.0"
   }
