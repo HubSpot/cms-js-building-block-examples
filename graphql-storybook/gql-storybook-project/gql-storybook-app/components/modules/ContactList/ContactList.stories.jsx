@@ -1,6 +1,6 @@
 import { moduleStory } from '@hubspot/cms-dev-server/storybook';
 
-import { Component, fields } from './index.jsx';
+import { Component, fields } from './index.tsx';
 
 export default {
   title: 'ContactTable',
