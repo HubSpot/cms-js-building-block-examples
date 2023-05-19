@@ -1,0 +1,53 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": ["install-all"],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "graphql-storybook-install": {
+      "name": "cd graphql-storybook; npm install;",
+      "command": "cd graphql-storybook; npm install;"
+    },
+    "hello-world-install": {
+      "name": "cd hello-world; npm install;",
+      "command": "cd hello-world; npm install;"
+    },
+    "islands-install": {
+      "name": "cd islands; npm install;",
+      "command": "cd islands; npm install;"
+    },
+    "styling-install": {
+      "name": "cd styling; npm install;",
+      "command": "cd styling; npm install;"
+    },
+    "todo-mvc-install": {
+      "name": "cd todo-mvc; npm install;",
+      "command": "cd todo-mvc; npm install;"
+    },
+    "graphql-storybook-start": {
+      "name": "cd graphql-storybook; npm start;",
+      "command": "cd graphql-storybook; npm start;"
+    },
+    "hello-world-start": {
+      "name": "cd hello-world; npm start;",
+      "command": "cd hello-world; npm start;"
+    },
+    "islands-start": {
+      "name": "cd islands; npm start;",
+      "command": "cd islands; npm start;"
+    },
+    "styling-start": {
+      "name": "cd styling; npm start;",
+      "command": "cd styling; npm start;"
+    },
+    "todo-mvc-start": {
+      "name": "cd todo-mvc; npm start;",
+      "command": "cd todo-mvc; npm start;"
+    },
+    "install-all": {
+      "name": "Install all examples",
+      "command": "find . -name \"package.json\" -not -path \"*/node_modules/*\" -print0 | xargs -0 -n 1 sh -c 'for arg do cd $(dirname \"$1\"); echo \"\"; echo \"Installing at $(pwd)\"; echo \"\"; npm install; done' _"
+    }
+  }
+}
+
