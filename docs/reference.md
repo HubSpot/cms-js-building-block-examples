@@ -1,4 +1,4 @@
-# JS Rendering Guide
+# API reference
 
 ## Project Structure
 
