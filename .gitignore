@@ -1,0 +1,4 @@
+node_modules/
+hubspot.config.yml
+dist
+package-lock.json
