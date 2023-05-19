@@ -4,7 +4,7 @@ Beta slack channel: [\#beta-js-rendering](https://hubspotdev.slack.com/archives/
 
 ## Welcome!
 
-Thank you for taking the time to explore this new direction for the HubSpot CMS! As always our goal is to solve for our customers so we welcome any and all feedback. During this private beta please chat away in [\#beta-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204). And if you are new to JavaScript or React, please check out the “Learning links” execution in the Appendix below.
+Thank you for taking the time to explore this new direction for the HubSpot CMS! As always our goal is to solve for our customers so we welcome any and all feedback. During this private beta please chat away in [\#beta-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204). After using these getting started steps, use to the [reference guide](./guide.md) to learn more. If you are new to JavaScript or React, please check out the “Learning links” execution in the [appendix](./appendix.md) below.
 
 ## What are the new JS building blocks?
 
