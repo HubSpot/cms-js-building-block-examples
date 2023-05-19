@@ -11,6 +11,11 @@ const DEFAULT_TODOS_IF_NO_FETCH = [
     name: 'Default todo 2',
     completed: true,
   },
+  {
+    id: 'tf-esoteric-nerd-reference', // https://twitter.com/thedungeonrun/status/1508823885948628992
+    name: 'Human kind, be both 🧡🙏',
+    completed: false,
+  }
 ];
 
 export function Component({ todoPlaceholder, dataQueryResult }) {
