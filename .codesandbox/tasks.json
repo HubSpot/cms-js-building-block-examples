@@ -11,24 +11,24 @@
   "tasks": {
     "graphql-storybook-start": {
       "name": "Start graphql-storybook example",
-      "command": "cd graphql-storybook; npm start;"
+      "command": "cd graphql-storybook; VITE_ORIGIN=$(echo \"//$CODESANDBOX_HOST\" | sed 's/\\$PORT/3000/g') npm start;"
     },
     "hello-world-start": {
       "name": "Start hello-world example",
-      "command": "cd hello-world; npm start;"
+      "command": "cd hello-world; VITE_ORIGIN=$(echo \"//$CODESANDBOX_HOST\" | sed 's/\\$PORT/3000/g') npm start;",
+      "runAtStart": true
     },
     "islands-start": {
       "name": "Start islands example",
-      "command": "cd islands; npm start;"
+      "command": "cd islands; VITE_ORIGIN=$(echo \"//$CODESANDBOX_HOST\" | sed 's/\\$PORT/3000/g') npm start;"
     },
     "styling-start": {
       "name": "Start styling example",
-      "command": "cd styling; npm start;",
-      "runAtStart": true
+      "command": "cd styling; VITE_ORIGIN=$(echo \"//$CODESANDBOX_HOST\" | sed 's/\\$PORT/3000/g') npm start;",
     },
     "todo-mvc-start": {
       "name": "Start todo-mvc example",
-      "command": "cd todo-mvc; npm start;"
+      "command": "cd todo-mvc; VITE_ORIGIN=$(echo \"//$CODESANDBOX_HOST\" | sed 's/\\$PORT/3000/g') npm start;"
     },
     "graphql-storybook-install": {
       "name": "Install graphql-storybook",
