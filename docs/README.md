@@ -4,7 +4,9 @@ Beta slack channel: [\#beta-js-rendering](https://hubspotdev.slack.com/archives/
 
 ## Welcome!
 
-Thank you for taking the time to explore this new direction for the HubSpot CMS! As always our goal is to solve for our customers so we welcome any and all feedback. During this private beta please chat away in [\#beta-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204). After using these getting started steps, use to the [API reference](./reference.md) to learn more. If you are new to JavaScript or React, please check out the “Learning links” execution in the [appendix](./appendix.md) below.
+Thank you for taking the time to explore this new direction for the HubSpot CMS! As always our goal is to solve for our customers so we welcome any and all feedback. During this private beta please chat away in [\#beta-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204).
+
+The easiest way to get started is by following the [Hello World example guide](../hello-world/README.md). Once you've acquainted yourself with JS building blocks use the [API reference](./reference.md) to learn more. If you are new to JavaScript or React, please check out the “Learning links” execution in the [appendix](./appendix.md) below.
 
 ## What are the new JS building blocks?
 
@@ -36,79 +38,6 @@ A few things to keep in mind during this beta:
 
 - JS building blocks need to be enabled for your portal(s) before use.
 - We don’t have a specific release timeline to share, though we would like to make JS building blocks generally available in 2023
-- There is a longer list of caveats, known issues, and features to come listed at the end of this document.
-
-## Hello World
-
-We have put together an example CMS JS project over at github.com/HubSpot/cms-js-building-blocks-hello-world as an introduction to our platform to download and explore. In that project there are examples of partials, modules, and islands that will help to illustrate how to make use of these building blocks.
-
-## Environment Setup
-
-To setup your development environment to work with JS rendering, you’ll first need a few things:
-
-- A HubSpot account with CMS Starter, Pro, or Enterprise access
-- [Node.js](https://nodejs.org/en/) - v16.0 or higher and associated version of NPM
-
-## Creating and Deploying a JS Rendered Project
-
-This section will take you through the process of deploying your first JS rendering project on HubSpot.
-
-### 1. Clone the Repo
-
-First, clone the Hello World repository:
-
-```
-git clone git@github.com:HubSpot/cms-js-building-blocks-hello-world.git
-```
-
-This repo has a few significant directories:
-
-- `hello-world-theme/`: Some example HubL templates that refer to JS components elsewhere
-- `hello-world-project/`: The HubSpot project folder
-- `hello-world-project/cms-assets`: A package inside of the project that can contain JS components (a project can contain many different package types, like [CRM apps](https://developers.hubspot.com/docs/platform/create-custom-cards-with-projects), etc)
-
-### 2. Install dependencies
-
-Open your terminal and change into the Hello World repo root folder (`cms-js-building-blocks-hello-world/`) if you are not already there.
-
-Then run `npm install`. This will install all the local development tools you need—like `@hubspot/cli` and `@hubspot/cms-dev-server`—and the dependencies used inside cms-assets/ JS component code.
-
-### 3. Uploading and Deploying on HubSpot
-
-Run `hs init` from the root of the repository to configure it to upload to your HubSpot account using your personal access key. When setting up JavaScript assets for the first time, you will need to deactivate and regenerate your personal access key making sure it includes `CMS Pages`, `Design Manager`, `Developer Projects`, and `GraphQL Data Fetching` permissions. This will create a `hubspot.config.yaml` file that is required for both uploading changes and local development. See the [HubSpot CLI documentation](https://developers.hubspot.com/docs/cms/guides/getting-started-with-local-development?__hstc=75491725.e2098b212e147a7b9be6fd756c0c6815.1649440584659.1667397195793.1667489478959.105&__hssc=75491725.4.1667489478959&__hsfp=1149209764#configure-the-local-development-tools) for more information.
-
-> **Warning**
-> If you are using an existing access key from a previous call to `hs init` or `hs auth`, you will need to deactivate and regenerate the access key after your account has been enabled for JS building blocks.
-
-Next, run `npm run deploy` to upload the Hello World project to your HubSpot account. Once the project is uploaded, built, and deployed, you will be able to add the modules and partials to your HubSpot templates.
-
-From the repository root, run `npm run upload:hubl` to upload the corresponding example HubL files to your account.
-
-At this point, you should be able to create a page from one of the `hello-world-theme` templates and see the output of the JS building blocks included in them in the page preview.
-
-### 4. Developing Locally
-
-Now that you have your first deployment under your belt, let’s try developing locally.
-
-To do this, simply run the dev server with `npm run start` and navigate to a development URL such as http://hslocal.net:3000/partial/Cars. Now when you make edits to the `Cars.jsx` partial, your browser will automatically reload to display your changes.
-
-Also for easier access, you can visit http://hslocal.net:3000 to see an index page that links to the `/partial/<partial filename>` or `/module/<module name>` endpoint for every JS partial and module inside your project.
-
-### 5. Previewing local changes on proxied pages
-
-In addition to direct local previews of JS partials and modules, you can preview your local JS component inside of live HubL-rendered pages. To do that you first need to create a page:
-
-- Go to Control Center
-- Click “Create”, ”Create Landing page”, write a page name, and click “Create page”..
-- Switch your active theme to “JS Building Blocks - Hello World”, and select one of the Hello World templates
-- Give that page a name in the settings tab, then publish that page and preview it.
-
-After that, you can proxy that page locally by:
-
-- Running the local dev server as described above
-- Visit the newly created page in your browser
-- Open the sprocket menu and select Open Local Dev Server:
-- Your local JavaScript source changes will appear immediately in the context of the HubL page
 
 ## Features missing and caveats
 
