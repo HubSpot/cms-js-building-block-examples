@@ -50,9 +50,3 @@ And here is a non-exhaustive list of features that we hope to work toward, but a
 
 - Improving Hot module reloading/React fast refresh
 - Server-side API calls from inside a JS partial or JS module
-
-## Known Issues
-
-### “Modern” Yarn support:
-
-The “Hello World” sample code repository has been tested with and supports the NPM and [“Classic” Yarn](https://classic.yarnpkg.com/lang/en/) package managers. There have been reported issues with [“Modern” Yarn](https://yarnpkg.com/) and “Hello World”. We recommend while working with this sample code that you do not use [“Modern” Yarn](https://yarnpkg.com/).
