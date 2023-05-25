@@ -16,7 +16,11 @@ JavaScript modules and partials are new building blocks you can use to write Rea
 
 ## Building Block Examples
 
-In this repository is example usage of some of key features of JS Building Blocks. These examples are are best understood alongside our official [documentation](docs).
+In this repository is example usage of some of key features of JS Building Blocks. These examples are are best understood alongside our official [documentation](docs). You can quickly get started without any local setup by [opening this repo in Codesandbox.io](https://codesandbox.io/p/sandbox/stoic-pateu-g20chg?file=%2Fcms-js-building-block-examples%2FREADME.md).
+
+<img width="400" alt="Preview of examples in Codesandbox.io interface" src="https://github.com/HubSpot/cms-js-building-block-examples/assets/60455/e8ab456e-39a6-4919-b256-584cd7054cb2">
+
+<br>
 
 ### [Styling](styling)
 
