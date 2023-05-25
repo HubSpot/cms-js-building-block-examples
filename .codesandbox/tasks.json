@@ -1,5 +1,4 @@
 {
-  // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
       "name": "Install all examples",
@@ -7,7 +6,6 @@
     }
   ],
 
-  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
     "graphql-storybook-start": {
       "name": "Start graphql-storybook example",
@@ -24,7 +22,7 @@
     },
     "styling-start": {
       "name": "Start styling example",
-      "command": "cd styling; VITE_ORIGIN=$(echo \"//$CODESANDBOX_HOST\" | sed 's/\\$PORT/3000/g') npm start;",
+      "command": "cd styling; VITE_ORIGIN=$(echo \"//$CODESANDBOX_HOST\" | sed 's/\\$PORT/3000/g') npm start;"
     },
     "todo-mvc-start": {
       "name": "Start todo-mvc example",
