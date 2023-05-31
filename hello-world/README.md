@@ -18,7 +18,7 @@ This section will take you through the process of deploying your first JS render
 First, clone the Hello World repository:
 
 ```
-git clone git@github.com:HubSpot/cms-js-building-blocks-hello-world.git
+git clone https://github.com/HubSpot/cms-js-building-block-examples.git
 ```
 
 This repo has a few significant directories:
