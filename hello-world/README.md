@@ -8,6 +8,7 @@ To setup your development environment to work with JS rendering, you’ll first 
 
 - A HubSpot account with CMS Starter, Pro, or Enterprise access
 - [Node.js](https://nodejs.org/en/) - v16.0 or higher and associated version of NPM
+- A portal with JS Building Blocks enabled. To turn on JS Building Blocks, go to https://app.hubspot.com/design-manager/<YOUR_PORTAL_ID>/settings and opt-in.  
 
 ## Creating and Deploying a JS Rendered Project
 
