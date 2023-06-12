@@ -17,12 +17,12 @@ import Layout from '../../Layout.jsx';
  * The Island component takes on the props of the component it is wrapping
  * Note: only props that can be serialized are supported
  */
-export const Component = (props) => {
+export const Component = ({ fieldValues }) => {
   const {
     default_todo: defaultTodos,
     button_color: buttonColor,
     complete_todo_opacity: completeTodoOpacity,
-  } = props;
+  } = fieldValues;
   return (
     <Layout>
       <Island
