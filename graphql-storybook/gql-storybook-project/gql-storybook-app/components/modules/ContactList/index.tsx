@@ -34,7 +34,9 @@ type ContactListProps = {
       };
     };
   };
-  layout: string;
+  fieldValues: {
+    layout: string;
+  };
 };
 
 const ContactTable = ({ contacts }: { contacts: ContactList }) => {
@@ -95,7 +97,7 @@ const ContactCards = ({ contacts }: { contacts: ContactList }) => {
 
 export const Component = (props: ContactListProps) => {
   const contacts = props.dataQueryResult.data.CRM.contact_collection.items;
-  const layout = props.layout || 'Table';
+  const layout = props.fieldValues.layout || 'Table';
 
   switch (layout) {
     case 'Table':
