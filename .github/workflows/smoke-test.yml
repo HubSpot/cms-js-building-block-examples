@@ -29,20 +29,25 @@ jobs:
         run: |
           curl --no-progress-meter http://localhost:3000/ --output home.txt
           ls -lh
-          wc -l home.txt
+          wc home.txt
           echo "Grepping home.txt"
-          grep '/partial/Cars' home.txt
+          grep -q '/partial/Cars' home.txt
+          echo "-----"
+          cat home.txt
           
       - name: Basic dev server partial test
         run: | 
           curl --no-progress-meter http://localhost:3000/partial/Cars --output Cars.txt 
           echo "Grepping Cars.txt"          
-          grep 'Volkswagen' Cars.txt
+          grep -q 'Volkswagen' Cars.txt
+          echo "-----"
+          cat Cars.txt
           
       - name: Basic dev server home test
         run: |
           curl --no-progress-meter http://localhost:3000/should/fail/does/it/error/action --output should-fail.txt
           echo "Grepping should-fail.txt"
-          grep 'Will not have this' should-fail.txt
-          
+          grep -q 'Will not have this' should-fail.txt
+          echo "-----"
+          cat should-fail.txt
 
