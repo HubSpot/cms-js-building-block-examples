@@ -17,34 +17,20 @@ jobs:
         with:
           node-version: '18'    
 
-      - name: Install and run dev server
+      - name: NPM install
         run: |
-          ls -lh
           npm install
+          
+      - name: Run dev server
+        run: |
           npm run start &
           
       - name: Hit dev server
         run: |
           curl http://localhost:3000/
           curl http://localhost:3000/partial/Cars
+          
+          curl http://localhost:3000/should/fail/does/it/error/action
+          echo ""
           echo "OK, I think?"
 
-
-
-
-# name: smoke-test
-# run-name: ${{ github.actor }} is running a smoke test
-# 
-# on:
-#   workflow_dispatch:
-#   
-# jobs:
-#   win-smoke-test:
-#     runs-on: windows-2019
-#     steps:
-#       - uses: actions/checkout@v3
-#       - uses: actions/setup-node@v3
-#         with:
-#           node-version: '18'
-#       - run: npm install -g bats
-#       - run: bats -v    
