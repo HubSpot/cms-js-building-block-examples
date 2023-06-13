@@ -26,7 +26,7 @@ jobs:
 
       - name: Rename project
         run: |
-          sed -i '' 's/hello-world-project/hello-world-project-os-${{ matrix.os }}-node-${{ matrix.node }}/g' hsproject.json
+          sed -i 's/hello-world-project/hello-world-project-os-${{ matrix.os }}-node-${{ matrix.node }}/g' hsproject.json
           echo ""
           echo "After rename"
           cat hsproject.json
