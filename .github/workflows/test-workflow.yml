@@ -17,4 +17,11 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
     - name: List directory
-      run: dir      
+      run: dir
+    - name: More
+    - run: echo %cd%
+    - run: cd hello-world
+    - run: dir
+    - run: npm ci
+    - run: dir
+    - run: npm run start
