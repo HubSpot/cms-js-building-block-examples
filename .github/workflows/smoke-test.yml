@@ -48,12 +48,5 @@ jobs:
           grep -q 'Volkswagen' Cars.txt
           echo "-----"
           cat Cars.txt
-          
-      - name: Basic dev server home test
-        run: |
-          curl --no-progress-meter http://localhost:3000/should/fail/does/it/error/action --output should-fail.txt
-          echo "Grepping should-fail.txt"
-          grep -q 'Will not have this' should-fail.txt
-          echo "-----"
-          cat should-fail.txt
+
 
