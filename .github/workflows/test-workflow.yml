@@ -18,13 +18,36 @@ jobs:
         shell: bash        
         
     steps:
-    - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
-    - name: List directory
-      run: ls -lh
-    - name: NPM install (ci)
-      run: npm ci
-    - name: More steps 5
-      run: ls -lh
-    - name: More steps 6
-      run: npm run start
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'    
+      - name: Send greeting
+        run: echo "Hello ${{ inputs.name }}"
+      - name: List directory
+        run: ls -lh
+      - name: NPM install (ci)
+        run: npm ci
+      - name: More steps 5
+        run: ls -lh
+      - name: More steps 6
+        run: npm run start
+
+
+
+# name: smoke-test
+# run-name: ${{ github.actor }} is running a smoke test
+# 
+# on:
+#   workflow_dispatch:
+#   
+# jobs:
+#   win-smoke-test:
+#     runs-on: windows-2019
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: '18'
+#       - run: npm install -g bats
+#       - run: bats -v    
