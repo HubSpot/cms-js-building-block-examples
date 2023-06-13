@@ -27,14 +27,14 @@ jobs:
           
       - name: Hit dev server
         run: |
-          curl --no-progress-meter http://localhost:3000/ > home.txt
-          grep '/partial/Cars' < home.txt
+          curl --no-progress-meter http://localhost:3000/ --output home.txt
+          grep '/partial/Cars' home.txt
           
-          curl --no-progress-meter http://localhost:3000/partial/Cars > Cars.txt 
-          grep 'Volkswagen' < Cars.txt
+          curl --no-progress-meter http://localhost:3000/partial/Cars --output Cars.txt 
+          grep 'Volkswagen' Cars.txt
           
-          curl --no-progress-meter http://localhost:3000/should/fail/does/it/error/action > should-fail.txt
-          grep 'Will not have this' < should-fail.txt
+          curl --no-progress-meter http://localhost:3000/should/fail/does/it/error/action --output should-fail.txt
+          grep 'Will not have this' should-fail.txt
           
           echo ""
           echo "OK, I think?"
