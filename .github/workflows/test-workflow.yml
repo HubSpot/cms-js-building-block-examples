@@ -11,7 +11,7 @@ on:
 
 jobs:
   greet:
-    runs-on: windows-2019
+    runs-on: windows-latest
     defaults:
       run:
         working-directory: hello-world
