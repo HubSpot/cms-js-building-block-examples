@@ -1,7 +1,6 @@
-name: Manual test workflow
+name: CMS dev server test
 
-on:
-  workflow_dispatch:
+on: push
 
 jobs:
   dev-server-smoke-test:
