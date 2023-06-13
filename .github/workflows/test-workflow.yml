@@ -12,19 +12,16 @@ on:
 jobs:
   greet:
     runs-on: windows-2019
-
+    defaults:
+      run:
+        working-directory: ./hello-world
+        
     steps:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
     - name: List directory
       run: dir
-    - name: More steps 1
-      run: echo %cd%
-    - name: More steps 2     
-      run: cd hello-world
-    - name: More steps 3
-      run: dir
-    - name: More steps 4
+    - name: NPM install (ci)
       run: npm ci
     - name: More steps 5
       run: dir
