@@ -18,10 +18,15 @@ jobs:
       run: echo "Hello ${{ inputs.name }}"
     - name: List directory
       run: dir
-    - name: More
-    - run: echo %cd%
-    - run: cd hello-world
-    - run: dir
-    - run: npm ci
-    - run: dir
-    - run: npm run start
+    - name: More steps 1
+      run: echo %cd%
+    - name: More steps 2     
+      run: cd hello-world
+    - name: More steps 3
+      run: dir
+    - name: More steps 4
+      run: npm ci
+    - name: More steps 5
+      run: dir
+    - name: More steps 6
+      run: npm run start
