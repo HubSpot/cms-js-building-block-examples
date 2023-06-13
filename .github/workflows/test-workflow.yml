@@ -14,16 +14,17 @@ jobs:
     runs-on: windows-2019
     defaults:
       run:
-        working-directory: ./hello-world
+        working-directory: hello-world
+        shell: bash        
         
     steps:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
     - name: List directory
-      run: dir
+      run: ls -lh
     - name: NPM install (ci)
       run: npm ci
     - name: More steps 5
-      run: dir
+      run: ls -lh
     - name: More steps 6
       run: npm run start
