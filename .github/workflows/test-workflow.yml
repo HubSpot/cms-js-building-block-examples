@@ -2,15 +2,9 @@ name: Manual test workflow
 
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Person to greet'
-        default: 'World'
-        required: true
-        type: string
 
 jobs:
-  greet:
+  windows-smoke-test:
     runs-on: windows-latest
     defaults:
       run:
@@ -22,16 +16,19 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'    
-      - name: Send greeting
-        run: echo "Hello ${{ inputs.name }}"
-      - name: List directory
-        run: ls -lh
-      - name: NPM install (ci)
-        run: npm ci
-      - name: More steps 5
-        run: ls -lh
-      - name: More steps 6
-        run: npm run start
+
+      - name: Install and run dev server
+        run: |
+          ls -lh
+          npm install
+          npm run start &
+          
+      - name: Hit dev server
+        run: |
+          curl http://localhost:3000/
+          curl http://localhost:3000/partial/Cars
+          echo "OK, I think?"
+
 
 
 
