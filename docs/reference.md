@@ -336,7 +336,7 @@ Returns `true` for components rendered live for a deployed project and `false` w
 
 ## Hooks
 
-We provide a number of React hooks to help write components that run on both the server and the browser.
+We provide a number of React hooks from the `@hubspot/cms-components` package to help write components that run on both the server and the browser.
 
 ### `useAfterIslandHydration`
 
@@ -358,7 +358,7 @@ Returns `true` while the component is being rendered on the server and `false` i
 
 ### `usePageUrl`
 
-`( ) => URL` Returns the current page [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL). Works on server and is reactive to changes to the URL on client. This can be useful when components need to react to URL changes, such as query params, while also supporting server rendering.
+`( ) => URL` Returns the current page [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL). Works on server and is reactive to changes to the URL on client. This can be useful when components need to react to URL changes, such as query params, while also supporting server rendering. To programmatically trigger non-navigation URL changes, use `pushHistoryState()` which is identical to `window.history.pushState()` but integrates with `usePageUrl()` to ensure it receives change events.
 
 ### `useSharedIslandState`
 
