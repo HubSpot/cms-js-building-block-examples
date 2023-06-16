@@ -17,14 +17,16 @@ import Layout from '../../Layout.jsx';
  * The Island component takes on the props of the component it is wrapping
  * Note: only props that can be serialized are supported
  */
-export const Component = ({ fieldValues }) => {
+export const Component = ({ fieldValues, hublParameters = {} }) => {
   const {
     default_todo: defaultTodos,
     button_color: buttonColor,
     complete_todo_opacity: completeTodoOpacity,
   } = fieldValues;
+  const { title } = hublParameters;
   return (
     <Layout>
+      <h1>{title || 'Todo'}</h1>
       <Island
         module={TodoList}
         hydrateOn="load"
