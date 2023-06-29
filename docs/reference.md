@@ -209,7 +209,7 @@ Note that the default was used to fill in the value field once it was passed. Th
 Field values are passed as props to the Component export of your module. For example, to use the field structure from the previous example inside of your JS module’s component you can:
 
 ```javascript
-export const Component = ({ fields }) => {
+export const Component = ({ fieldValues }) => {
   return (
     <ul>
       <li>{fields.example_field}</li>
