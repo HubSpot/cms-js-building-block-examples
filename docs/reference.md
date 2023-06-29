@@ -212,8 +212,8 @@ Field values are passed as props to the Component export of your module. For exa
 export const Component = ({ fieldValues }) => {
   return (
     <ul>
-      <li>{fields.example_field}</li>
-      <li>{fields.group_of_fields.child_text_field}</li>
+      <li>{fieldValues.example_field}</li>
+      <li>{fieldValues.group_of_fields.child_text_field}</li>
     </ul>
   );
 };
