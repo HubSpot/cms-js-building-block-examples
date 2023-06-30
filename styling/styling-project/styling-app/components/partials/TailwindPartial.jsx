@@ -25,7 +25,8 @@ const aiArt = [
 
 export default function Example() {
   return (
-    <>
+    // Use .tailwind-wrapper config to give the tailwind classes more precedence
+    <div className="tailwind-wrapper">
       <ul className="divide-y divide-gray-200">
         {aiArt.map((art) => (
           <li key={art.name} className="py-4 flex">
@@ -49,6 +50,6 @@ export default function Example() {
           <BookOpenIcon width={200} />
         </dd>
       </dl>
-    </>
+    </div>
   );
 }
