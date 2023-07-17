@@ -53,6 +53,16 @@ export const meta = {
   label: `Contact With Associations Module`,
 };
 
+/*
+ * This query string includes a comment which creates a GraphQL variable "$email",
+ * which is populated by referencing a HubL variable which is assumed to be
+ * present in the render context. Here is a list of more variables from the
+ * CMS Reference docs https://developers.hubspot.com/docs/cms/hubl/variables.
+ *
+ * There are scenarios in which these predefined variables are undefined,
+ * to account for this the query sets a fallaback. In this case the fallback
+ * is "bh@hubspot.com".
+ */
 export const query = `
 # $email: "{{ contact.email }}"
 query ContactQuery($email: String! = "bh@hubspot.com") {
