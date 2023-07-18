@@ -17,7 +17,7 @@ const ProfileImage = ({ firstName = 'John Doe' }) => {
         alignItems: 'center',
       }}
     >
-      {firstName.slice(0, 1)}
+      {firstName && firstName.slice(0, 1)}
       <div
         style={{
           fontSize: '2rem',
