@@ -186,7 +186,9 @@ export const fields = (
 );
 ```
 
-In the React component for the module fields defined above, props will have the following shape:
+It's important to note that the root component of the `fields` export is `ModuleField`, this is required. Addtionally we are making use of `FieldGroup` which is a special component type that creates a [Field Group](https://developers.hubspot.com/docs/cms/building-blocks/module-theme-fields-overview#field-groups) that includes the nested fields.
+
+In the `FullNameField` React component for the module fields defined above, props will have the following shape:
 
 ```javascript
 {
@@ -203,6 +205,44 @@ In the React component for the module fields defined above, props will have the 
 ```
 
 Note that the default was used to fill in the value field once it was passed. This is because module values are passed from the server, so if someone changes the value of a field in the page editor, the new value will be passed to your module. But in our current case where no page-level field value is set, the server passes the default value to your props.
+
+#### RepeatedFieldGroup
+
+In addition to `ModuleFields` and `FieldGroup`, another special component type from `@hubspot/cms-components/fields` is `RepeatedFieldGroup`. It creates a repeater and is used like so:
+
+```javascript
+export const fields = (
+  <ModuleField>
+    <RepeatedFieldGroup
+        name="default_todos"
+        label="Default Todos"
+        occurrence={{
+          min: 1,
+          max: 500,
+          default: 1,
+        }}
+        default={[
+          {
+            text: 'Todo Test 1a',
+            completed: false
+          },{
+            text: 'Todo Test 2',
+            completed: true
+          },
+        ]}
+      >
+      <TextField
+        label="Todo title"
+        name="text"
+        default="Todo..."
+        required
+      />
+      <BooleanField label="Todo Completed" name="completed" default={false} />
+    </RepeatedFieldGroup>
+  </ModuleField>
+)
+
+```
 
 ### Using Field Values
 
