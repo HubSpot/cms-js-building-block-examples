@@ -1,9 +1,9 @@
 import { StyleRegistry, useStyleRegistry } from 'styled-jsx';
-import { useServerInsertedHtml } from '@hubspot/cms-components';
+import { useInlineHeadAsset } from '@hubspot/cms-components';
 
 function InsertHTML() {
   const registry = useStyleRegistry();
-  useServerInsertedHtml(() => {
+  useInlineHeadAsset(() => {
     // Collect styles generated on the server pass and return them to go in the
     // <head>
 

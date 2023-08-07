@@ -1,5 +1,5 @@
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-import { useServerInsertedHtml } from '@hubspot/cms-components';
+import { useInlineHeadAsset } from '@hubspot/cms-components';
 
 export default function StyledComponentsRegistry({ children }) {
   // On the client, styled-components creates its own stylesheet. We only want
@@ -8,7 +8,7 @@ export default function StyledComponentsRegistry({ children }) {
     ? new ServerStyleSheet()
     : null;
 
-  useServerInsertedHtml(() => {
+  useInlineHeadAsset(() => {
     if (styledComponentsStyleSheet === null) {
       return;
     }
