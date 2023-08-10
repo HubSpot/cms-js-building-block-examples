@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import { styled } from 'styled-components';
 import StyledComponentsRegistry from '../StyledComponentsRegistry'
 import StyledComponentsIsland from '../StyledComponentsIsland';
 import InteractiveStyledComponent from '../InteractiveStyledComponent?island';

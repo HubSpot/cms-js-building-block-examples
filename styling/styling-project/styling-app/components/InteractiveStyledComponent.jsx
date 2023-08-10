@@ -1,5 +1,5 @@
 import { useState, useId } from 'react';
-import styled from 'styled-components/macro';
+import { styled } from 'styled-components';
 
 const StyledButton = styled.button`
   padding: ${props => 10 + props.$count * 10}px;

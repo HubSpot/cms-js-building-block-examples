@@ -455,9 +455,9 @@ See the `TailwindPartial` component and the relevant configuration in the exampl
 
 ### styled-components
 
-You can use [`styled-components`](https://styled-components.com) via a [Babel macro](https://styled-components.com/docs/tooling#babel-macro) in your project by doing the following:
+You can use [`styled-components`](https://styled-components.com) in your project by doing the following:
 
-- Add a `dependency` on `styled-components` and `devDependencies` on `babel-plugin-macros` and `babel-plugin-styled-components` to your `package.json`
+- Add a `dependency` on `styled-components` to your `package.json`
 - Create a registry component using the styled-components [server side rendering](https://styled-components.com/docs/advanced#server-side-rendering) API along with [`useServerInsertedHtml()`](#useserverinsertedhtml) and wrap the components you intend to style in it. The example includes a `StyledComponentsRegistry.jsx` you can use.
 - For each Island usage, you must wrap each subtree in a registry to capture styles when rendering on the server. To make this easier you may use the `Wrapper` prop on the `Island` component to wrap the contents without needing to edit the island components themselves. Note that when using the `Wrapper` prop **you must import the component passed with a `?client` suffix** to make sure it can be bundled for the client. This prop also lets you configure this once by replacing all instances of `<Island />` with a `<StyledIsland />` that looks something like:
 
@@ -470,11 +470,11 @@ export default function StyledIsland(props) {
 }
 ```
 
-- You can now `import styled from 'styled-components/macro';` and use it as you would the main `styled-components` import.
+- You can now `import styled from 'styled-components';` and use it to style your components.
 
 ### styled-jsx
 
-Similar to `styled-components`, [`styled-jsx`](https://github.com/vercel/styled-jsx) can be used with a registry. `styled-jsx` supports a macro pattern, but since the API deviates from the original, the HubSpot platform includes the native Babel plugin so the macro isn't necessary. Steps to use `styled-jsx` are:
+Steps to use `styled-jsx` are:
 
 - Add a dependency on `styled-jsx` to your `package.json`
 - Create a registry component using the [server side rendering](https://github.com/vercel/styled-jsx#server-side-rendering) API and [`useServerInsertedHtml()`](#useserverinsertedhtml). The example includes a `StyledJSXRegistry.jsx` to refer to or use.
@@ -570,7 +570,7 @@ export default function FancierComponent(props) {
 
 ### Other CSS-in-JS libraries
 
-Other CSS-in-JS libraries that provide a server side rendering API and don't depend on a macro-less Babel plugin can be used within HubSpot projects. The same registry pattern described above can be generalized for other libraries to emit CSS to include as part of the server render. The registry will need to be included as a `Wrapper` on any `<Island />` usage as well if there are styles within the island.
+Other CSS-in-JS libraries that provide a server side rendering API and don't depend on a Babel plugin can be used within HubSpot projects. The same registry pattern described above can be generalized for other libraries to emit CSS to include as part of the server render. The registry will need to be included as a `Wrapper` on any `<Island />` usage as well if there are styles within the island.
 
 ## Static Assets
 
