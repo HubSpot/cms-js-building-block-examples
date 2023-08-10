@@ -362,7 +362,7 @@ Returns `true` while the component is being rendered on the server and `false` i
 
 Returns the current page [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL). Works on server and is reactive to changes to the URL on client. This can be useful when components need to react to URL changes, such as query params, while also supporting server rendering. To programmatically trigger non-navigation URL changes, use `pushHistoryState()` which is identical to `window.history.pushState()` but integrates with `usePageUrl()` to ensure it receives change events.
 
-### `useServerInsertedHtml`
+### `useInlineHeadAsset`
 
 `(renderFunc: () => JSX.Element) => void`
 
@@ -458,7 +458,7 @@ See the `TailwindPartial` component and the relevant configuration in the exampl
 You can use [`styled-components`](https://styled-components.com) in your project by doing the following:
 
 - Add a `dependency` on `styled-components` to your `package.json`
-- Create a registry component using the styled-components [server side rendering](https://styled-components.com/docs/advanced#server-side-rendering) API along with [`useServerInsertedHtml()`](#useserverinsertedhtml) and wrap the components you intend to style in it. The example includes a `StyledComponentsRegistry.jsx` you can use.
+- Create a registry component using the styled-components [server side rendering](https://styled-components.com/docs/advanced#server-side-rendering) API along with [`useInlineHeadAsset()`](#useInlineHeadAsset) and wrap the components you intend to style in it. The example includes a `StyledComponentsRegistry.jsx` you can use.
 - For each Island usage, you must wrap each subtree in a registry to capture styles when rendering on the server. To make this easier you may use the `Wrapper` prop on the `Island` component to wrap the contents without needing to edit the island components themselves. Note that when using the `Wrapper` prop **you must import the component passed with a `?client` suffix** to make sure it can be bundled for the client. This prop also lets you configure this once by replacing all instances of `<Island />` with a `<StyledIsland />` that looks something like:
 
 ```javascript
@@ -477,7 +477,7 @@ export default function StyledIsland(props) {
 Steps to use `styled-jsx` are:
 
 - Add a dependency on `styled-jsx` to your `package.json`
-- Create a registry component using the [server side rendering](https://github.com/vercel/styled-jsx#server-side-rendering) API and [`useServerInsertedHtml()`](#useserverinsertedhtml). The example includes a `StyledJSXRegistry.jsx` to refer to or use.
+- Create a registry component using the [server side rendering](https://github.com/vercel/styled-jsx#server-side-rendering) API and [`useInlineHeadAsset()`](#useInlineHeadAsset). The example includes a `StyledJSXRegistry.jsx` to refer to or use.
 - The registry component for `styled-jsx` must also be wrapped on any `Island` usage to prevent hydration mismatches or missing styles on initial load. Note that `styled-jsx`'s implementation depends on `useId()` hooks in a way that can cause mismatches if not properly configured. See the `StyledJSXIsland.jsx` implementation from the example for an easier pattern of replacing all direct `<Island />` usage.
 - You can now use `styled-jsx` to style your components, including ``<style jsx>{` /* CSS here */ `}</style>`` patterns.
 
