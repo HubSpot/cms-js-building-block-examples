@@ -30,7 +30,7 @@ This repo has a few significant directories:
 
 ### 2. Install dependencies
 
-Open your terminal and change into the Hello World repo root folder (`cms-js-building-blocks-hello-world/hello-world`) if you are not already there.
+Open your terminal and change into the Hello World repo root folder (`cms-js-building-block-examples/hello-world`) if you are not already there.
 
 Then run `npm install`. This will install all the local development tools you need—like `@hubspot/cli` and `@hubspot/cms-dev-server`—and the dependencies used inside cms-assets/ JS component code.
 
