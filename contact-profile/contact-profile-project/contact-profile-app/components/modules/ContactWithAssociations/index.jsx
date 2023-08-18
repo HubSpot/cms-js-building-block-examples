@@ -6,6 +6,16 @@ import ProfileName from '../../ProfileName.jsx';
 import Company from '../../Company.jsx';
 import Layout from '../../Layout.jsx';
 
+/**
+ * This component depends on data from a GraphQL query.
+ * The GraphQL query is looking for the "contact" HubL
+ * variable in order to get the email for the query
+ * argument.
+ *
+ * NOTE: In the case of local development, the "contact"
+ * HubL variable will not be present (for now) and so the query
+ * will always rely on the default as written in it.
+ */
 export const Component = (props) => {
   const contact = props.dataQueryResult.data.CRM.contact;
 

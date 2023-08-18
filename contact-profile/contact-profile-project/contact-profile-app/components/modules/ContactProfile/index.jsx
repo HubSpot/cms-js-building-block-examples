@@ -6,6 +6,13 @@ import ProfileImage from '../../ProfileImage.jsx';
 import ProfileName from '../../ProfileName.jsx';
 import Layout from '../../Layout.jsx';
 
+/**
+ * This component depends on data from a being passed from HubL.
+ *
+ * NOTE: In the case of local development (for now), the "contact"
+ * HubL variable will not be present and so the component
+ * will need to use the defaults as written bellow.
+ */
 export const Component = ({ hublParameters = {} }) => {
   const {
     title,
