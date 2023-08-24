@@ -473,6 +473,8 @@ For example, a CMS page with JS rendered components “https://cmssite.com/page"
 
 Or by visiting http://hslocal.net:3000/proxy and pasting in the page you want to proxy.
 
+Similar to how previewing a page from the page editor works, you can force the page to render with the context of a contact by passing an `email` parameter. For example `http://cmssite.com.hslocal.net:3000/page?email=bh@hubspot.com` will cause the contact object to be populated based on the email parameter value.
+
 You may also start the dev server with the `--ssl` option, which enables:
 
 - https://cmssite.com.hslocal.net:3000/page
