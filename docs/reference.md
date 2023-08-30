@@ -89,7 +89,7 @@ Regardless of the path you chose, the file (i.e. either `ExampleModule/index.jsx
 
 - `Component`: A React component to be rendered. It may contain islands
 - `meta`: A JavaScript object, equivalent to the ￼`meta.json`￼ [in CMS modules](https://developers.hubspot.com/docs/cms/building-blocks/modules/configuration?__hstc=75491725.e2098b212e147a7b9be6fd756c0c6815.1649440584659.1667397195793.1667489478959.105&__hssc=75491725.4.1667489478959&__hsfp=1149209764#meta-json)
-- `fields`: A JSX tree using components from `@hubspot/cms-components/fields` to define [module fields](https://docs.google.com/document/d/1SedUwFswfBIxRPDtjlr1LE7sqRSvIcuS9tQXp0f0lKU/edit#heading=h.m2dvp7qc12un)
+- `fields`: A JSX tree using components from `@hubspot/cms-components/fields` to define [module fields](https://docs.google.com/document/d/1SedUwFswfBIxRPDtjlr1LE7sqRSvIcuS9tQXp0f0lKU/edit#heading=h.m2dvp7qc12un) or a traditional [JavaScript fields object](https://developers.hubspot.com/docs/cms/building-blocks/module-theme-fields)
 Note that you may use re-exports, for example:
 
 ```
@@ -118,11 +118,13 @@ export { meta } from './ExampleModuleMeta.js;
 
 ### Module Fields
 
-Fields are expressed as a JSX tree using field components from `@hubspot/cms-components/fields` . These are the same [module fields](https://developers.hubspot.com/docs/cms/building-blocks/modules?__hstc=75491725.e2098b212e147a7b9be6fd756c0c6815.1649440584659.1667397195793.1667489478959.105&__hssc=75491725.4.1667489478959&__hsfp=1149209764#fields-json) that a developer has access to today. They also include TypeScript definitions, so developers can benefit from autocomplete and validation when defining fields. [Here](/field-types/modules.md) are the TypeDocs of all the exported Field Types.
+Fields can be expressed as a JSX tree using field components from `@hubspot/cms-components/fields` . These are the same [module fields](https://developers.hubspot.com/docs/cms/building-blocks/modules?__hstc=75491725.e2098b212e147a7b9be6fd756c0c6815.1649440584659.1667397195793.1667489478959.105&__hssc=75491725.4.1667489478959&__hsfp=1149209764#fields-json) that a developer has access to today. They also include TypeScript definitions, so developers can benefit from autocomplete and validation when defining fields. [Here](/field-types/modules.md) are the TypeDocs of all the exported Field Types.
 
-### Writing Fields.jsx files
+You may still express field definitions as an array of JavaScript objects identical to the traditional [JSON structure](https://developers.hubspot.com/docs/cms/building-blocks/module-theme-fields) within a HubL module, exporting in the same way as `fields`.
 
-Instead of JSON, JS module fields are written using JSX. We believe the JSX field syntax is easier to read than JSON fields. It also allows you to dynamically generate fields, share field logic between modules, and create custom abstractions around field definitions. For example, here is a `FullNameField` custom field component that abstracts out a group of 2 or 3 text fields:
+### Building fields with JSX
+
+As an alternative to JSON, JS module fields are written using JSX. We believe the JSX field syntax is easier to read than JSON fields. It also allows you to dynamically generate fields, share field logic between modules, and create custom abstractions around field definitions. For example, here is a `FullNameField` custom field component that abstracts out a group of 2 or 3 text fields:
 
 ```javascript
 import {
@@ -186,7 +188,7 @@ export const fields = (
 );
 ```
 
-It's important to note that the root component of the `fields` export is `ModuleField`, this is required. Addtionally we are making use of `FieldGroup` which is a special component type that creates a [Field Group](https://developers.hubspot.com/docs/cms/building-blocks/module-theme-fields-overview#field-groups) that includes the nested fields.
+It's important to note that the root component of the `fields` export is required to be `ModuleField`. Addtionally we are making use of `FieldGroup` which is a component type that creates a [Field Group](https://developers.hubspot.com/docs/cms/building-blocks/module-theme-fields-overview#field-groups) that includes the nested fields.
 
 In the `FullNameField` React component for the module fields defined above, props will have the following shape:
 
@@ -374,6 +376,12 @@ Returns the the current account ID (“Hub ID” or “portal ID”) for the pag
 
 Returns `true` for components rendered live for a deployed project and `false` when rendering in the dev server.
 
+### `getSecret`
+
+`(secretName: string) => string`
+
+Returns a value for a given secret key. The secret must be defined using `hs secrets` in the CLI and the key must be included in a `secrets` array in your `cms-assets.json` configuration. When working  To prevent accidental leaking of secrets, `getSecret()` will only successfully run on the server and not within an island. If a secret value isn't sensitive and you need to access it in island components, you may call `getSecret()` outside the island and pass the value in as a prop.
+
 ## Hooks
 
 We provide a number of React hooks from the `@hubspot/cms-components` package to help write components that run on both the server and the browser.
@@ -477,6 +485,14 @@ You may also start the dev server with the `--ssl` option, which enables:
 
 - https://cmssite.com.hslocal.net:3000/page
 - https://cmssite.com.localhost:3000/page
+
+### Storybook
+
+`cms-dev-server` includes a [Storybook](https://storybook.js.org/) integration. Pass a `--storybook` option when starting the server to start a Storybook instance alongside the built-in dev server. You may then add `.stories.jsx` files alongside your components to build stories for testing or development. At the root http://hslocal.net:3000 page there should be a link to the Storybook UI for your project.
+
+To make building stories for HubSpot modules easier, `cms-dev-server` provides helpers to auto-generate `argTypes` based on module fields. See the [GraphQL and Storybook](/graphql-storybook/gql-storybook-project/gql-storybook-app/) example project for usage of `moduleStory()`.
+
+Storybook is built with client components in mind, so components that cross island boundaries can have unexpected lifecycle behavior when rendered in a story. Because server-only components never make it to the browser, they cannot be hot reloaded and a full re-render is necessary to update the server response. To fully emulate hybrid rendering in Storybook at the cost of hot module reloading, you may use `moduleStoryWithIsland()` in your story in place of `moduleStory()`.
 
 ## Styling
 
