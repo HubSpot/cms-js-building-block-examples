@@ -21,6 +21,10 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+defaults:
+  run:
+    working-directory: docs
+
 jobs:
   # Build job
   build:
@@ -34,14 +38,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: npm # or pnpm / yarn
+          cache: yarn # or pnpm / yarn
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Install dependencies
-        run: yarn --cwd docs # or pnpm install / yarn install / bun install
+        run: yarn # or pnpm install / yarn install / bun install
       - name: Build with VitePress
         run: |
-          yarn --cwd docs docs:build
+          yarn docs docs:build
           touch docs/.vitepress/dist/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
