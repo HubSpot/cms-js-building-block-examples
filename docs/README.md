@@ -46,6 +46,7 @@ Note, this beta is early and we are actively working on many things. Here is a l
 - More performance optimizations
 - Support for passing template-level overrides to the module tag via HubL params
 - Support for contact variable during local proxy
+- Support for importing JS Modules into JS Partials
 
 And here is a non-exhaustive list of features that we hope to work toward, but are not guaranteed for our v1 release:
 
