@@ -15,6 +15,7 @@
 - [Third-party dependencies](#third-party-dependencies)
 - [Prerendering](#prerendering)
 - [Testing](#testing)
+- [Data Fetching](#data-fetching)
 
 ## Project Structure
 
@@ -38,6 +39,8 @@ project-folder/
 A `hsproject.json` file must be inside the root of your project folder in order for `hs project upload` to recognize your project. A `cms-assets.json` file must be inside of your JavaScript asset package subfolder so that the project build can recognize and correctly build your JS components.
 
 This JS building blocks beta introduces the “CMS assets” project component alongside private apps, CRM extensions, and serverless functions. To learn more about HubSpot projects, you can check out the [projects beta documentation](https://developers.hubspot.com/docs/platform/build-and-deploy-using-hubspot-projects).
+
+The examples in this repo have both a "CMS Assets" project component and a "HubL Theme" within them. This is done to illustrate one way a developer might organize code. That said a "HubL Theme" and a "CMS Asset Project Component" are two different things in HubSpot and currently there nothing that couples them. We have a `package.json`, `.eslintrc.js`, `prettierrc` at the same level as the "HubL Theme" and "CMS Assets Project Component" as a convenience. We leverage that structure to have helpful scripts in the examples' `package.json`.
 
 ## JS Partials
 
@@ -261,7 +264,7 @@ export const Component = ({ fieldValues }) => {
 
 ### GraphQL
 
-Like in HubL modules, you can bind a GraphQL data query to a JS module. Adding a named `query` export to a module will provide the query result to render in the component props. and receive the query result in the component props to render using a named `query` export. You can import and re-export a `.graphql` query file or a JavaScript expression that evaluates to a GraphQL query (e.g. with [`gql-query-builder`](https://www.npmjs.com/package/gql-query-builder)). The result will be available via a `dataQueryResult` prop in the module component.
+Like in HubL modules, you can bind a GraphQL data query to a JS module. Adding a named `query` export to a module will provide the query result to render in the component props as `dataQueryResult`. You can import and re-export a `.graphql` query file or a JavaScript expression that evaluates to a GraphQL query (e.g. with [`gql-query-builder`](https://www.npmjs.com/package/gql-query-builder)). The result will be available via a `dataQueryResult` prop in the module component.
 
 ```javascript
 // index.js
@@ -280,6 +283,29 @@ export const fields = ModuleFields;
 
 export const query = myQuery;
 ```
+
+And accessing the data in `ModuleComponent`:
+
+```jsx
+//ModuleComponent.jsx
+
+export default function ModuleComponent(props) {
+  return (
+    <div>
+    <span>
+      {props.dataQueryResult.data.CRM.contact_collection.items[0].firstname}
+    </span>
+    <span>
+      {props.dataQueryResult.data.CRM.contact_collection.items[0].lastname}
+    </span>
+    </div>
+  )
+}
+```
+
+The GraphQL HubSpot integration currently supports querying data from HubDB and Custom Objects. To explore your portal's GraphQL data schema and for help with writing queries check out our GraphiQL implementation within HubSpot at `app.hubspot.com/graphiql/[portalId]`.
+
+Using GraphQL in this way will connect any module and subsequent down stream pages to updates to the query and upstream data. This is has implications for prerendering in that updates to data sources referenced from the query will cause the page to re-prerender.
 
 ## Islands
 
@@ -663,3 +689,53 @@ When writing a test file that uses React Testing Library to render components or
 
 This enables React Testing Library’s [`render`](https://testing-library.com/docs/react-testing-library/api/#render) function to work.
 
+## Data Fetching
+
+Getting content and data into your JS Modules or JS Partials can take many forms as the sources are varied and nuanced.
+
+### HubSpot Content - Server Side
+
+In an ideal world the HubSpot GraphQL integration would be the go to for getting all of your HubSpot content into the JS Building Blocks. Currently however, GraphQL only supports querying HubDB and Custom Objects - refer to the [GraphQL](#graphql) documentation above. There are some key advantages to using the GraphQL integration with JS Building Blocks
+
+- Co-located Query and Component
+- One single Query for needed associations e.g. contact->company
+- Tight coupling with prerendering rules e.g. updates to the query or relevant data will cause a re-prerender of any downstream connected page.
+
+That said there are other kinds of HubSpot data you might want access to within your JS Building Blocks. The current way to accomplish this by passing that information from a HubL template to a JS Building Blocks via the `js_partial` and `module` HubL tags. For example:
+
+```handlebars
+{% module "contact_profile"
+    path="@projects/contact-profile-project/contact-profile-app/components/modules/ContactProfile",
+    firstName="{{contact.firstname}}",
+    lastName="{{contact.lastname}}",
+    email="{{contact.email}}" %}
+```
+
+And then on the React side:
+
+```jsx
+// contact-profile-project/contact-profile-app/components/modules/ContactProfile/index.jsx
+export const Component = (props) => {
+  return (
+    <div>
+      <span>{props.hublParameters.firstName}</span>
+      <span>{props.hublParameters.lastName}</span>
+      <span>{props.hublParameters.email}</span>
+    </div>
+  )
+}
+```
+
+Whether you are passing data via the HubL tags or querying via GraphQL these solutions account only for reading data, not for creating or updating data in your HubSpot portal. The JS Building Blocks today don't offer any new avenues for manipulating your HubSpot Data.
+
+### HubSpot Content - Client Side
+
+As is the case today, you can make use of public APIs to fetch your HubSpot data from the browser. While the JS Building Blocks don't offer any HubSpot specific tools for data fetching on the client, we think the introduction of [Islands](#islands) will allow for more optimized and ergonomic client side data fetching. Relative to updating your HubSpot data - the recommended path would still be to implement a [Serverless Function](https://developers.hubspot.com/docs/cms/data/serverless-functions) that is responsible for securely making calls to HubSpot APIs. The serverless function would then expose and endpoint that a developer could makes requests to from the client.
+
+### External Content - Server Side
+
+While there is no pathway for this currently, our goal is to open up a pathway for developers to do async tasks dynamically at render time. This would allow for making server-side API requests to arbitrary 3rd party services. We do not currently have a timeline for when this will be available. The advantage to server side data fetching is that a developer can make requests that require secrets or tokens safely, in addition to the performance benefit of server rendered dynamic content.
+
+### External Content - Client Side
+
+Similar to the client side HubSpot Content scenario there is no real "change" in in terms of what is possible for fetching data on the client.
