@@ -67,7 +67,7 @@ A JS module is just like a [traditional HubL module](https://developers.hubspot.
 
 ### Directory Structure Requirements
 
-A JS Module file can live at either of the following paths, using the directory or file name as the module name:
+JS Modules and JS Partials can live at either of the following paths, using the directory or file name as the module/partial name:
 
 `/components/modules/ExampleModule/index.js`
 
@@ -88,7 +88,10 @@ js-package/
         └── ExampleModule.jsx
 ```
 
-Regardless of the path you chose, the file (i.e. either `ExampleModule/index.jsx` or `ExampleModule.jsx`) must contain the following named exports:
+Regardless of the path you chose, JS partials (i.e. either `ExamplePartial/index.jsx` or `ExamplePartial.jsx`) must export your component as the default export.
+
+
+JS Modules (i.e. either `ExampleModule/index.jsx` or `ExampleModule.jsx`) must contain the following named exports:
 
 - `Component`: A React component to be rendered. It may contain islands
 - `meta`: A JavaScript object, equivalent to the ￼`meta.json`￼ [in CMS modules](https://developers.hubspot.com/docs/cms/building-blocks/modules/configuration?__hstc=75491725.e2098b212e147a7b9be6fd756c0c6815.1649440584659.1667397195793.1667489478959.105&__hssc=75491725.4.1667489478959&__hsfp=1149209764#meta-json)
