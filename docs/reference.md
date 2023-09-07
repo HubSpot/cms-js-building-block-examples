@@ -70,6 +70,7 @@ A JS module is just like a [traditional HubL module](https://developers.hubspot.
 JS Modules and JS Partials can live at either of the following paths, using the directory or file name as the module/partial name:
 
 `/components/modules/ExampleModule/index.js`
+`/components/partials/ExamplePartial/index.js`
 
 ```
 js-package/
@@ -77,18 +78,26 @@ js-package/
     └── modules/
         └── ExampleModule/
             └── index.jsx
+    └── partials/
+        └── ExamplePartial/
+          └── index.jsx
 ```
 
+and/or:
+
 `/components/modules/ExampleModule.jsx`
+`/components/partials/ExamplePartial.jsx`
 
 ```
 js-package/
 └── components/
     └── modules/
         └── ExampleModule.jsx
+    └── partials/
+        └── ExamplePartial.jsx
 ```
 
-Regardless of the path you chose, JS partials (i.e. either `ExamplePartial/index.jsx` or `ExamplePartial.jsx`) must export your component as the default export.
+Regardless of the path you chose, JS partials (i.e. either `ExamplePartial/index.jsx` or `ExamplePartial.jsx`) must export your component as a default export.
 
 
 JS Modules (i.e. either `ExampleModule/index.jsx` or `ExampleModule.jsx`) must contain the following named exports:
