@@ -5,6 +5,7 @@ import fieldTypesSidebar from '../field-types/typedoc-sidebar.json';
 export default defineConfig({
   title: 'HubSpot - JS Building Blocks',
   description: 'Documentation for HubSpot CMS JS Building Blocks',
+  base: '/cms-js-building-block-examples/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
