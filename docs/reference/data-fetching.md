@@ -8,9 +8,9 @@ In an ideal world the HubSpot GraphQL integration would be the go to for getting
 
 - Co-located Query and Component
 - One single Query for needed associations e.g. contact->company
-- Tight coupling with prerendering rules e.g. updates to the query or relevant data will cause a re-prerender of any downstream connected page.
+- Tight coupling with prerendering: updates to the query or relevant data will update any pages containing the query
 
-That said there are other kinds of HubSpot data you might want access to within your JS Building Blocks. The current way to accomplish this by passing that information from a HubL template to a JS Building Blocks via the `js_partial` and `module` HubL tags. For example:
+That said there are other kinds of HubSpot data you might want access to within your JS Building Blocks. The best way to accomplish this today is by passing that information from a HubL template to a JS Building Blocks via the `js_partial` and `module` HubL tags. For example:
 
 ```handlebars
 {% module "contact_profile"
@@ -35,15 +35,15 @@ export const Component = (props) => {
 }
 ```
 
-Whether you are passing data via the HubL tags or querying via GraphQL these solutions account only for reading data, not for creating or updating data in your HubSpot portal. The JS Building Blocks today don't offer any new avenues for manipulating your HubSpot Data.
+Whether you are passing data via the HubL tags or querying via GraphQL these solutions account only for reading data, not for creating or updating data in your HubSpot portal. JS Building Blocks today don't offer any new avenues for manipulating your HubSpot Data.
 
 ### HubSpot Content - Client Side
 
-As is the case today, you can make use of public APIs to fetch your HubSpot data from the browser. While the JS Building Blocks don't offer any HubSpot specific tools for data fetching on the client, we think the introduction of [Islands](./islands) will allow for more optimized and ergonomic client side data fetching. Relative to updating your HubSpot data - the recommended path would still be to implement a [Serverless Function](https://developers.hubspot.com/docs/cms/data/serverless-functions) that is responsible for securely making calls to HubSpot APIs. The serverless function would then expose and endpoint that a developer could makes requests to from the client.
+As was the case without JS Building Blocks, you can make use of public APIs to fetch your HubSpot data from the browser. While JS Building Blocks don't offer any HubSpot specific tools for data fetching on the client, we think the introduction of [Islands](#islands) will allow for more optimized and ergonomic client side data fetching. Relative to updating your HubSpot data - the recommended path would still be to implement a [Serverless Function](https://developers.hubspot.com/docs/cms/data/serverless-functions) that is responsible for securely making calls to HubSpot APIs. The serverless function would then expose an endpoint to respond to requests to from the client.
 
 ### External Content - Server Side
 
-While there is no pathway for this currently, our goal is to open up a pathway for developers to do async tasks dynamically at render time. This would allow for making server-side API requests to arbitrary 3rd party services. We do not currently have a timeline for when this will be available. The advantage to server side data fetching is that a developer can make requests that require secrets or tokens safely, in addition to the performance benefit of server rendered dynamic content.
+While there is no pathway for this currently, our goal is to open up a pathway for developers to make asynchronous requests dynamically at render time, including server-side API requests to third-party services. In addition to potential performance benefits, with server-side data fetching a developer can make requests that require secrets or authentication safely. We do not currently have a timeline for when this will be available.
 
 ### External Content - Client Side
 

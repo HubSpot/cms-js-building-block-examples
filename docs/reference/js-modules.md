@@ -248,6 +248,6 @@ export default function ModuleComponent(props) {
 }
 ```
 
-The GraphQL HubSpot integration currently supports querying data from HubDB and Custom Objects. To explore your portal's GraphQL data schema and for help with writing queries check out our GraphiQL implementation within HubSpot at `app.hubspot.com/graphiql/[portalId]`.
+The GraphQL HubSpot integration currently supports querying data from HubDB and Custom Objects. To explore your portal's GraphQL data schema and for help with writing queries check out our [GraphiQL implementation](http://app.hubspot.com/l/graphiql)
 
 Using GraphQL in this way will connect any module and subsequent down stream pages to updates to the query and upstream data. This is has implications for prerendering in that updates to data sources referenced from the query will cause the page to re-prerender.
