@@ -1,3 +1,9 @@
+---
+next:
+  text: 'API Reference'
+  link: 'reference/project-structure'
+---
+
 Beta slack channel: [\#beta-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204)
 
 # Introduction
@@ -6,7 +12,7 @@ Beta slack channel: [\#beta-js-rendering](https://hubspotdev.slack.com/archives/
 
 Thank you for taking the time to explore this new direction for the HubSpot CMS! As always our goal is to solve for our customers so we welcome any and all feedback. During this private beta please chat away in [\#beta-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204).
 
-The easiest way to get started is by following the [Hello World example guide](../hello-world/README.md). Once you've acquainted yourself with JS building blocks use the [API reference](./reference.md) to learn more. If you are new to JavaScript or React, please check out the “Learning links” execution in the [appendix](./appendix.md) below.
+The easiest way to get started is by following the [Hello World example guide](https://github.com/HubSpot/cms-js-building-block-examples/tree/main/hello-world). Once you've acquainted yourself with JS building blocks use the [API reference](/reference/project-structure) to learn more. If you are new to JavaScript or React, please check out the “Learning links” execution in the [appendix](/appendix) below.
 
 ## What are the new JS building blocks?
 
