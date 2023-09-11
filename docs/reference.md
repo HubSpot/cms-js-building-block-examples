@@ -38,9 +38,9 @@ project-folder/
 
 A `hsproject.json` file must be inside the root of your project folder in order for `hs project upload` to recognize your project. A `cms-assets.json` file must be inside of your JavaScript asset package subfolder so that the project build can recognize and correctly build your JS components.
 
-This JS building blocks beta introduces the “CMS assets” project component alongside private apps, CRM extensions, and serverless functions. To learn more about HubSpot projects, you can check out the [projects beta documentation](https://developers.hubspot.com/docs/platform/build-and-deploy-using-hubspot-projects).
+This JS building blocks beta introduces the “CMS assets” project component alongside private apps, CRM extensions, and serverless functions. To learn more about HubSpot projects, you can check out the [projects beta documentation](https://developers.hubspot.com/docs/platform/build-and-deploy-using-hubspot-projects). *Note:* The linked documentation notes that "Create a project (BETA)" is available for "Sales Hub" and "Service Hub" enterprise. JS Building Blocks within the CMS is available for all tiers and therefore so is use of the Projects system to support them.
 
-The examples in this repo have both a "CMS Assets" project component and a "HubL Theme" within them. This is done to illustrate one way a developer might organize code. That said a "HubL Theme" and a "CMS Asset Project Component" are two different things in HubSpot and currently there nothing that couples them. We have a `package.json`, `.eslintrc.js`, `prettierrc` at the same level as the "HubL Theme" and "CMS Assets Project Component" as a convenience. We leverage that structure to have helpful scripts in the examples' `package.json`.
+The examples in this repo have both a "CMS Assets" project component and a "HubL Theme" within them. This illustrates one way a developer might organize code, but a "HubL Theme" and a "CMS Asset Project Component" are currently two decoupled concepts in HubSpot. The top-level configuration in each example is added for convenience to get started, especially the scripts in the `package.json`.
 
 ## JS Partials
 
@@ -303,7 +303,7 @@ export default function ModuleComponent(props) {
 }
 ```
 
-The GraphQL HubSpot integration currently supports querying data from HubDB and Custom Objects. To explore your portal's GraphQL data schema and for help with writing queries check out our GraphiQL implementation within HubSpot at `app.hubspot.com/graphiql/[portalId]`.
+The GraphQL HubSpot integration currently supports querying data from HubDB and Custom Objects. To explore your portal's GraphQL data schema and for help with writing queries check out our [GraphiQL implementation](http://app.hubspot.com/l/graphiql)
 
 Using GraphQL in this way will connect any module and subsequent down stream pages to updates to the query and upstream data. This is has implications for prerendering in that updates to data sources referenced from the query will cause the page to re-prerender.
 
@@ -699,9 +699,9 @@ In an ideal world the HubSpot GraphQL integration would be the go to for getting
 
 - Co-located Query and Component
 - One single Query for needed associations e.g. contact->company
-- Tight coupling with prerendering rules e.g. updates to the query or relevant data will cause a re-prerender of any downstream connected page.
+- Tight coupling with prerendering: updates to the query or relevant data will update any pages containing the query
 
-That said there are other kinds of HubSpot data you might want access to within your JS Building Blocks. The current way to accomplish this by passing that information from a HubL template to a JS Building Blocks via the `js_partial` and `module` HubL tags. For example:
+That said there are other kinds of HubSpot data you might want access to within your JS Building Blocks. The best way to accomplish this today is by passing that information from a HubL template to a JS Building Blocks via the `js_partial` and `module` HubL tags. For example:
 
 ```handlebars
 {% module "contact_profile"
@@ -726,15 +726,15 @@ export const Component = (props) => {
 }
 ```
 
-Whether you are passing data via the HubL tags or querying via GraphQL these solutions account only for reading data, not for creating or updating data in your HubSpot portal. The JS Building Blocks today don't offer any new avenues for manipulating your HubSpot Data.
+Whether you are passing data via the HubL tags or querying via GraphQL these solutions account only for reading data, not for creating or updating data in your HubSpot portal. JS Building Blocks today don't offer any new avenues for manipulating your HubSpot Data.
 
 ### HubSpot Content - Client Side
 
-As is the case today, you can make use of public APIs to fetch your HubSpot data from the browser. While the JS Building Blocks don't offer any HubSpot specific tools for data fetching on the client, we think the introduction of [Islands](#islands) will allow for more optimized and ergonomic client side data fetching. Relative to updating your HubSpot data - the recommended path would still be to implement a [Serverless Function](https://developers.hubspot.com/docs/cms/data/serverless-functions) that is responsible for securely making calls to HubSpot APIs. The serverless function would then expose and endpoint that a developer could makes requests to from the client.
+As was the case without JS Building Blocks, you can make use of public APIs to fetch your HubSpot data from the browser. While JS Building Blocks don't offer any HubSpot specific tools for data fetching on the client, we think the introduction of [Islands](#islands) will allow for more optimized and ergonomic client side data fetching. Relative to updating your HubSpot data - the recommended path would still be to implement a [Serverless Function](https://developers.hubspot.com/docs/cms/data/serverless-functions) that is responsible for securely making calls to HubSpot APIs. The serverless function would then expose an endpoint to respond to requests to from the client.
 
 ### External Content - Server Side
 
-While there is no pathway for this currently, our goal is to open up a pathway for developers to do async tasks dynamically at render time. This would allow for making server-side API requests to arbitrary 3rd party services. We do not currently have a timeline for when this will be available. The advantage to server side data fetching is that a developer can make requests that require secrets or tokens safely, in addition to the performance benefit of server rendered dynamic content.
+While there is no pathway for this currently, our goal is to open up a pathway for developers to make asynchronous requests dynamically at render time, including server-side API requests to third-party services. In addition to potential performance benefits, with server-side data fetching a developer can make requests that require secrets or authentication safely. We do not currently have a timeline for when this will be available.
 
 ### External Content - Client Side
 
