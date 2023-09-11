@@ -1,3 +1,9 @@
+---
+next:
+  text: 'API Reference'
+  link: 'reference/project-structure'
+---
+
 Beta slack channel: [\#beta-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204)
 
 # Introduction
@@ -52,7 +58,3 @@ And here is a non-exhaustive list of features that we hope to work toward, but a
 
 - Improving Hot module reloading/React fast refresh
 - Server-side API calls from inside a JS partial or JS module
-
----
-layout: page
----
