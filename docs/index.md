@@ -44,7 +44,7 @@ A few things to keep in mind during this beta:
 
 - JS Building Blocks need to be enabled for your portal(s) before use.
 - We don’t have a specific release timeline to share, though we would like to make JS Building Blocks generally available in 2023
-- JS Building Blocks are available for all tiers of CMS Hub including free.
+- JS Building Blocks are scoped for all tiers of CMS Hub including free.
 
 ## Features missing and caveats
 
