@@ -10,7 +10,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Getting Started', link: '/getting-started' },
+      {
+        text: 'Getting Started',
+        link: 'https://github.com/HubSpot/cms-js-building-block-examples/tree/main/hello-world',
+      },
       { text: 'API Reference', link: '/reference/project-structure' },
       { text: 'Appendix', link: '/appendix' },
     ],
