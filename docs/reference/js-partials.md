@@ -15,7 +15,7 @@ Any parameters passed to `js_partial` alongside the `path` will be available wit
 
 A JS Partial file can live at either of the following paths, using the directory or file name as the partial name:
 
-`/components/modules/ExamplePartial/index.js`
+`/components/partials/ExamplePartial/index.js`
 
 ```
 js-package/
@@ -25,7 +25,7 @@ js-package/
             └── index.jsx
 ```
 
-`/components/modules/ExamplePartial.jsx`
+`/components/partials/ExamplePartial.jsx`
 
 ```
 js-package/
