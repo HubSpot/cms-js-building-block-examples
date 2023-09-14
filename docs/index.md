@@ -40,7 +40,7 @@ Additionally by building on top of JavaScript and an open source framework (Reac
 
 ## Features missing and caveats
 
-Note, this feature is still in development and we are actively working on many things. Here is a list of some features that we are actively implementing but do not work in the feature yet:
+Note, CMS JS Building Blocks is still in development and we are actively working on many things. Here is a list of some features that we are actively implementing but do not work in the feature yet:
 
 - More performance optimizations
 - Support for passing template-level overrides to the module tag via HubL params
