@@ -8,6 +8,10 @@ Thank you for taking the time to explore this new direction for the HubSpot CMS!
 
 JavaScript modules and partials are new building blocks you can use to write React and JavaScript instead of HubL inside the HubSpot CMS. Note this doesn’t mean you will switch entirely away from HubL immediately, rather we want to provide a pathway to begin writing React to render on both on the server and client. JS modules and partials are built from React components and can directly be referenced via HubL tags in your templates.
 
+## Can I use JS Building Blocks with my CMS portal?
+
+Yes! JS Building Blocks are generally available and can be used with all tiers of the CMS, including free.
+
 ## Documentation
 [Link to documentation](https://github.hubspot.com/cms-js-building-block-examples/)
 
