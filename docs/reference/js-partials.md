@@ -10,3 +10,28 @@ Similar to [global partials](https://developers.hubspot.com/docs/cms/building-bl
 ```
 
 Any parameters passed to `js_partial` alongside the `path` will be available within the React component as props.
+
+### Directory Structure Requirements
+
+A JS Partial file can live at either of the following paths, using the directory or file name as the partial name:
+
+`/components/partials/ExamplePartial/index.js`
+
+```
+js-package/
+└── components/
+    └── partials/
+        └── ExamplePartial/
+            └── index.jsx
+```
+
+`/components/partials/ExamplePartial.jsx`
+
+```
+js-package/
+└── components/
+    └── partials/
+        └── ExamplePartial.jsx
+```
+
+Regardless of the path you chose, the file (i.e. either `ExamplePartial/index.jsx` or `ExamplePartial.jsx`) must contain a default export of your component.
