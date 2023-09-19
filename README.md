@@ -2,11 +2,15 @@
 
 ## Welcome!
 
-Thank you for taking the time to explore this new direction for the HubSpot CMS! As always our goal is to solve for our customers so we welcome any and all feedback. During this beta please chat away in [\#beta-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204).
+Thank you for taking the time to explore this new direction for the HubSpot CMS! As always our goal is to solve for our customers so we welcome any and all feedback. Chat away in [\#cms-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204) with other HubSpot developers who are pushing forward with CMS JS Building Blocks.
 
 ## What are the new JS building blocks?
 
 JavaScript modules and partials are new building blocks you can use to write React and JavaScript instead of HubL inside the HubSpot CMS. Note this doesn’t mean you will switch entirely away from HubL immediately, rather we want to provide a pathway to begin writing React to render on both on the server and client. JS modules and partials are built from React components and can directly be referenced via HubL tags in your templates.
+
+## Can I use JS Building Blocks with my CMS account?
+
+Yes! JS Building Blocks are generally available and can be used with all tiers of the CMS, including free.
 
 ## Documentation
 [Link to documentation](https://github.hubspot.com/cms-js-building-block-examples/)
@@ -39,6 +43,3 @@ GraphQL is the future for querying HubSpot data in your CMS pages. As part of JS
 
 It seems with every new FE technology on the web comes an implemetation of TodoMVC. We didn't want to be left out and ported a recent version that made use of React and React hooks to work as a JS Module with Islands. Additionally there is an example of our `sharedIslandReducer` which provides a redux like interface for sharing state across islands.
 
-## Legal Stuff
-
-By participating in a public beta, you acknowledge and agree to the [HubSpot Beta Terms](https://legal.hubspot.com/hubspot-beta-terms).
