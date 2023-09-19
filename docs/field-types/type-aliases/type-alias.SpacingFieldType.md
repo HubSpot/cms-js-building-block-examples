@@ -2,58 +2,70 @@
 
 # Type alias: SpacingFieldType
 
-> **SpacingFieldType**: `object`
+> **SpacingFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `margin`: \{
+      `bottom`: [`SpacingValueType`](type-alias.SpacingValueType.md);
+      `top`: [`SpacingValueType`](type-alias.SpacingValueType.md);
+    };
+    `padding`: \{
+      `bottom`: [`SpacingValueType`](type-alias.SpacingValueType.md);
+      `left`: [`SpacingValueType`](type-alias.SpacingValueType.md);
+      `right`: [`SpacingValueType`](type-alias.SpacingValueType.md);
+      `top`: [`SpacingValueType`](type-alias.SpacingValueType.md);
+    };
+  };
+  `type`: `"spacing"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.margin`
+> ## `SpacingFieldType.default`
 >
-> **margin**?: `object`
+> **default**?: `object`
 >
-> > ##### `margin.bottom`
+> > ### `default.margin`
 > >
-> > **bottom**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
+> > **margin**?: `object`
 > >
-> > ##### `margin.top`
+> > > #### `margin.bottom`
+> > >
+> > > **bottom**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
+> > >
+> > > #### `margin.top`
+> > >
+> > > **top**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
+> > >
+> > >
 > >
-> > **top**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
+> > ### `default.padding`
+> >
+> > **padding**?: `object`
+> >
+> > > #### `padding.bottom`
+> > >
+> > > **bottom**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
+> > >
+> > > #### `padding.left`
+> > >
+> > > **left**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
+> > >
+> > > #### `padding.right`
+> > >
+> > > **right**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
+> > >
+> > > #### `padding.top`
+> > >
+> > > **top**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
+> > >
+> > >
 > >
 > >
 >
-> #### `default.padding`
+> ## `SpacingFieldType.type`
 >
-> **padding**?: `object`
->
-> > ##### `padding.bottom`
-> >
-> > **bottom**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
-> >
-> > ##### `padding.left`
-> >
-> > **left**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
-> >
-> > ##### `padding.right`
-> >
-> > **right**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
-> >
-> > ##### `padding.top`
-> >
-> > **top**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
-> >
-> >
+> **type**: `"spacing"`
 >
 >
-
-***
-
-### `type`
-
-**type**: `"spacing"`
 
 ## Source
 
-fieldTypes.ts:441
+fieldTypes.ts:439

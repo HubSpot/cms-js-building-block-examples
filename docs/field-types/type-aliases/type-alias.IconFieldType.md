@@ -2,40 +2,44 @@
 
 # Type alias: IconFieldType
 
-> **IconFieldType**: `object`
+> **IconFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `name`: `string`;
+    `type`: `"SOLID"` \| `"REGULAR"`;
+    `unicode`: `string`;
+  };
+  `set`: `"fontawesome-5"` \| `"fontawesome-5.0.10"` \| `"fontawesome-5.14.0"`;
+  `type`: `"icon"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.name`
+> ## `IconFieldType.default`
 >
-> **name**?: `string`
+> **default**?: `object`
 >
-> #### `default.type`
+> > ### `default.name`
+> >
+> > **name**?: `string`
+> >
+> > ### `default.type`
+> >
+> > **type**?: `"SOLID"` \| `"REGULAR"`
+> >
+> > ### `default.unicode`
+> >
+> > **unicode**?: `string`
+> >
+> >
 >
-> **type**?: `"SOLID"` \| `"REGULAR"`
+> ## `IconFieldType.set`
 >
-> #### `default.unicode`
+> **set**?: `"fontawesome-5"` \| `"fontawesome-5.0.10"` \| `"fontawesome-5.14.0"`
 >
-> **unicode**?: `string`
+> ## `IconFieldType.type`
+>
+> **type**: `"icon"`
 >
 >
-
-***
-
-### `set`
-
-**set**?: `"fontawesome-5"` \| `"fontawesome-5.0.10"` \| `"fontawesome-5.14.0"`
-
-***
-
-### `type`
-
-**type**: `"icon"`
 
 ## Source
 
-fieldTypes.ts:295
+fieldTypes.ts:293

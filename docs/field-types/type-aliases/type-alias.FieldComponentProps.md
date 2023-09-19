@@ -2,9 +2,9 @@
 
 # Type alias: FieldComponentProps`<T>`
 
-> **FieldComponentProps**: <`T`> `AdaptChildren`\< `AdaptChildren`\< [`SnakeToCamelCaseMap`](type-alias.SnakeToCamelCaseMap.md)\< `Omit`\< `Extract`\< [`Field`](type-alias.Field.md), \{
+> **FieldComponentProps**: <`T`> `AdaptChildren`\< `AdaptChildren`\< `Omit`\< `Extract`\< `CamelCaseField`, \{
   `type`: `T`;
- } \>, `"type"` \> \> \> \>
+ } \>, `"type"` \> \> \>
 
 ## Type parameters
 
@@ -14,4 +14,4 @@
 
 ## Source
 
-fieldTypes.ts:600
+fieldTypes.ts:597

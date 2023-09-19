@@ -2,25 +2,25 @@
 
 # Type alias: FileFieldType
 
-> **FileFieldType**: `object`
+> **FileFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `string`;
+  `picker`: `"file"` \| `"image"` \| `"video"` \| `"document"`;
+  `type`: `"file"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `string`
-
-***
-
-### `picker`
-
-**picker**: `"file"` \| `"image"` \| `"video"` \| `"document"`
-
-***
-
-### `type`
-
-**type**: `"file"`
+> ## `FileFieldType.default`
+>
+> **default**?: `string`
+>
+> ## `FileFieldType.picker`
+>
+> **picker**: `"file"` \| `"image"` \| `"video"` \| `"document"`
+>
+> ## `FileFieldType.type`
+>
+> **type**: `"file"`
+>
+>
 
 ## Source
 

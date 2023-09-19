@@ -2,25 +2,25 @@
 
 # Type alias: BooleanFieldType
 
-> **BooleanFieldType**: `object`
+> **BooleanFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `boolean`;
+  `display`: `"toggle"` \| `"checkbox"`;
+  `type`: `"boolean"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `boolean`
-
-***
-
-### `display`
-
-**display**?: `"toggle"` \| `"checkbox"`
-
-***
-
-### `type`
-
-**type**: `"boolean"`
+> ## `BooleanFieldType.default`
+>
+> **default**?: `boolean`
+>
+> ## `BooleanFieldType.display`
+>
+> **display**?: `"toggle"` \| `"checkbox"`
+>
+> ## `BooleanFieldType.type`
+>
+> **type**: `"boolean"`
+>
+>
 
 ## Source
 

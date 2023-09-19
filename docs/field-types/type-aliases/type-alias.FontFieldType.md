@@ -2,85 +2,86 @@
 
 # Type alias: FontFieldType
 
-> **FontFieldType**: `object`
+> **FontFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `color`: `string`;
+    `fallback`: `string`;
+    `font`: `string`;
+    `font_set`: `"DEFAULT"` \| `"GOOGLE"` \| `"CUSTOM"`;
+    `google_font_variants`: `FontVariants`[];
+    `size`: `number`;
+    `size_unit`: [`CssUnit`](type-alias.CssUnit.md);
+    `styles`: \{
+      `key`: `string`;
+      `value`: `string`;
+    };
+    `variant`: `string`;
+  };
+  `loadExternalFonts`: `boolean`;
+  `type`: `"font"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.color`
+> ## `FontFieldType.default`
 >
-> **color**?: `string`
+> **default**?: `object`
 >
-> #### `default.fallback`
->
-> **fallback**?: `string`
->
-> #### `default.font`
->
-> **font**: `string`
->
-> #### `default.font_set`
->
-> **font\_set**?: `"DEFAULT"` \| `"GOOGLE"` \| `"CUSTOM"`
->
-> #### `default.google_font_variants`
->
-> **google\_font\_variants**?: `FontVariants`[]
->
-> #### `default.size`
->
-> **size**?: `number`
->
-> #### `default.size_unit`
->
-> **size\_unit**?: `CssUnit`
->
-> #### `default.styles`
->
-> **styles**?: `object`
->
-> > ##### `styles.key`
+> > ### `default.color`
 > >
-> > **key**: `string`
+> > **color**?: `string`
 > >
-> > ##### `styles.value`
+> > ### `default.fallback`
 > >
-> > **value**: `string`
+> > **fallback**?: `string`
+> >
+> > ### `default.font`
+> >
+> > **font**: `string`
+> >
+> > ### `default.font_set`
+> >
+> > **font\_set**?: `"DEFAULT"` \| `"GOOGLE"` \| `"CUSTOM"`
+> >
+> > ### `default.google_font_variants`
+> >
+> > **google\_font\_variants**?: `FontVariants`[]
+> >
+> > ### `default.size`
+> >
+> > **size**?: `number`
+> >
+> > ### `default.size_unit`
+> >
+> > **size\_unit**?: [`CssUnit`](type-alias.CssUnit.md)
+> >
+> > ### `default.styles`
+> >
+> > **styles**?: `object`
+> >
+> > > #### `styles.key`
+> > >
+> > > **key**: `string`
+> > >
+> > > #### `styles.value`
+> > >
+> > > **value**: `string`
+> > >
+> > >
+> >
+> > ### `default.variant`
+> >
+> > **variant**?: `string`
 > >
 > >
 >
-> #### `default.variant`
+> ## `FontFieldType.loadExternalFonts`
 >
-> **variant**?: `string`
+> **loadExternalFonts**?: `boolean`
+>
+> ## `FontFieldType.type`
+>
+> **type**: `"font"`
 >
 >
-
-***
-
-### `load_external_fonts`
-
-**load\_external\_fonts**?: `boolean`
-
-***
-
-### `maxSize`
-
-**maxSize**?: `number`
-
-***
-
-### `minSize`
-
-**minSize**?: `number`
-
-***
-
-### `type`
-
-**type**: `"font"`
 
 ## Source
 

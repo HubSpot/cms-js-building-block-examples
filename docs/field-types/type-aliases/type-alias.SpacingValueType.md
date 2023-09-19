@@ -2,20 +2,21 @@
 
 # Type alias: SpacingValueType
 
-> **SpacingValueType**: `object`
+> **SpacingValueType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `units`: [`CssUnit`](type-alias.CssUnit.md);
+  `value`: `string`;
+ }
 
-## Type declaration
-
-### `units`
-
-**units**: `CssUnit`
-
-***
-
-### `value`
-
-**value**: `string`
+> ## `SpacingValueType.units`
+>
+> **units**: [`CssUnit`](type-alias.CssUnit.md)
+>
+> ## `SpacingValueType.value`
+>
+> **value**: `string`
+>
+>
 
 ## Source
 
-fieldTypes.ts:437
+fieldTypes.ts:435

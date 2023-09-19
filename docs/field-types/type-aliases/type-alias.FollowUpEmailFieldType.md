@@ -2,25 +2,25 @@
 
 # Type alias: FollowUpEmailFieldType
 
-> **FollowUpEmailFieldType**: `object`
+> **FollowUpEmailFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `string`;
+  `placeholder`: `string`;
+  `type`: `"followupemail"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `string`
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `type`
-
-**type**: `"followupemail"`
+> ## `FollowUpEmailFieldType.default`
+>
+> **default**?: `string`
+>
+> ## `FollowUpEmailFieldType.placeholder`
+>
+> **placeholder**?: `string`
+>
+> ## `FollowUpEmailFieldType.type`
+>
+> **type**: `"followupemail"`
+>
+>
 
 ## Source
 

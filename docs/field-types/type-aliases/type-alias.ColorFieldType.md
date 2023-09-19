@@ -2,29 +2,33 @@
 
 # Type alias: ColorFieldType
 
-> **ColorFieldType**: `object`
+> **ColorFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `color`: `string`;
+    `opacity`: `number`;
+  };
+  `type`: `"color"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.color`
+> ## `ColorFieldType.default`
 >
-> **color**?: `string`
+> **default**?: `object`
 >
-> #### `default.opacity`
+> > ### `default.color`
+> >
+> > **color**?: `string`
+> >
+> > ### `default.opacity`
+> >
+> > **opacity**?: `number`
+> >
+> >
 >
-> **opacity**?: `number`
+> ## `ColorFieldType.type`
+>
+> **type**: `"color"`
 >
 >
-
-***
-
-### `type`
-
-**type**: `"color"`
 
 ## Source
 

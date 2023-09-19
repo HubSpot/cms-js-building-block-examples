@@ -2,26 +2,26 @@
 
 # Type alias: HubdbTableFieldType
 
-> **HubdbTableFieldType**: `object`
+> **HubdbTableFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `string` \| `number`;
+  `placeholder`: `string`;
+  `type`: `"hubdbtable"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `string` \| `number`
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `type`
-
-**type**: `"hubdbtable"`
+> ## `HubdbTableFieldType.default`
+>
+> **default**?: `string` \| `number`
+>
+> ## `HubdbTableFieldType.placeholder`
+>
+> **placeholder**?: `string`
+>
+> ## `HubdbTableFieldType.type`
+>
+> **type**: `"hubdbtable"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:286
+fieldTypes.ts:284

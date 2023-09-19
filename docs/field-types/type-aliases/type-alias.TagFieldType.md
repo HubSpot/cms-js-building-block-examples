@@ -2,30 +2,34 @@
 
 # Type alias: TagFieldType
 
-> **TagFieldType**: `object`
-
-## Type declaration
-
-### `default`
-
-**default**?: `string` \| `number` \| \{
-  `id`: `string`;
-  `name`: `string`;
-  `slug`: `string`;
+> **TagFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `string` \| `number` \| \{
+    `id`: `string`;
+    `name`: `string`;
+    `slug`: `string`;
+  };
+  `tagValue`: `"SLUG"` \| `"NAME"` \| `"ID"` \| `"ALL"`;
+  `type`: `"tag"`;
  }
 
-***
-
-### `tag_value`
-
-**tag\_value**: `"SLUG"` \| `"NAME"` \| `"ID"` \| `"ALL"`
-
-***
-
-### `type`
-
-**type**: `"tag"`
+> ## `TagFieldType.default`
+>
+> **default**?: `string` \| `number` \| \{
+> `id`: `string`;
+> `name`: `string`;
+> `slug`: `string`;
+> }
+>
+> ## `TagFieldType.tagValue`
+>
+> **tagValue**: `"SLUG"` \| `"NAME"` \| `"ID"` \| `"ALL"`
+>
+> ## `TagFieldType.type`
+>
+> **type**: `"tag"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:464
+fieldTypes.ts:462

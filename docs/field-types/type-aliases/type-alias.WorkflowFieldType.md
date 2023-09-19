@@ -2,20 +2,21 @@
 
 # Type alias: WorkflowFieldType
 
-> **WorkflowFieldType**: `object`
+> **WorkflowFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `number`;
+  `type`: `"workflow"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `number`
-
-***
-
-### `type`
-
-**type**: `"workflow"`
+> ## `WorkflowFieldType.default`
+>
+> **default**?: `number`
+>
+> ## `WorkflowFieldType.type`
+>
+> **type**: `"workflow"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:517
+fieldTypes.ts:516

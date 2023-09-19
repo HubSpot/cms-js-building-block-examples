@@ -2,8 +2,8 @@
 
 # Type alias: FieldType
 
-> **FieldType**: [`Field`](type-alias.Field.md)[`"type"`]
+> **FieldType**: `CamelCaseField`[`"type"`]
 
 ## Source
 
-fieldTypes.ts:582
+fieldTypes.ts:581

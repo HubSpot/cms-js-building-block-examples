@@ -2,49 +2,45 @@
 
 # Type alias: ChoiceFieldType
 
-> **ChoiceFieldType**: `object`
+> **ChoiceFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `choices`: [`any`, `string`][];
+  `default`: `string` \| `number` \| (`string` \| `number`)[];
+  `display`: `"radio"` \| `"select"` \| `"checkbox"`;
+  `multiple`: `boolean`;
+  `placeholder`: `string`;
+  `reorderingEnabled`: `boolean`;
+  `type`: `"choice"`;
+ }
 
-## Type declaration
-
-### `choices`
-
-**choices**: [`any`, `string`][]
-
-***
-
-### `default`
-
-**default**?: `string` \| `number` \| (`string` \| `number`)[]
-
-***
-
-### `display`
-
-**display**?: `"radio"` \| `"select"` \| `"checkbox"`
-
-***
-
-### `multiple`
-
-**multiple**?: `boolean`
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `reordering_enabled`
-
-**reordering\_enabled**?: `boolean`
-
-***
-
-### `type`
-
-**type**: `"choice"`
+> ## `ChoiceFieldType.choices`
+>
+> **choices**: [`any`, `string`][]
+>
+> ## `ChoiceFieldType.default`
+>
+> **default**?: `string` \| `number` \| (`string` \| `number`)[]
+>
+> ## `ChoiceFieldType.display`
+>
+> **display**?: `"radio"` \| `"select"` \| `"checkbox"`
+>
+> ## `ChoiceFieldType.multiple`
+>
+> **multiple**?: `boolean`
+>
+> ## `ChoiceFieldType.placeholder`
+>
+> **placeholder**?: `string`
+>
+> ## `ChoiceFieldType.reorderingEnabled`
+>
+> **reorderingEnabled**?: `boolean`
+>
+> ## `ChoiceFieldType.type`
+>
+> **type**: `"choice"`
+>
+>
 
 ## Source
 

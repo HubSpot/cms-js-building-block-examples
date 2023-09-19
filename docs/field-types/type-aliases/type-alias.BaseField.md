@@ -6,21 +6,21 @@
 
 ## Type declaration
 
-### `advanced_visibility`
+### `advancedVisibility`
 
-**advanced\_visibility**?: [`AdvancedVisibility`](type-alias.AdvancedVisibility.md)
-
-***
-
-### `display_width`
-
-**display\_width**?: `string`
+**advancedVisibility**?: [`AdvancedVisibility`](type-alias.AdvancedVisibility.md)
 
 ***
 
-### `help_text`
+### `displayWidth`
 
-**help\_text**?: `string`
+**displayWidth**?: `string`
+
+***
+
+### `helpText`
+
+**helpText**?: `string`
 
 ***
 
@@ -30,9 +30,9 @@
 
 ***
 
-### `inline_help_text`
+### `inlineHelpText`
 
-**inline\_help\_text**?: `string` \| `null`
+**inlineHelpText**?: `string` \| `null`
 
 ***
 
@@ -126,9 +126,9 @@
 
 ***
 
-### `visibility_rules`
+### `visibilityRules`
 
-**visibility\_rules**?: `"SIMPLE"` \| `"ADVANCED"`
+**visibilityRules**?: `"SIMPLE"` \| `"ADVANCED"`
 
 ## Source
 

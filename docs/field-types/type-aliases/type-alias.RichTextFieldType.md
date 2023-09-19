@@ -2,26 +2,26 @@
 
 # Type alias: RichTextFieldType
 
-> **RichTextFieldType**: `object`
+> **RichTextFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `string`;
+  `enabledFeatures`: `RichTextFeatures`[];
+  `type`: `"richtext"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `string`
-
-***
-
-### `enabled_features`
-
-**enabled\_features**?: `RichTextFeatures`[]
-
-***
-
-### `type`
-
-**type**: `"richtext"`
+> ## `RichTextFieldType.default`
+>
+> **default**?: `string`
+>
+> ## `RichTextFieldType.enabledFeatures`
+>
+> **enabledFeatures**?: `RichTextFeatures`[]
+>
+> ## `RichTextFieldType.type`
+>
+> **type**: `"richtext"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:424
+fieldTypes.ts:422

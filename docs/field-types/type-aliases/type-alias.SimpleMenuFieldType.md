@@ -2,20 +2,21 @@
 
 # Type alias: SimpleMenuFieldType
 
-> **SimpleMenuFieldType**: `object`
+> **SimpleMenuFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{}[];
+  `type`: `"simplemenu"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: \{}[]
-
-***
-
-### `type`
-
-**type**: `"simplemenu"`
+> ## `SimpleMenuFieldType.default`
+>
+> **default**?: \{}[]
+>
+> ## `SimpleMenuFieldType.type`
+>
+> **type**: `"simplemenu"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:433
+fieldTypes.ts:431

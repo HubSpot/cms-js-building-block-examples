@@ -2,57 +2,66 @@
 
 # Type alias: BorderFieldType
 
-> **BorderFieldType**: `object`
+> **BorderFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `allowCustomBorderSides`: `boolean`;
+  `default`: \{
+    `border_radius`: \{
+      `units`: [`CssUnit`](type-alias.CssUnit.md);
+      `value`: `number`;
+    };
+    `bottom`: [`BorderSideType`](type-alias.BorderSideType.md);
+    `left`: [`BorderSideType`](type-alias.BorderSideType.md);
+    `right`: [`BorderSideType`](type-alias.BorderSideType.md);
+    `top`: [`BorderSideType`](type-alias.BorderSideType.md);
+  };
+  `type`: `"border"`;
+ }
 
-## Type declaration
-
-### `allow_custom_border_sides`
-
-**allow\_custom\_border\_sides**?: `boolean`
-
-***
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.border_radius`
+> ## `BorderFieldType.allowCustomBorderSides`
 >
-> **border\_radius**?: `object`
+> **allowCustomBorderSides**?: `boolean`
 >
-> > ##### `border\_radius.units`
+> ## `BorderFieldType.default`
+>
+> **default**?: `object`
+>
+> > ### `default.border_radius`
 > >
-> > **units**: `CssUnit`
+> > **border\_radius**?: `object`
 > >
-> > ##### `border\_radius.value`
+> > > #### `border\_radius.units`
+> > >
+> > > **units**: [`CssUnit`](type-alias.CssUnit.md)
+> > >
+> > > #### `border\_radius.value`
+> > >
+> > > **value**: `number`
+> > >
+> > >
 > >
-> > **value**: `number`
+> > ### `default.bottom`
+> >
+> > **bottom**?: [`BorderSideType`](type-alias.BorderSideType.md)
+> >
+> > ### `default.left`
+> >
+> > **left**?: [`BorderSideType`](type-alias.BorderSideType.md)
+> >
+> > ### `default.right`
+> >
+> > **right**?: [`BorderSideType`](type-alias.BorderSideType.md)
+> >
+> > ### `default.top`
+> >
+> > **top**?: [`BorderSideType`](type-alias.BorderSideType.md)
 > >
 > >
 >
-> #### `default.bottom`
+> ## `BorderFieldType.type`
 >
-> **bottom**?: [`BorderSideType`](type-alias.BorderSideType.md)
->
-> #### `default.left`
->
-> **left**?: [`BorderSideType`](type-alias.BorderSideType.md)
->
-> #### `default.right`
->
-> **right**?: [`BorderSideType`](type-alias.BorderSideType.md)
->
-> #### `default.top`
->
-> **top**?: [`BorderSideType`](type-alias.BorderSideType.md)
+> **type**: `"border"`
 >
 >
-
-***
-
-### `type`
-
-**type**: `"border"`
 
 ## Source
 

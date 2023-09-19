@@ -2,26 +2,29 @@
 
 # Type alias: PaymentFieldType
 
-> **PaymentFieldType**: `object`
+> **PaymentFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `id`: `number`;
+  };
+  `type`: `"payment"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.id`
+> ## `PaymentFieldType.default`
 >
-> **id**?: `number`
+> **default**?: `object`
+>
+> > ### `default.id`
+> >
+> > **id**?: `number`
+> >
+> >
+>
+> ## `PaymentFieldType.type`
+>
+> **type**: `"payment"`
 >
 >
-
-***
-
-### `type`
-
-**type**: `"payment"`
 
 ## Source
 
-fieldTypes.ts:378
+fieldTypes.ts:376

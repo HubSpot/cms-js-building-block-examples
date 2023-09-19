@@ -2,55 +2,53 @@
 
 # Type alias: CrmObjectFieldType
 
-> **CrmObjectFieldType**: `object`
+> **CrmObjectFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `id`: `number`;
+  };
+  `displayFormat`: `string`;
+  `displayProperties`: `string`[];
+  `objectType`: `string`;
+  `placeholder`: `string`;
+  `propertiesToFetch`: `string`[];
+  `type`: `"crmobject"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.id`
+> ## `CrmObjectFieldType.default`
 >
-> **id**?: `number`
+> **default**?: `object`
+>
+> > ### `default.id`
+> >
+> > **id**?: `number`
+> >
+> >
+>
+> ## `CrmObjectFieldType.displayFormat`
+>
+> **displayFormat**?: `string`
+>
+> ## `CrmObjectFieldType.displayProperties`
+>
+> **displayProperties**?: `string`[]
+>
+> ## `CrmObjectFieldType.objectType`
+>
+> **objectType**: `string`
+>
+> ## `CrmObjectFieldType.placeholder`
+>
+> **placeholder**?: `string`
+>
+> ## `CrmObjectFieldType.propertiesToFetch`
+>
+> **propertiesToFetch**: `string`[]
+>
+> ## `CrmObjectFieldType.type`
+>
+> **type**: `"crmobject"`
 >
 >
-
-***
-
-### `display_format`
-
-**display\_format**?: `string`
-
-***
-
-### `display_properties`
-
-**display\_properties**?: `string`[]
-
-***
-
-### `object_type`
-
-**object\_type**: `string`
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `properties_to_fetch`
-
-**properties\_to\_fetch**: `string`[]
-
-***
-
-### `type`
-
-**type**: `"crmobject"`
 
 ## Source
 

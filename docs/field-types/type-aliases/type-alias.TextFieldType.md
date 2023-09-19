@@ -2,38 +2,36 @@
 
 # Type alias: TextFieldType
 
-> **TextFieldType**: `object`
+> **TextFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `allowNewLine`: `boolean`;
+  `default`: `string`;
+  `showEmojiPicker`: `boolean`;
+  `type`: `"text"`;
+  `validationRegex`: `string`;
+ }
 
-## Type declaration
-
-### `allow_new_line`
-
-**allow\_new\_line**?: `boolean`
-
-***
-
-### `default`
-
-**default**?: `string`
-
-***
-
-### `show_emoji_picker`
-
-**show\_emoji\_picker**?: `boolean`
-
-***
-
-### `type`
-
-**type**: `"text"`
-
-***
-
-### `validation_regex`
-
-**validation\_regex**?: `string`
+> ## `TextFieldType.allowNewLine`
+>
+> **allowNewLine**?: `boolean`
+>
+> ## `TextFieldType.default`
+>
+> **default**?: `string`
+>
+> ## `TextFieldType.showEmojiPicker`
+>
+> **showEmojiPicker**?: `boolean`
+>
+> ## `TextFieldType.type`
+>
+> **type**: `"text"`
+>
+> ## `TextFieldType.validationRegex`
+>
+> **validationRegex**?: `string`
+>
+>
 
 ## Source
 
-fieldTypes.ts:476
+fieldTypes.ts:474

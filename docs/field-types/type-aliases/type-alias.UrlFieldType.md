@@ -2,44 +2,49 @@
 
 # Type alias: UrlFieldType
 
-> **UrlFieldType**: `object`
+> **UrlFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `content_id`: `number`;
+    `href`: `string`;
+    `supported_types`: `UrlTypes`[];
+    `type`: `UrlTypes`;
+  };
+  `supportedTypes`: `UrlTypes`;
+  `type`: `"url"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.content_id`
+> ## `UrlFieldType.default`
 >
-> **content\_id**?: `number`
+> **default**?: `object`
 >
-> #### `default.href`
+> > ### `default.content_id`
+> >
+> > **content\_id**?: `number`
+> >
+> > ### `default.href`
+> >
+> > **href**?: `string`
+> >
+> > ### `default.supported_types`
+> >
+> > **supported\_types**?: `UrlTypes`[]
+> >
+> > ### `default.type`
+> >
+> > **type**?: `UrlTypes`
+> >
+> >
 >
-> **href**?: `string`
+> ## `UrlFieldType.supportedTypes`
 >
-> #### `default.supported_types`
+> **supportedTypes**: `UrlTypes`
 >
-> **supported\_types**?: `UrlTypes`[]
+> ## `UrlFieldType.type`
 >
-> #### `default.type`
->
-> **type**?: `UrlTypes`
+> **type**: `"url"`
 >
 >
-
-***
-
-### `supported_types`
-
-**supported\_types**: `UrlTypes`
-
-***
-
-### `type`
-
-**type**: `"url"`
 
 ## Source
 
-fieldTypes.ts:490
+fieldTypes.ts:488

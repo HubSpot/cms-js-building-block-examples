@@ -2,26 +2,29 @@
 
 # Type alias: TextAlignmentFieldType
 
-> **TextAlignmentFieldType**: `object`
+> **TextAlignmentFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `text_align`: `"LEFT"` \| `"CENTER"` \| `"RIGHT"` \| `"JUSTIFY"`;
+  };
+  `type`: `"textalignment"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.text_align`
+> ## `TextAlignmentFieldType.default`
 >
-> **text\_align**?: `"LEFT"` \| `"CENTER"` \| `"RIGHT"` \| `"JUSTIFY"`
+> **default**?: `object`
+>
+> > ### `default.text_align`
+> >
+> > **text\_align**?: `"LEFT"` \| `"CENTER"` \| `"RIGHT"` \| `"JUSTIFY"`
+> >
+> >
+>
+> ## `TextAlignmentFieldType.type`
+>
+> **type**: `"textalignment"`
 >
 >
-
-***
-
-### `type`
-
-**type**: `"textalignment"`
 
 ## Source
 
-fieldTypes.ts:483
+fieldTypes.ts:481

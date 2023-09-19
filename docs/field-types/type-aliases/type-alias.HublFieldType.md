@@ -2,20 +2,21 @@
 
 # Type alias: HublFieldType
 
-> **HublFieldType**: `object`
+> **HublFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `string`;
+  `type`: `"hubl"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `string`
-
-***
-
-### `type`
-
-**type**: `"hubl"`
+> ## `HublFieldType.default`
+>
+> **default**?: `string`
+>
+> ## `HublFieldType.type`
+>
+> **type**: `"hubl"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:291
+fieldTypes.ts:289
