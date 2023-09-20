@@ -2,25 +2,25 @@
 
 # Type alias: BlogFieldType
 
-> **BlogFieldType**: `object`
+> **BlogFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `number` \| `number`[];
+  `placeholder`: `string`;
+  `type`: `"blog"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `number` \| `number`[]
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `type`
-
-**type**: `"blog"`
+> ## `BlogFieldType.default`
+>
+> **default**?: `number` \| `number`[]
+>
+> ## `BlogFieldType.placeholder`
+>
+> **placeholder**?: `string`
+>
+> ## `BlogFieldType.type`
+>
+> **type**: `"blog"`
+>
+>
 
 ## Source
 

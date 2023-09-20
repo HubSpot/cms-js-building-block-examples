@@ -2,19 +2,20 @@
 
 # Type alias: CtaFieldType
 
-> **CtaFieldType**: `object`
+> **CtaFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `string`;
+  `type`: `"cta"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `string`
-
-***
-
-### `type`
-
-**type**: `"cta"`
+> ## `CtaFieldType.default`
+>
+> **default**?: `string`
+>
+> ## `CtaFieldType.type`
+>
+> **type**: `"cta"`
+>
+>
 
 ## Source
 

@@ -2,32 +2,31 @@
 
 # Type alias: MeetingFieldType
 
-> **MeetingFieldType**: `object`
+> **MeetingFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `string`;
+  `embeddable`: `boolean`;
+  `placeholder`: `string`;
+  `type`: `"meeting"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `string`
-
-***
-
-### `embeddable`
-
-**embeddable**?: `boolean`
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `type`
-
-**type**: `"meeting"`
+> ## `MeetingFieldType.default`
+>
+> **default**?: `string`
+>
+> ## `MeetingFieldType.embeddable`
+>
+> **embeddable**?: `boolean`
+>
+> ## `MeetingFieldType.placeholder`
+>
+> **placeholder**?: `string`
+>
+> ## `MeetingFieldType.type`
+>
+> **type**: `"meeting"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:350
+fieldTypes.ts:348

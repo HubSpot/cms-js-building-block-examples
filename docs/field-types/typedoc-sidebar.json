@@ -72,6 +72,12 @@
     "items": []
   },
   {
+    "text": "CssUnit",
+    "link": "/../../field-types/type-aliases/type-alias.CssUnit.md",
+    "collapsed": true,
+    "items": []
+  },
+  {
     "text": "CtaFieldType",
     "link": "/../../field-types/type-aliases/type-alias.CtaFieldType.md",
     "collapsed": true,
@@ -254,12 +260,6 @@
   {
     "text": "SimpleMenuFieldType",
     "link": "/../../field-types/type-aliases/type-alias.SimpleMenuFieldType.md",
-    "collapsed": true,
-    "items": []
-  },
-  {
-    "text": "SnakeToCamelCaseMap",
-    "link": "/../../field-types/type-aliases/type-alias.SnakeToCamelCaseMap.md",
     "collapsed": true,
     "items": []
   },

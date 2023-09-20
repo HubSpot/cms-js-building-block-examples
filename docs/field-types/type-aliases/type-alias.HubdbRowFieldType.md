@@ -2,56 +2,54 @@
 
 # Type alias: HubdbRowFieldType
 
-> **HubdbRowFieldType**: `object`
+> **HubdbRowFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `columnsToFetch`: `string`[];
+  `default`: \{
+    `id`: `number`;
+  };
+  `displayColumns`: `string`[];
+  `displayFormat`: `string`;
+  `placeholder`: `string`;
+  `tableNameOrId`: `string` \| `number`;
+  `type`: `"hubdbrow"`;
+ }
 
-## Type declaration
-
-### `columns_to_fetch`
-
-**columns\_to\_fetch**: `string`[]
-
-***
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.id`
+> ## `HubdbRowFieldType.columnsToFetch`
 >
-> **id**: `number`
+> **columnsToFetch**: `string`[]
+>
+> ## `HubdbRowFieldType.default`
+>
+> **default**?: `object`
+>
+> > ### `default.id`
+> >
+> > **id**: `number`
+> >
+> >
+>
+> ## `HubdbRowFieldType.displayColumns`
+>
+> **displayColumns**?: `string`[]
+>
+> ## `HubdbRowFieldType.displayFormat`
+>
+> **displayFormat**?: `string`
+>
+> ## `HubdbRowFieldType.placeholder`
+>
+> **placeholder**?: `string`
+>
+> ## `HubdbRowFieldType.tableNameOrId`
+>
+> **tableNameOrId**: `string` \| `number`
+>
+> ## `HubdbRowFieldType.type`
+>
+> **type**: `"hubdbrow"`
 >
 >
-
-***
-
-### `display_columns`
-
-**display\_columns**?: `string`[]
-
-***
-
-### `display_format`
-
-**display\_format**?: `string`
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `table_name_or_id`
-
-**table\_name\_or\_id**: `string` \| `number`
-
-***
-
-### `type`
-
-**type**: `"hubdbrow"`
 
 ## Source
 
-fieldTypes.ts:275
+fieldTypes.ts:273

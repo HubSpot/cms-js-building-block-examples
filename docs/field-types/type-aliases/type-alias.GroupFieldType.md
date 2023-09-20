@@ -2,38 +2,36 @@
 
 # Type alias: GroupFieldType
 
-> **GroupFieldType**: `object`
+> **GroupFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `children`: [`Field`](type-alias.Field.md)[];
+  `default`: [] \| \{};
+  `expanded`: `boolean`;
+  `tab`: `"STYLE"`;
+  `type`: `"group"`;
+ }
 
-## Type declaration
-
-### `children`
-
-**children**?: [`Field`](type-alias.Field.md)[]
-
-***
-
-### `default`
-
-**default**?: [] \| \{}
-
-***
-
-### `expanded`
-
-**expanded**?: `boolean`
-
-***
-
-### `tab`
-
-**tab**?: `"STYLE"`
-
-***
-
-### `type`
-
-**type**: `"group"`
+> ## `GroupFieldType.children`
+>
+> **children**?: [`Field`](type-alias.Field.md)[]
+>
+> ## `GroupFieldType.default`
+>
+> **default**?: [] \| \{}
+>
+> ## `GroupFieldType.expanded`
+>
+> **expanded**?: `boolean`
+>
+> ## `GroupFieldType.tab`
+>
+> **tab**?: `"STYLE"`
+>
+> ## `GroupFieldType.type`
+>
+> **type**: `"group"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:522
+fieldTypes.ts:521

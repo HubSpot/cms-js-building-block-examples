@@ -2,33 +2,38 @@
 
 # Type alias: BackgroundImageFieldType
 
-> **BackgroundImageFieldType**: `object`
+> **BackgroundImageFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `background_position`: `"TOP_LEFT"` \| `"TOP_CENTER"` \| `"TOP_RIGHT"` \| `"MIDDLE_LEFT"` \| `"MIDDLE_CENTER"` \| `"MIDDLE_RIGHT"` \| `"BOTTOM_LEFT"` \| `"BOTTOM_CENTER"` \| `"BOTTOM_RIGHT"`;
+    `background_size`: `"COVER"` \| `"CONTAIN"` \| `"AUTO"`;
+    `src`: `string`;
+  };
+  `type`: `"backgroundimage"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.background_position`
+> ## `BackgroundImageFieldType.default`
 >
-> **background\_position**?: `"TOP_LEFT"` \| `"TOP_CENTER"` \| `"TOP_RIGHT"` \| `"MIDDLE_LEFT"` \| `"MIDDLE_CENTER"` \| `"MIDDLE_RIGHT"` \| `"BOTTOM_LEFT"` \| `"BOTTOM_CENTER"` \| `"BOTTOM_RIGHT"`
+> **default**?: `object`
 >
-> #### `default.background_size`
+> > ### `default.background_position`
+> >
+> > **background\_position**?: `"TOP_LEFT"` \| `"TOP_CENTER"` \| `"TOP_RIGHT"` \| `"MIDDLE_LEFT"` \| `"MIDDLE_CENTER"` \| `"MIDDLE_RIGHT"` \| `"BOTTOM_LEFT"` \| `"BOTTOM_CENTER"` \| `"BOTTOM_RIGHT"`
+> >
+> > ### `default.background_size`
+> >
+> > **background\_size**?: `"COVER"` \| `"CONTAIN"` \| `"AUTO"`
+> >
+> > ### `default.src`
+> >
+> > **src**?: `string`
+> >
+> >
 >
-> **background\_size**?: `"COVER"` \| `"CONTAIN"` \| `"AUTO"`
+> ## `BackgroundImageFieldType.type`
 >
-> #### `default.src`
->
-> **src**?: `string`
+> **type**: `"backgroundimage"`
 >
 >
-
-***
-
-### `type`
-
-**type**: `"backgroundimage"`
 
 ## Source
 

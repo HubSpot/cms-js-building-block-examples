@@ -2,19 +2,20 @@
 
 # Type alias: DateFieldType
 
-> **DateFieldType**: `object`
+> **DateFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `number`;
+  `type`: `"date"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `number`
-
-***
-
-### `type`
-
-**type**: `"date"`
+> ## `DateFieldType.default`
+>
+> **default**?: `number`
+>
+> ## `DateFieldType.type`
+>
+> **type**: `"date"`
+>
+>
 
 ## Source
 

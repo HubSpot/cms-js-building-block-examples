@@ -2,20 +2,21 @@
 
 # Type alias: SfdcCamapaignFieldType
 
-> **SfdcCamapaignFieldType**: `object`
+> **SfdcCamapaignFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `string`;
+  `type`: `"salesforcecampaign"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `string`
-
-***
-
-### `type`
-
-**type**: `"salesforcecampaign"`
+> ## `SfdcCamapaignFieldType.default`
+>
+> **default**?: `string`
+>
+> ## `SfdcCamapaignFieldType.type`
+>
+> **type**: `"salesforcecampaign"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:429
+fieldTypes.ts:427

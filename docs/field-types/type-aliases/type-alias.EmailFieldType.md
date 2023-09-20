@@ -2,25 +2,25 @@
 
 # Type alias: EmailFieldType
 
-> **EmailFieldType**: `object`
+> **EmailFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `allowCustomEmailAddresses`: `boolean`;
+  `default`: `string`[];
+  `type`: `"email"`;
+ }
 
-## Type declaration
-
-### `allow_custom_email_addresses`
-
-**allow\_custom\_email\_addresses**?: `boolean`
-
-***
-
-### `default`
-
-**default**?: `string`[]
-
-***
-
-### `type`
-
-**type**: `"email"`
+> ## `EmailFieldType.allowCustomEmailAddresses`
+>
+> **allowCustomEmailAddresses**?: `boolean`
+>
+> ## `EmailFieldType.default`
+>
+> **default**?: `string`[]
+>
+> ## `EmailFieldType.type`
+>
+> **type**: `"email"`
+>
+>
 
 ## Source
 

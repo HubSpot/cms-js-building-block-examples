@@ -2,37 +2,38 @@
 
 # Type alias: CrmObjectPropertyFieldType
 
-> **CrmObjectPropertyFieldType**: `object`
+> **CrmObjectPropertyFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `property`: `string`;
+  };
+  `objectType`: `string`;
+  `placeholder`: `string`;
+  `type`: `"crmobjectproperty"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.property`
+> ## `CrmObjectPropertyFieldType.default`
 >
-> **property**?: `string`
+> **default**?: `object`
+>
+> > ### `default.property`
+> >
+> > **property**?: `string`
+> >
+> >
+>
+> ## `CrmObjectPropertyFieldType.objectType`
+>
+> **objectType**: `string`
+>
+> ## `CrmObjectPropertyFieldType.placeholder`
+>
+> **placeholder**?: `string`
+>
+> ## `CrmObjectPropertyFieldType.type`
+>
+> **type**: `"crmobjectproperty"`
 >
 >
-
-***
-
-### `object_type`
-
-**object\_type**: `string`
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `type`
-
-**type**: `"crmobjectproperty"`
 
 ## Source
 

@@ -2,32 +2,39 @@
 
 # Type alias: GradientColorType
 
-> **GradientColorType**: `object`
+> **GradientColorType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `color`: \{
+    `a`: `number`;
+    `b`: `string`;
+    `g`: `string`;
+    `r`: `string`;
+  };
+ }
 
-## Type declaration
-
-### `color`
-
-**color**: `object`
-
-> #### `color.a`
+> ## `GradientColorType.color`
 >
-> **a**: `number`
+> **color**: `object`
 >
-> #### `color.b`
->
-> **b**: `string`
->
-> #### `color.g`
->
-> **g**: `string`
->
-> #### `color.r`
->
-> **r**: `string`
+> > ### `color.a`
+> >
+> > **a**: `number`
+> >
+> > ### `color.b`
+> >
+> > **b**: `string`
+> >
+> > ### `color.g`
+> >
+> > **g**: `string`
+> >
+> > ### `color.r`
+> >
+> > **r**: `string`
+> >
+> >
 >
 >
 
 ## Source
 
-fieldTypes.ts:263
+fieldTypes.ts:261

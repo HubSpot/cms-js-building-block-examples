@@ -2,36 +2,39 @@
 
 # Type alias: SurveyFieldType
 
-> **SurveyFieldType**: `object`
+> **SurveyFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `id`: `string`;
+    `survey_type`: `"CES"` \| `"CSAT"` \| `"NPS"`;
+  };
+  `placeholder`: `string`;
+  `type`: `"survey"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.id`
+> ## `SurveyFieldType.default`
 >
-> **id**?: `string`
+> **default**?: `object`
 >
-> #### `default.survey_type`
+> > ### `default.id`
+> >
+> > **id**?: `string`
+> >
+> > ### `default.survey_type`
+> >
+> > **survey\_type**?: `"CES"` \| `"CSAT"` \| `"NPS"`
+> >
+> >
 >
-> **survey\_type**?: `"CES"` \| `"CSAT"` \| `"NPS"`
+> ## `SurveyFieldType.placeholder`
+>
+> **placeholder**?: `string`
+>
+> ## `SurveyFieldType.type`
+>
+> **type**: `"survey"`
 >
 >
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `type`
-
-**type**: `"survey"`
 
 ## Source
 
-fieldTypes.ts:456
+fieldTypes.ts:454

@@ -2,40 +2,47 @@
 
 # Type alias: GradientFieldType
 
-> **GradientFieldType**: `object`
+> **GradientFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `color`: [`GradientColorType`](type-alias.GradientColorType.md)[];
+    `side_or_corner`: \{
+      `horizontalSide`: `"LEFT"` \| `"RIGHT"`;
+      `verticalSide`: `"TOP"` \| `"BOTTOM"`;
+    };
+  };
+  `type`: `"gradient"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.color`
+> ## `GradientFieldType.default`
 >
-> **color**?: [`GradientColorType`](type-alias.GradientColorType.md)[]
+> **default**?: `object`
 >
-> #### `default.side_or_corner`
->
-> **side\_or\_corner**?: `object`
->
-> > ##### `side\_or\_corner.horizontalSide`
+> > ### `default.color`
 > >
-> > **horizontalSide**?: `"LEFT"` \| `"RIGHT"`
+> > **color**?: [`GradientColorType`](type-alias.GradientColorType.md)[]
 > >
-> > ##### `side\_or\_corner.verticalSide`
+> > ### `default.side_or_corner`
 > >
-> > **verticalSide**?: `"TOP"` \| `"BOTTOM"`
+> > **side\_or\_corner**?: `object`
+> >
+> > > #### `side\_or\_corner.horizontalSide`
+> > >
+> > > **horizontalSide**?: `"LEFT"` \| `"RIGHT"`
+> > >
+> > > #### `side\_or\_corner.verticalSide`
+> > >
+> > > **verticalSide**?: `"TOP"` \| `"BOTTOM"`
+> > >
+> > >
 > >
 > >
 >
+> ## `GradientFieldType.type`
 >
-
-***
-
-### `type`
-
-**type**: `"gradient"`
+> **type**: `"gradient"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:253
+fieldTypes.ts:251

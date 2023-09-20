@@ -2,74 +2,82 @@
 
 # Type alias: LinkFieldType
 
-> **LinkFieldType**: `object`
+> **LinkFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `no_follow`: `boolean`;
+    `open_in_new_tab`: `boolean`;
+    `sponsored`: `boolean`;
+    `url`: \{
+      `content_id`: `number`;
+      `href`: `string`;
+      `type`: `UrlTypes`;
+    };
+    `user_generated_content`: `boolean`;
+  };
+  `placeholder`: `string`;
+  `showAdvancedRelOptions`: `boolean`;
+  `supportedTypes`: `UrlTypes`[];
+  `type`: `"link"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.no_follow`
+> ## `LinkFieldType.default`
 >
-> **no\_follow**?: `boolean`
+> **default**?: `object`
 >
-> #### `default.open_in_new_tab`
->
-> **open\_in\_new\_tab**?: `boolean`
->
-> #### `default.sponsored`
->
-> **sponsored**?: `boolean`
->
-> #### `default.url`
->
-> **url**?: `object`
->
-> > ##### `url.content_id`
+> > ### `default.no_follow`
 > >
-> > **content\_id**: `number`
+> > **no\_follow**?: `boolean`
 > >
-> > ##### `url.href`
+> > ### `default.open_in_new_tab`
 > >
-> > **href**: `string`
+> > **open\_in\_new\_tab**?: `boolean`
 > >
-> > ##### `url.type`
+> > ### `default.sponsored`
 > >
-> > **type**: `UrlTypes`
+> > **sponsored**?: `boolean`
+> >
+> > ### `default.url`
+> >
+> > **url**?: `object`
+> >
+> > > #### `url.content_id`
+> > >
+> > > **content\_id**: `number`
+> > >
+> > > #### `url.href`
+> > >
+> > > **href**: `string`
+> > >
+> > > #### `url.type`
+> > >
+> > > **type**: `UrlTypes`
+> > >
+> > >
+> >
+> > ### `default.user_generated_content`
+> >
+> > **user\_generated\_content**?: `boolean`
 > >
 > >
 >
-> #### `default.user_generated_content`
+> ## `LinkFieldType.placeholder`
 >
-> **user\_generated\_content**?: `boolean`
+> **placeholder**?: `string`
+>
+> ## `LinkFieldType.showAdvancedRelOptions`
+>
+> **showAdvancedRelOptions**?: `boolean`
+>
+> ## `LinkFieldType.supportedTypes`
+>
+> **supportedTypes**?: `UrlTypes`[]
+>
+> ## `LinkFieldType.type`
+>
+> **type**: `"link"`
 >
 >
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `show_advanced_rel_options`
-
-**show\_advanced\_rel\_options**?: `boolean`
-
-***
-
-### `supported_types`
-
-**supported\_types**?: `UrlTypes`[]
-
-***
-
-### `type`
-
-**type**: `"link"`
 
 ## Source
 
-fieldTypes.ts:320
+fieldTypes.ts:318

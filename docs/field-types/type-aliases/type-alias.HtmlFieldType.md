@@ -2,20 +2,21 @@
 
 # Type alias: HtmlFieldType
 
-> **HtmlFieldType**: `object`
+> **HtmlFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `string`;
+  `type`: `"html"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `string`
-
-***
-
-### `type`
-
-**type**: `"html"`
+> ## `HtmlFieldType.default`
+>
+> **default**?: `string`
+>
+> ## `HtmlFieldType.type`
+>
+> **type**: `"html"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:271
+fieldTypes.ts:269

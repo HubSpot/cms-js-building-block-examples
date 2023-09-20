@@ -2,26 +2,26 @@
 
 # Type alias: PageFieldType
 
-> **PageFieldType**: `object`
+> **PageFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `number` \| `number`[];
+  `placeholder`: `string`;
+  `type`: `"page"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `number` \| `number`[]
-
-***
-
-### `placeholder`
-
-**placeholder**?: `string`
-
-***
-
-### `type`
-
-**type**: `"page"`
+> ## `PageFieldType.default`
+>
+> **default**?: `number` \| `number`[]
+>
+> ## `PageFieldType.placeholder`
+>
+> **placeholder**?: `string`
+>
+> ## `PageFieldType.type`
+>
+> **type**: `"page"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:373
+fieldTypes.ts:371

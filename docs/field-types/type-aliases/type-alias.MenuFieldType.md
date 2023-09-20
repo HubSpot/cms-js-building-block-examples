@@ -2,26 +2,26 @@
 
 # Type alias: MenuFieldType
 
-> **MenuFieldType**: `object`
+> **MenuFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: `number` \| `string`;
+  `placeholder`: `"string"`;
+  `type`: `"menu"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `number` \| `string`
-
-***
-
-### `placeholder`
-
-**placeholder**?: `"string"`
-
-***
-
-### `type`
-
-**type**: `"menu"`
+> ## `MenuFieldType.default`
+>
+> **default**?: `number` \| `string`
+>
+> ## `MenuFieldType.placeholder`
+>
+> **placeholder**?: `"string"`
+>
+> ## `MenuFieldType.type`
+>
+> **type**: `"menu"`
+>
+>
 
 ## Source
 
-fieldTypes.ts:356
+fieldTypes.ts:354

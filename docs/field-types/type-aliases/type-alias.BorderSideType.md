@@ -2,39 +2,41 @@
 
 # Type alias: BorderSideType
 
-> **BorderSideType**: `object`
+> **BorderSideType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `color`: `string`;
+  `opacity`: `number`;
+  `style`: `"none"` \| `"solid"` \| `"dashed"` \| `"double"` \| `"groove"` \| `"ridge"` \| `"inset"` \| `"outset"`;
+  `width`: \{
+    `units`: [`CssUnit`](type-alias.CssUnit.md);
+    `value`: `number`;
+  };
+ }
 
-## Type declaration
-
-### `color`
-
-**color**?: `string`
-
-***
-
-### `opacity`
-
-**opacity**?: `number`
-
-***
-
-### `style`
-
-**style**?: `"none"` \| `"solid"` \| `"dashed"` \| `"double"` \| `"groove"` \| `"ridge"` \| `"inset"` \| `"outset"`
-
-***
-
-### `width`
-
-**width**?: `object`
-
-> #### `width.units`
+> ## `BorderSideType.color`
 >
-> **units**: `CssUnit`
+> **color**?: `string`
 >
-> #### `width.value`
+> ## `BorderSideType.opacity`
 >
-> **value**: `number`
+> **opacity**?: `number`
+>
+> ## `BorderSideType.style`
+>
+> **style**?: `"none"` \| `"solid"` \| `"dashed"` \| `"double"` \| `"groove"` \| `"ridge"` \| `"inset"` \| `"outset"`
+>
+> ## `BorderSideType.width`
+>
+> **width**?: `object`
+>
+> > ### `width.units`
+> >
+> > **units**: [`CssUnit`](type-alias.CssUnit.md)
+> >
+> > ### `width.value`
+> >
+> > **value**: `number`
+> >
+> >
 >
 >
 

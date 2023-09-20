@@ -2,91 +2,98 @@
 
 # Type alias: EmbedFieldType
 
-> **EmbedFieldType**: `object`
+> **EmbedFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+  `default`: \{
+    `embed_type`: `string`;
+    `height`: `number`;
+    `max_height`: `number`;
+    `max_width`: `number`;
+    `media_bridge_object`: \{};
+    `oembed_response`: \{};
+    `oembed_string`: `string`;
+    `size_type`: `"auto"` \| `"auto_custom_max"` \| `"auto_full_width"` \| `"exact"`;
+    `source_type`: `"oembed"` \| `"html"` \| `"media_bridge"`;
+    `width`: `number`;
+  };
+  `resizeable`: `boolean`;
+  `showPreview`: `boolean`;
+  `supportedMediaBridgeProviders`: `number`[];
+  `supportedOembedTypes`: (`"photo"` \| `"video"` \| `"link"` \| `"rich"`)[];
+  `supportedSourceTypes`: (`"oembed"` \| `"html"` \| `"media_bridge"`)[];
+  `type`: `"embed"`;
+ }
 
-## Type declaration
-
-### `default`
-
-**default**?: `object`
-
-> #### `default.embed_type`
+> ## `EmbedFieldType.default`
 >
-> **embed\_type**?: `string`
+> **default**?: `object`
 >
-> #### `default.height`
+> > ### `default.embed_type`
+> >
+> > **embed\_type**?: `string`
+> >
+> > ### `default.height`
+> >
+> > **height**?: `number`
+> >
+> > ### `default.max_height`
+> >
+> > **max\_height**?: `number`
+> >
+> > ### `default.max_width`
+> >
+> > **max\_width**?: `number`
+> >
+> > ### `default.media_bridge_object`
+> >
+> > **media\_bridge\_object**?: `object`
+> >
+> > ### `default.oembed_response`
+> >
+> > **oembed\_response**?: `object`
+> >
+> > ### `default.oembed_string`
+> >
+> > **oembed\_string**?: `string`
+> >
+> > ### `default.size_type`
+> >
+> > **size\_type**?: `"auto"` \| `"auto_custom_max"` \| `"auto_full_width"` \| `"exact"`
+> >
+> > ### `default.source_type`
+> >
+> > **source\_type**?: `"oembed"` \| `"html"` \| `"media_bridge"`
+> >
+> > ### `default.width`
+> >
+> > **width**?: `number`
+> >
+> >
 >
-> **height**?: `number`
+> ## `EmbedFieldType.resizeable`
 >
-> #### `default.max_height`
+> **resizeable**?: `boolean`
 >
-> **max\_height**?: `number`
+> ## `EmbedFieldType.showPreview`
 >
-> #### `default.max_width`
+> **showPreview**?: `boolean`
 >
-> **max\_width**?: `number`
+> ## `EmbedFieldType.supportedMediaBridgeProviders`
 >
-> #### `default.media_bridge_object`
+> **supportedMediaBridgeProviders**: `number`[]
 >
-> **media\_bridge\_object**?: `object`
+> ## `EmbedFieldType.supportedOembedTypes`
 >
-> #### `default.oembed_response`
+> **supportedOembedTypes**: (`"photo"` \| `"video"` \| `"link"` \| `"rich"`)[]
 >
-> **oembed\_response**?: `object`
+> ## `EmbedFieldType.supportedSourceTypes`
 >
-> #### `default.oembed_string`
+> **supportedSourceTypes**: (`"oembed"` \| `"html"` \| `"media_bridge"`)[]
 >
-> **oembed\_string**?: `string`
+> ## `EmbedFieldType.type`
 >
-> #### `default.size_type`
->
-> **size\_type**?: `"auto"` \| `"auto_custom_max"` \| `"auto_full_width"` \| `"exact"`
->
-> #### `default.source_type`
->
-> **source\_type**?: `"oembed"` \| `"html"` \| `"media_bridge"`
->
-> #### `default.width`
->
-> **width**?: `number`
+> **type**: `"embed"`
 >
 >
-
-***
-
-### `resizeable`
-
-**resizeable**?: `boolean`
-
-***
-
-### `show_preview`
-
-**show\_preview**?: `boolean`
-
-***
-
-### `supported_media_bridge_providers`
-
-**supported\_media\_bridge\_providers**: `number`[]
-
-***
-
-### `supported_oembed_types`
-
-**supported\_oembed\_types**: (`"photo"` \| `"video"` \| `"link"` \| `"rich"`)[]
-
-***
-
-### `supported_source_types`
-
-**supported\_source\_types**: (`"oembed"` \| `"html"` \| `"media_bridge"`)[]
-
-***
-
-### `type`
-
-**type**: `"embed"`
 
 ## Source
 
