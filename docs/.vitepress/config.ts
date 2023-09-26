@@ -16,6 +16,7 @@ export default defineConfig({
       },
       { text: 'API Reference', link: '/reference/project-structure' },
       { text: 'Appendix', link: '/appendix' },
+      { text: 'Release Log', link: 'release-log'}
     ],
 
     sidebar: {
