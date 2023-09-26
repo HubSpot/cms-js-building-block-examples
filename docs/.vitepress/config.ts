@@ -31,6 +31,7 @@ export default defineConfig({
             { text: 'API reference', link: '/reference/project-structure' },
             { text: 'Field types', link: '/field-types/' },
             { text: 'Appendix', link: '/appendix' },
+            { text: 'Release Log', link: 'release-log'}
           ],
         },
       ],

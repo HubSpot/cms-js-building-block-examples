@@ -4,7 +4,7 @@
 
 Type: Enhancement
 
-Part of: `@cms-dev-server@0.10.0`
+Part of: `@hubspot/cms-dev-server@0.10.0`
 
 Added `help/--help` command to the development server.
 
@@ -35,7 +35,7 @@ https://github.hubspot.com/cms-js-building-block-examples/
 
 Type: Bug Fix
 
-Part of: `@cms-components@0.10.0`
+Part of: `@hubspot/cms-components@0.10.0`
 
 Change: Add support for visibility in FieldGroup
 
@@ -43,7 +43,7 @@ Change: Add support for visibility in FieldGroup
 
 Type: Bug Fix
 
-Part of: `@cms-components@0.10.0`
+Part of: `@hubspot/cms-components@0.10.0`
 
 Change: Add support for `limits` for the "Spacing" field type.
 
@@ -51,7 +51,7 @@ Change: Add support for `limits` for the "Spacing" field type.
 
 Type: Bug Fix
 
-Part of: `@cms-components@0.10.0`
+Part of: `@hubspot/cms-components@0.10.0`
 
 Change: Add support for `resizable`, `show_advanced_options`, and `show_preview` for the "Video" field type.
 
