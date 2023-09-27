@@ -34,6 +34,74 @@ In the middle column, a client-side-only render, we wrap the component in an Isl
 
 In the right-most column, a server-side render with client hydration, we wrap the component in an Island without the `clientOnly` option set. Immediately the client will display the server-side rendered “Hello, world!”, and then the Island’s React code will be downloaded and [instantiated](https://react.dev/reference/react-dom/client/hydrateRoot) (“hydrated”), with the first render also returning “Hello, world!”, since `useAfterIslandHydration` will return `false` on its first invocation. Automatically, there is a subsequent render where `useAfterIslandHydration` will resolve to `true` and the client will show “Hello, hydration!”.
 
+## Debugging
+
+Client and Server side rendering means that html is being rendered in two different contexts. With "Islands", React components are generally executed in _both_ places. Often times a useful tool is logging various values during the render. However, while a `console.log` statement that executes during a server render will log, the server render logs are not visible to the developer. `@hubspot/cms-components` exposes some useful utilities for logging values on the server which then get shipped to the client.
+
+For example:
+
+```javascript
+import { logWarn, logInfo, logError } from '@hubspot/cms-components'
+
+export default function Component(props) {
+
+  logInfo('Information!')
+  logWarn('Warning!')
+  logError('Error!')
+
+  return (
+    <div>
+      {props.children}
+    </div>
+  )
+
+}
+```
+
+These logging utilities behave differently on the server and the client.
+
+When executed on the server they will create log statements respective of the level (info, warn, error) that get included in the HTML which is delivered to the browser. When that HTML is executed in the browser grouped by the Component.
+
+![Log Grouping](./images/log-grouping.png)
+
+When executed on the client they will log respective of the level (info, warn, error) inline when and where they are called.
+
+It can be arduous/inefficient to add and remove `logInfo` statements to your code and build/deploy on each iteration. A developer could create a function that listens to a query parameter and outputs log when that parameter is present.
+
+```javascript
+// debug.js
+import { usePageUrl } from '@hubspot/cms-components'
+
+
+export default function debug(loggingCallback) {
+  const url = usePageUrl();
+
+  if(url.searchParams.get('hsDebug') === 'true') {
+    loggingCallback();
+  }
+}
+
+// MyComponent
+import debug from './debug.js'
+
+export default function MyComponent(props) {
+
+  debug(() => {
+    logInfo('Information!');
+    logWarn('Warning!');
+    logError('Error!');
+  });
+
+  return (
+    <div>
+      {props.children}
+    </div>
+  )
+
+}
+
+```
+
 ### Mismatch Error Example
 
 This example leads to an error because the result of client hydration does not match the server render. When there’s a mismatch this can cause problems with React.This is why `useAfterIslandHydration` is helpful. More information on this error can be found in the [React docs](https://react.dev/reference/react-dom/client/hydrateRoot#handling-different-client-and-server-content).
