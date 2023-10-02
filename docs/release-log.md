@@ -2,7 +2,7 @@
 
 ## 2023-10-02
 
-`@hubspot/cms-dev-server@0.10.0` and `@hubspot/cms-components@0.10.2`
+`@hubspot/cms-dev-server@0.10.2` and `@hubspot/cms-components@0.10.2`
 
 Type: Bug Fix
 
