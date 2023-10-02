@@ -50,7 +50,7 @@ Type: Bug Fix
 
 Change: Add babel macros support to storybook server
 
-## 09.26.23
+## 2023-09-26
 
 Type: Enhancement
 
