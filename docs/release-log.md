@@ -48,6 +48,8 @@ const TestLogInfoDebugComponent = ({ logArgs }) => {
 
 Type: Bug Fix
 
+`@hubspot/cms-dev-server@0.10.1`
+
 Change: Add babel macros support to storybook server
 
 ## 2023-09-26
