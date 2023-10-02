@@ -1,5 +1,55 @@
 # Release Log
 
+## 2023-10-02
+
+`@hubspot/cms-dev-server@0.10.0` and `@hubspot/cms-components@0.10.2`
+
+Type: Bug Fix
+
+Change: Correct types for SpacingLimitType, SpacingValueType, and Advanced Visibility
+
+---
+
+Type: Bug Fix
+
+Change: Add support for visibility in RepeatedFieldGroup
+
+---
+
+Type: Enhancement
+
+Change: Add `useIsDebug`, `logInfoDebugOnly`, `logWarnDebugOnly`, and `logErrorDebugOnly`
+
+Example Usage: When visiting your page, `useIsDebug` will return true and the logging functions with log when you set `hsDebug` to true in your query parameters. e.g. "mydomain.com/home?hsDebug=true". Note that use of `hsDebug` will disable pre-rendering for that page while it is in use.
+
+```javascript
+import { useIsDebug, logInfoDebugOnly } from '@hubspot/cms-components'
+
+function PicardComponent() {
+  const isDebug = useIsDebug();
+
+  const picardCommand = isDebug ? 'make it so' : 'engage';
+
+  return (
+    <>
+      <h1>{`${picardCommand}`}</h1>
+    </>
+  );
+}
+
+const TestLogInfoDebugComponent = ({ logArgs }) => {
+  logInfoDebugOnly(...logArgs);
+
+  return null;
+};
+```
+
+---
+
+Type: Bug Fix
+
+Change: Add babel macros support to storybook server
+
 ## 09.26.23
 
 Type: Enhancement
