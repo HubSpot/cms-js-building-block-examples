@@ -1,6 +1,8 @@
+import { fileURLToPath } from 'url';
+const componentsDir = fileURLToPath(new URL('./components', import.meta.url));
+
 export default {
-  relative: true,
-  content: [`./components/**/*.{js,ts,jsx,tsx}`],
+  content: [`${componentsDir}/**/*.{js,ts,jsx,tsx}`],
   theme: {
     extend: {},
   },
