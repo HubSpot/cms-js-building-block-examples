@@ -1,10 +1,34 @@
 # Release Log
 
-## 2023-10-02
+## 2023-10-16
 
-`@hubspot/cms-dev-server@0.10.2` and `@hubspot/cms-components@0.10.2`
+Type: Small tweak
+
+Part of: `@hubspot/cms-components@0.10.4`
+
+Added `data-hs-island` attribute to island wrapper elements.
+
+---
 
 Type: Bug Fix
+
+Part of: `@hubspot/cms-components@0.10.3`
+
+Change: Support `locked` in FieldGroup and RepeatedFieldGroup
+
+---
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-components@0.10.3`
+
+Change: Support `helpText` and `inlineHelpText` in `FieldGroup` and `RepeatedFieldGroup`
+
+## 2023-10-02
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-components@0.10.2`
 
 Change: Correct types for SpacingLimitType, SpacingValueType, and Advanced Visibility
 
@@ -12,11 +36,15 @@ Change: Correct types for SpacingLimitType, SpacingValueType, and Advanced Visib
 
 Type: Bug Fix
 
+Part of: `@hubspot/cms-components@0.10.2`
+
 Change: Add support for visibility in RepeatedFieldGroup
 
 ---
 
 Type: Enhancement
+
+Part of: `@hubspot/cms-components@0.10.2`
 
 Change: Add `useIsDebug`, `logInfoDebugOnly`, `logWarnDebugOnly`, and `logErrorDebugOnly`
 
@@ -48,7 +76,7 @@ const TestLogInfoDebugComponent = ({ logArgs }) => {
 
 Type: Bug Fix
 
-`@hubspot/cms-dev-server@0.10.1`
+Part of: `@hubspot/cms-dev-server@0.10.1`
 
 Change: Add babel macros support to storybook server
 
