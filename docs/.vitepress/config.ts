@@ -16,7 +16,7 @@ export default defineConfig({
       },
       { text: 'API Reference', link: '/reference/project-structure' },
       { text: 'Appendix', link: '/appendix' },
-      { text: 'Release Log', link: 'release-log'}
+      { text: 'Release Log', link: 'release-log' },
     ],
 
     sidebar: {
@@ -31,7 +31,7 @@ export default defineConfig({
             { text: 'API reference', link: '/reference/project-structure' },
             { text: 'Field types', link: '/field-types/' },
             { text: 'Appendix', link: '/appendix' },
-            { text: 'Release Log', link: 'release-log'}
+            { text: 'Release Log', link: 'release-log' },
           ],
         },
       ],
@@ -46,7 +46,21 @@ export default defineConfig({
                 link: 'project-structure',
               },
               { text: 'JS Partials', link: 'js-partials' },
-              { text: 'JS Modules', link: 'js-modules' },
+              {
+                text: 'JS Modules',
+                link: 'js-modules',
+                items: [
+                  {
+                    text: 'Directory Structure',
+                    link: 'js-modules#directory-structure-requirements',
+                  },
+                  {
+                    text: 'Module Fields',
+                    link: 'js-modules#module-fields',
+                  },
+                  { text: 'GraphQL', link: 'js-modules#graphql' },
+                ],
+              },
               { text: 'Islands', link: 'islands' },
               { text: '@hubspot/cms-components', link: 'cms-components' },
               { text: '@hubspot/cms-dev-server', link: 'cms-dev-server' },

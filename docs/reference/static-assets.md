@@ -1,4 +1,4 @@
-## Static Assets
+# Static Assets
 
 Static asset in your modules with common extensions will resolve to public URLs automatically:
 

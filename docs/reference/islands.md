@@ -1,5 +1,4 @@
-
-## Islands
+# Islands
 
 To use an interactive React component in your page—any component that responds to user input or has state—you need to wrap it with an `<Island>`.
 
@@ -48,9 +47,9 @@ export default function InteractiveComponent({ defaultCount }) {
 }
 ```
 
-### Island props
+## Island props
 
-#### `hydrateOn`
+### `hydrateOn`
 
 When rendering a page with Islands on the server the output includes a script to initialize Islands on the client. The default behavior of the island initialization script is to eagerly hydrate all Islands as soon as possible, i.e., on load, but there are other strategies available when hydrating components.
 
@@ -72,7 +71,7 @@ For Islands with the `visible` hydration type we don’t hydrate until the eleme
 
 Hydrating means downloading and initializing your Island component code, so using these different hydration types strategically to defer some of that work can help boost initial page load performance!
 
-#### `clientOnly`
+### `clientOnly`
 
 `boolean`
 

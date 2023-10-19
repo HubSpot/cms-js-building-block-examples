@@ -1,4 +1,4 @@
-## Third-party dependencies
+# Third-party dependencies
 
 JS modules and JS partials can depend on public third-party NPM dependencies inside and outside of Islands. Dependency code will only be bundled and sent to the client if it is referenced from an Island. You can specify a package and version in the `dependencies` field of your `package.json` within your asset package that will be used in the project build. Note that the build process runs a `production` installation of dependencies, so `devDependencies` will not be included.
 

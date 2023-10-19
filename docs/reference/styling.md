@@ -1,8 +1,8 @@
-## Styling
+# Styling
 
 Refer to the [styling example project](https://github.com/HubSpot/cms-js-building-block-examples/tree/main/styling/styling-project/styling-app) for working examples of supported methods of styling your components, including a number of major styling libraries.
 
-### Tailwind
+## Tailwind
 
 You can configure [Tailwind](https://tailwindcss.com/) for your components by doing the following:
 
@@ -13,7 +13,7 @@ You can configure [Tailwind](https://tailwindcss.com/) for your components by do
 
 See the `TailwindPartial` component and the relevant configuration in the example for more detail.
 
-### styled-components
+## styled-components
 
 You can use [`styled-components`](https://styled-components.com) in your project by doing the following:
 
@@ -36,7 +36,7 @@ export default function StyledIsland(props) {
 
 - You can now `import styled from 'styled-components';` and use it to style your components.
 
-### styled-jsx
+## styled-jsx
 
 Steps to use `styled-jsx` are:
 
@@ -45,7 +45,7 @@ Steps to use `styled-jsx` are:
 - The registry component for `styled-jsx` must also be wrapped on any `Island` usage to prevent hydration mismatches or missing styles on initial load. Note that `styled-jsx`'s implementation depends on `useId()` hooks in a way that can cause mismatches if not properly configured. See the `StyledJSXIsland.jsx` implementation from the example for an easier pattern of replacing all direct `<Island />` usage.
 - You can now use `styled-jsx` to style your components, including ``<style jsx>{` /* CSS here */ `}</style>`` patterns.
 
-### CSS Modules
+## CSS Modules
 
 You can use [CSS Modules](https://github.com/css-modules/css-modules) within any React components by importing a file ending in .module.css, which will return a CSS module object:
 
@@ -77,7 +77,7 @@ When you important a CSS modules file from inside a React component:
 
 Note, you can also import regular CSS files into your React components. But their selectors will not be automatically namespaced.
 
-#### Dynamic styles based on props
+### Dynamic styles based on props
 
 If you need to dynamically adjust styles based on props, here are some options:
 
@@ -132,6 +132,6 @@ export default function FancierComponent(props) {
 }
 ```
 
-### Other CSS-in-JS libraries
+## Other CSS-in-JS libraries
 
 Other CSS-in-JS libraries that provide a server side rendering API and don't depend on a Babel plugin can be used within HubSpot projects. The same registry pattern described above can be generalized for other libraries to emit CSS to include as part of the server render. The registry will need to be included as a `Wrapper` on any `<Island />` usage as well if there are styles within the island.
