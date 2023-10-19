@@ -1,12 +1,18 @@
-Beta slack channel: [\#beta-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204)
+---
+next:
+  text: 'API Reference'
+  link: 'reference/project-structure'
+---
+
+CMS JS Building Blocks slack channel: [\#cms-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204)
 
 # Introduction
 
 ## Welcome!
 
-Thank you for taking the time to explore this new direction for the HubSpot CMS! As always our goal is to solve for our customers so we welcome any and all feedback. During this private beta please chat away in [\#beta-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204).
+Thank you for taking the time to explore this new direction for the HubSpot CMS! As always our goal is to solve for our customers so we welcome any and all feedback. Chat away in [\#cms-js-rendering](https://hubspotdev.slack.com/archives/C04AY1H2204) with other HubSpot developers who are pushing forward with CMS JS Building Blocks.
 
-The easiest way to get started is by following the [Hello World example guide](../hello-world/README.md). Once you've acquainted yourself with JS building blocks use the [API reference](./reference.md) to learn more. If you are new to JavaScript or React, please check out the “Learning links” execution in the [appendix](./appendix.md) below.
+The easiest way to get started is by following the [Hello World example guide](https://github.com/HubSpot/cms-js-building-block-examples/tree/main/hello-world). Once you've acquainted yourself with JS building blocks use the [API reference](https://github.hubspot.com/cms-js-building-block-examples/reference/project-structure.html) to learn more. If you are new to JavaScript or React, please check out the “Learning links” execution in the [appendix](/appendix) below.
 
 ## What are the new JS building blocks?
 
@@ -16,7 +22,7 @@ In addition to stitching server-rendered React components into the HTML generate
 
 ## Benefits
 
-Using JavaScript and React instead of HubL comes with lots of benefits, including component composability, code reuse, broader community resources, and real access to JavaScript on the server. While this beta (and eventual release) is just a start, our hope is to make developing on the HubSpot CMS feel like modern web development. Plus we want to give you technologies that scale with you, all the way from simple static pages to complex interactive and dynamic web applications.
+Using JavaScript and React instead of HubL comes with lots of benefits, including component composability, code reuse, broader community resources, and real access to JavaScript on the server. While this release is just a start, our hope is to make developing on the HubSpot CMS feel like modern web development. Plus we want to give you technologies that scale with you, all the way from simple static pages to complex interactive and dynamic web applications.
 
 Rendering React on the server means that there is far less of a technological divide between your code that serves the initial page HTML and your interactive browser code. Previously, as you created more complex and interactive pages, that would either lead to:
 
@@ -32,20 +38,14 @@ However when server-side rendering (SSR) JavaScript, you no longer have to make 
 
 Additionally by building on top of JavaScript and an open source framework (React), you'll have better access to the wealth of tooling, libraries, example code, community answers, etc available in the broader ecosystem. That will make new developers get up to speed faster, enable you to create better experiences with less time and effort, and give you better and shinier toys to code with. For example, since JS modules and partials are built on top of Vite, you'll get things like ESM, TypeScript, JSX, CSS modules, and tree-shaking out of the box.
 
-## About the beta
-
-A few things to keep in mind during this beta:
-
-- JS building blocks need to be enabled for your portal(s) before use.
-- We don’t have a specific release timeline to share, though we would like to make JS building blocks generally available in 2023
-
 ## Features missing and caveats
 
-Note, this beta is early and we are actively working on many things. Here is a list of some features that we are actively implementing but do not work in the beta yet:
+Note, CMS JS Building Blocks is still in development and we are actively working on many things. Here is a list of some features that we are actively implementing but do not work in the feature yet:
 
 - More performance optimizations
 - Support for passing template-level overrides to the module tag via HubL params
 - Support for contact variable during local proxy
+- Support for importing JS Modules into JS Partials
 
 And here is a non-exhaustive list of features that we hope to work toward, but are not guaranteed for our v1 release:
 
