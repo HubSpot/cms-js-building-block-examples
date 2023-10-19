@@ -1,6 +1,86 @@
 # Release Log
 
-## 09.26.23
+## 2023-10-16
+
+Type: Small tweak
+
+Part of: `@hubspot/cms-components@0.10.4`
+
+Added `data-hs-island` attribute to island wrapper elements.
+
+---
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-components@0.10.3`
+
+Change: Support `locked` in FieldGroup and RepeatedFieldGroup
+
+---
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-components@0.10.3`
+
+Change: Support `helpText` and `inlineHelpText` in `FieldGroup` and `RepeatedFieldGroup`
+
+## 2023-10-02
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-components@0.10.2`
+
+Change: Correct types for SpacingLimitType, SpacingValueType, and Advanced Visibility
+
+---
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-components@0.10.2`
+
+Change: Add support for visibility in RepeatedFieldGroup
+
+---
+
+Type: Enhancement
+
+Part of: `@hubspot/cms-components@0.10.2`
+
+Change: Add `useIsDebug`, `logInfoDebugOnly`, `logWarnDebugOnly`, and `logErrorDebugOnly`
+
+Example Usage: When visiting your page, `useIsDebug` will return true and the logging functions with log when you set `hsDebug` to true in your query parameters. e.g. "mydomain.com/home?hsDebug=true". Note that use of `hsDebug` will disable pre-rendering for that page while it is in use.
+
+```javascript
+import { useIsDebug, logInfoDebugOnly } from '@hubspot/cms-components'
+
+function PicardComponent() {
+  const isDebug = useIsDebug();
+
+  const picardCommand = isDebug ? 'make it so' : 'engage';
+
+  return (
+    <>
+      <h1>{`${picardCommand}`}</h1>
+    </>
+  );
+}
+
+const TestLogInfoDebugComponent = ({ logArgs }) => {
+  logInfoDebugOnly(...logArgs);
+
+  return null;
+};
+```
+
+---
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-dev-server@0.10.1`
+
+Change: Add babel macros support to storybook server
+
+## 2023-09-26
 
 Type: Enhancement
 
