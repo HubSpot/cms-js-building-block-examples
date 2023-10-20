@@ -1,4 +1,4 @@
-## JS Partials
+# JS Partials
 
 Similar to [global partials](https://developers.hubspot.com/docs/cms/building-blocks/global-content#global-partials-vs-global-modules), JavaScript partials are “slices” of your page that can be replaced with React. These can be used globally within HubL. Partials must be located in the `components/partials/` subdirectory of the JavaScript project component. For instance, if you have a file `components/partials/Header.jsx`, which default exports a React component, then you can include it in your project HubL like so:
 
@@ -11,7 +11,7 @@ Similar to [global partials](https://developers.hubspot.com/docs/cms/building-bl
 
 Any parameters passed to `js_partial` alongside the `path` will be available within the React component as props.
 
-### Directory Structure Requirements
+## Directory Structure Requirements
 
 A JS Partial file can live at either of the following paths, using the directory or file name as the partial name:
 

@@ -16,6 +16,14 @@ Returns the the current account ID (“Hub ID” or “portal ID”) for the pag
 
 Returns `true` for components rendered live for a deployed project and `false` when rendering in the dev server.
 
+### `getSecret`
+
+`(secretName: string) => string`
+
+Returns a value for a given secret key. The secret must be defined using `hs secrets` in the CLI and the key must be included in a `secretNames` array in your `cms-assets.json` configuration. To prevent accidentally leaking  secrets, `getSecret()` can only be called from components executed on the server and not from the browser (i.e. within an island).
+
+See the [Secrets section](./secrets) for more information on usage.
+
 ## Hooks
 
 We provide a number of React hooks from the `@hubspot/cms-components` package to help write components that run on both the server and the browser.

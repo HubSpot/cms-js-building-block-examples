@@ -1,4 +1,4 @@
-## Testing
+# Testing
 
 With JS building blocks it is easy to unit test your components using [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
 

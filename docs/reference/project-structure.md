@@ -1,4 +1,4 @@
-## Project Structure
+# Project Structure
 
 This is the top-level structure to be used for JS rendering projects:
 
