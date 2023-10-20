@@ -20,19 +20,9 @@ Returns `true` for components rendered live for a deployed project and `false` w
 
 `(secretName: string) => string`
 
-Returns a value for a given secret key. The secret must be defined using `hs secrets` in the CLI and the key must be included in a `secretNames` array in your `cms-assets.json` configuration. To prevent accidentally leaking  secrets, `getSecret()` can only be called from components executed on the server and not from the browser (within an island). If a secret value isn't sensitive and you need to access it in island components, you may call `getSecret()` outside the island and pass the value down via a prop.
+Returns a value for a given secret key. The secret must be defined using `hs secrets` in the CLI and the key must be included in a `secretNames` array in your `cms-assets.json` configuration. To prevent accidentally leaking  secrets, `getSecret()` can only be called from components executed on the server and not from the browser (i.e. within an island).
 
-To set a secret value for use locally in `cms-dev-server`, you can use a `.env` file in you project component, adding a prefix of `HS_` to the secret key. For example:
-
-```
-// .env
-HS_MYSECRET=devsecretvalue
-```
-
-```js
-// in a component:
-const secretValue = getSecret('MYSECRET');
-```
+See the [Secrets section](./secrets) for more information on usage.
 
 ## Hooks
 

@@ -73,6 +73,7 @@ export default defineConfig({
               { text: 'Prerendering', link: 'prerendering' },
               { text: 'Testing', link: 'testing' },
               { text: 'Data Fetching', link: 'data-fetching' },
+              { text: 'Secrets', link: 'secrets' },
             ],
           },
           {
