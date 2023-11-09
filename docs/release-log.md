@@ -1,5 +1,120 @@
 # Release Log
 
+## 2022-11-08
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-components@0.11.3
+
+Change: Add support for `propertyAliasesPaths`
+
+Example Usage: When defining fields one can use the new property like so:
+
+```jsx
+  <ColorField
+    name="test"
+    label="test label"
+    propertyAliasesPaths={{
+      color: ['color'],
+    }}
+  />
+```
+
+Will result in:
+
+```json
+ {
+    "type": "color",
+    "name": "test",
+    "label": "test label",
+    "aliases_mapping": {
+      "property_aliases_paths": {
+        "color": [
+          "color",
+        ],
+      },
+    },
+  }
+```
+
+---
+
+Type: Enhancement
+
+Part of: `@hubspot/cms-components@0.11.1`
+
+Change: Added `<RichTextFieldWrapper />` component.
+
+Example Usage:
+
+```jsx
+import { RichTextFieldWrapper } from '@hubspot/cms-components';
+
+function SomeTextComponent({ fieldValues }) {
+  const { richTextFieldName: richTextValue } = fieldValues;
+
+  return (
+    <RichTextFieldWrapper
+
+      // Pass in a rich text field's value
+      fieldValue={richTextValue}
+
+      // optional, changes the wrapper element (defaults to div)
+      tag="article"
+
+      // Also supports other standard React attributes for HTML
+      // like id, className, on*,   style, data-*, aria-*, etc
+    />
+  );
+}
+```
+
+All props other than `fieldValue` and `tag` are applied to the `tag` element as HTML Attributes.
+
+---
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-components@0.11.1`
+
+Change: Add support for `inheritedValueDefaultValuePath` and `inheritedValuePropertyValuePaths` within Fields definitions.
+
+Example Usage: When defining fields one can use the two new properties like so:
+
+```jsx
+  <TextField
+    name="test"
+    label="test label"
+    inheritedValueDefaultValuePath="fields.bodyFont"
+    inheritedValuePropertyValuePaths={{
+      color: 'module.secondary_color.color',
+    }}
+  />
+```
+
+Will result in:
+
+```json
+ {
+    "name": "test",
+    "inherited_value": {
+      "default_value_path": "fields.bodyFont",
+      "property_value_paths": {
+        "color": "module.secondary_color.color",
+      },
+    },
+    ...
+  }
+```
+
+---
+
+Type: Enhancement
+
+Part of: `@hubspot/cms-components@0.11.0`
+
+Added secrets integration. See [documentation](https://github.hubspot.com/cms-js-building-block-examples/reference/secrets.html) for more information and example usage
+
 ## 2023-10-16
 
 Type: Small tweak
