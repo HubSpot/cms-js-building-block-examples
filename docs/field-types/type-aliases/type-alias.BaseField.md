@@ -30,6 +30,18 @@
 
 ***
 
+### `inheritedValueDefaultValuePath`
+
+**inheritedValueDefaultValuePath**?: `string`
+
+***
+
+### `inheritedValuePropertyValuePaths`
+
+**inheritedValuePropertyValuePaths**?: `object`
+
+***
+
 ### `inlineHelpText`
 
 **inlineHelpText**?: `string` \| `null`
@@ -75,6 +87,12 @@
 > **sorting\_label\_field**?: `string`
 >
 >
+
+***
+
+### `propertyAliasesPaths`
+
+**propertyAliasesPaths**?: `object`
 
 ***
 

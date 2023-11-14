@@ -1,10 +1,18 @@
 # Release Log
 
-## 2022-11-08
+## 2023-11-14
+
+Type: Enhancement
+
+Part of: `@hubspot/cms-components@0.12.0`
+
+Change: Add `Audio` field component for new `audioplayer` field type
+
+## 2023-11-08
 
 Type: Bug Fix
 
-Part of: `@hubspot/cms-components@0.11.3
+Part of: `@hubspot/cms-components@0.11.3`
 
 Change: Add support for `propertyAliasesPaths`
 

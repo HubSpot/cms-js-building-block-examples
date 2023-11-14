@@ -17,6 +17,9 @@
     `size_type`: `"exact"` \| `"auto"` \| `"auto_custom_max"` \| `"auto_full_width"`;
     `width`: `number`;
   };
+  `resizable`: `boolean`;
+  `showAdvancedOptions`: `boolean`;
+  `showPreview`: `boolean`;
   `type`: `"videoplayer"`;
  }
 
@@ -74,6 +77,18 @@
 > >
 > >
 >
+> ## `VideoFieldType.resizable`
+>
+> **resizable**?: `boolean`
+>
+> ## `VideoFieldType.showAdvancedOptions`
+>
+> **showAdvancedOptions**?: `boolean`
+>
+> ## `VideoFieldType.showPreview`
+>
+> **showPreview**?: `boolean`
+>
 > ## `VideoFieldType.type`
 >
 > **type**: `"videoplayer"`
@@ -82,4 +97,4 @@
 
 ## Source
 
-fieldTypes.ts:502
+fieldTypes.ts:545

@@ -4,7 +4,7 @@
 
 > **FileFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
   `default`: `string`;
-  `picker`: `"file"` \| `"image"` \| `"video"` \| `"document"`;
+  `picker`: `"file"` \| `"image"` \| `"video"` \| `"document"` \| `"audio"`;
   `type`: `"file"`;
  }
 
@@ -14,7 +14,7 @@
 >
 > ## `FileFieldType.picker`
 >
-> **picker**: `"file"` \| `"image"` \| `"video"` \| `"document"`
+> **picker**: `"file"` \| `"image"` \| `"video"` \| `"document"` \| `"audio"`
 >
 > ## `FileFieldType.type`
 >
@@ -24,4 +24,4 @@
 
 ## Source
 
-fieldTypes.ts:198
+fieldTypes.ts:211

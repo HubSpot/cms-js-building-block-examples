@@ -6,6 +6,8 @@
   `default`: \{
     `margin`: \{
       `bottom`: [`SpacingValueType`](type-alias.SpacingValueType.md);
+      `left`: [`SpacingValueType`](type-alias.SpacingValueType.md);
+      `right`: [`SpacingValueType`](type-alias.SpacingValueType.md);
       `top`: [`SpacingValueType`](type-alias.SpacingValueType.md);
     };
     `padding`: \{
@@ -13,6 +15,20 @@
       `left`: [`SpacingValueType`](type-alias.SpacingValueType.md);
       `right`: [`SpacingValueType`](type-alias.SpacingValueType.md);
       `top`: [`SpacingValueType`](type-alias.SpacingValueType.md);
+    };
+  };
+  `limits`: \{
+    `margin`: \{
+      `bottom`: [`SpacingLimitType`](type-alias.SpacingLimitType.md);
+      `left`: [`SpacingLimitType`](type-alias.SpacingLimitType.md);
+      `right`: [`SpacingLimitType`](type-alias.SpacingLimitType.md);
+      `top`: [`SpacingLimitType`](type-alias.SpacingLimitType.md);
+    };
+    `padding`: \{
+      `bottom`: [`SpacingLimitType`](type-alias.SpacingLimitType.md);
+      `left`: [`SpacingLimitType`](type-alias.SpacingLimitType.md);
+      `right`: [`SpacingLimitType`](type-alias.SpacingLimitType.md);
+      `top`: [`SpacingLimitType`](type-alias.SpacingLimitType.md);
     };
   };
   `type`: `"spacing"`;
@@ -29,6 +45,14 @@
 > > > #### `margin.bottom`
 > > >
 > > > **bottom**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
+> > >
+> > > #### `margin.left`
+> > >
+> > > **left**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
+> > >
+> > > #### `margin.right`
+> > >
+> > > **right**?: [`SpacingValueType`](type-alias.SpacingValueType.md)
 > > >
 > > > #### `margin.top`
 > > >
@@ -60,6 +84,56 @@
 > >
 > >
 >
+> ## `SpacingFieldType.limits`
+>
+> **limits**?: `object`
+>
+> > ### `limits.margin`
+> >
+> > **margin**: `object`
+> >
+> > > #### `margin.bottom`
+> > >
+> > > **bottom**?: [`SpacingLimitType`](type-alias.SpacingLimitType.md)
+> > >
+> > > #### `margin.left`
+> > >
+> > > **left**?: [`SpacingLimitType`](type-alias.SpacingLimitType.md)
+> > >
+> > > #### `margin.right`
+> > >
+> > > **right**?: [`SpacingLimitType`](type-alias.SpacingLimitType.md)
+> > >
+> > > #### `margin.top`
+> > >
+> > > **top**?: [`SpacingLimitType`](type-alias.SpacingLimitType.md)
+> > >
+> > >
+> >
+> > ### `limits.padding`
+> >
+> > **padding**: `object`
+> >
+> > > #### `padding.bottom`
+> > >
+> > > **bottom**?: [`SpacingLimitType`](type-alias.SpacingLimitType.md)
+> > >
+> > > #### `padding.left`
+> > >
+> > > **left**?: [`SpacingLimitType`](type-alias.SpacingLimitType.md)
+> > >
+> > > #### `padding.right`
+> > >
+> > > **right**?: [`SpacingLimitType`](type-alias.SpacingLimitType.md)
+> > >
+> > > #### `padding.top`
+> > >
+> > > **top**?: [`SpacingLimitType`](type-alias.SpacingLimitType.md)
+> > >
+> > >
+> >
+> >
+>
 > ## `SpacingFieldType.type`
 >
 > **type**: `"spacing"`
@@ -68,4 +142,4 @@
 
 ## Source
 
-fieldTypes.ts:443
+fieldTypes.ts:461
