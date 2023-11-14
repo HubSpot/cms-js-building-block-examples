@@ -1,22 +1,22 @@
-[API](../index.md) > HubdbTableFieldType
+[API](../index.md) > HubDbTableFieldType
 
-# Type alias: HubdbTableFieldType
+# Type alias: HubDbTableFieldType
 
-> **HubdbTableFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+> **HubDbTableFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
   `default`: `string` \| `number`;
   `placeholder`: `string`;
   `type`: `"hubdbtable"`;
  }
 
-> ## `HubdbTableFieldType.default`
+> ## `HubDbTableFieldType.default`
 >
 > **default**?: `string` \| `number`
 >
-> ## `HubdbTableFieldType.placeholder`
+> ## `HubDbTableFieldType.placeholder`
 >
 > **placeholder**?: `string`
 >
-> ## `HubdbTableFieldType.type`
+> ## `HubDbTableFieldType.type`
 >
 > **type**: `"hubdbtable"`
 >
@@ -24,4 +24,4 @@
 
 ## Source
 
-fieldTypes.ts:288
+fieldTypes.ts:301

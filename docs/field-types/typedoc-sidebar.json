@@ -12,6 +12,12 @@
     "items": []
   },
   {
+    "text": "AudioFieldType",
+    "link": "/../../field-types/type-aliases/type-alias.AudioFieldType.md",
+    "collapsed": true,
+    "items": []
+  },
+  {
     "text": "BackgroundImageFieldType",
     "link": "/../../field-types/type-aliases/type-alias.BackgroundImageFieldType.md",
     "collapsed": true,
@@ -174,14 +180,14 @@
     "items": []
   },
   {
-    "text": "HubdbRowFieldType",
-    "link": "/../../field-types/type-aliases/type-alias.HubdbRowFieldType.md",
+    "text": "HubDbRowFieldType",
+    "link": "/../../field-types/type-aliases/type-alias.HubDbRowFieldType.md",
     "collapsed": true,
     "items": []
   },
   {
-    "text": "HubdbTableFieldType",
-    "link": "/../../field-types/type-aliases/type-alias.HubdbTableFieldType.md",
+    "text": "HubDbTableFieldType",
+    "link": "/../../field-types/type-aliases/type-alias.HubDbTableFieldType.md",
     "collapsed": true,
     "items": []
   },
@@ -266,6 +272,12 @@
   {
     "text": "SpacingFieldType",
     "link": "/../../field-types/type-aliases/type-alias.SpacingFieldType.md",
+    "collapsed": true,
+    "items": []
+  },
+  {
+    "text": "SpacingLimitType",
+    "link": "/../../field-types/type-aliases/type-alias.SpacingLimitType.md",
     "collapsed": true,
     "items": []
   },

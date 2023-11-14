@@ -1,8 +1,8 @@
-[API](../index.md) > HubdbRowFieldType
+[API](../index.md) > HubDbRowFieldType
 
-# Type alias: HubdbRowFieldType
+# Type alias: HubDbRowFieldType
 
-> **HubdbRowFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
+> **HubDbRowFieldType**: [`BaseField`](type-alias.BaseField.md) & \{
   `columnsToFetch`: `string`[];
   `default`: \{
     `id`: `number`;
@@ -14,11 +14,11 @@
   `type`: `"hubdbrow"`;
  }
 
-> ## `HubdbRowFieldType.columnsToFetch`
+> ## `HubDbRowFieldType.columnsToFetch`
 >
 > **columnsToFetch**: `string`[]
 >
-> ## `HubdbRowFieldType.default`
+> ## `HubDbRowFieldType.default`
 >
 > **default**?: `object`
 >
@@ -28,23 +28,23 @@
 > >
 > >
 >
-> ## `HubdbRowFieldType.displayColumns`
+> ## `HubDbRowFieldType.displayColumns`
 >
 > **displayColumns**?: `string`[]
 >
-> ## `HubdbRowFieldType.displayFormat`
+> ## `HubDbRowFieldType.displayFormat`
 >
 > **displayFormat**?: `string`
 >
-> ## `HubdbRowFieldType.placeholder`
+> ## `HubDbRowFieldType.placeholder`
 >
 > **placeholder**?: `string`
 >
-> ## `HubdbRowFieldType.tableNameOrId`
+> ## `HubDbRowFieldType.tableNameOrId`
 >
 > **tableNameOrId**: `string` \| `number`
 >
-> ## `HubdbRowFieldType.type`
+> ## `HubDbRowFieldType.type`
 >
 > **type**: `"hubdbrow"`
 >
@@ -52,4 +52,4 @@
 
 ## Source
 
-fieldTypes.ts:277
+fieldTypes.ts:290

@@ -9,7 +9,7 @@
     `supported_types`: `UrlTypes`[];
     `type`: `UrlTypes`;
   };
-  `supportedTypes`: `UrlTypes`;
+  `supportedTypes`: `UrlTypes`[];
   `type`: `"url"`;
  }
 
@@ -37,7 +37,7 @@
 >
 > ## `UrlFieldType.supportedTypes`
 >
-> **supportedTypes**: `UrlTypes`
+> **supportedTypes**: `UrlTypes`[]
 >
 > ## `UrlFieldType.type`
 >
@@ -47,4 +47,4 @@
 
 ## Source
 
-fieldTypes.ts:492
+fieldTypes.ts:535
