@@ -1,4 +1,5 @@
 {
   "name": "todo-mvc-project",
-  "srcDir": "."
+  "srcDir": ".",
+  "platformVersion": "2023.2"
 }
