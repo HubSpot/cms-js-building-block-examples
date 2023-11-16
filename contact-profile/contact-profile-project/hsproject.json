@@ -1,4 +1,5 @@
 {
   "name": "contact-profile-project",
-  "srcDir": "."
+  "srcDir": ".",
+  "platformVersion": "2023.2"
 }
