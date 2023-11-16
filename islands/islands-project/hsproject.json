@@ -1,4 +1,5 @@
 {
   "name": "islands-project",
-  "srcDir": "."
+  "srcDir": ".",
+  "platformVersion": "2023.2"
 }
