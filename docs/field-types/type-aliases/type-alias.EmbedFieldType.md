@@ -15,7 +15,7 @@
     `source_type`: `"oembed"` \| `"html"` \| `"media_bridge"`;
     `width`: `number`;
   };
-  `resizeable`: `boolean`;
+  `resizable`: `boolean`;
   `showPreview`: `boolean`;
   `supportedMediaBridgeProviders`: `number`[];
   `supportedOembedTypes`: (`"photo"` \| `"video"` \| `"link"` \| `"rich"`)[];
@@ -69,9 +69,9 @@
 > >
 > >
 >
-> ## `EmbedFieldType.resizeable`
+> ## `EmbedFieldType.resizable`
 >
-> **resizeable**?: `boolean`
+> **resizable**?: `boolean`
 >
 > ## `EmbedFieldType.showPreview`
 >
