@@ -1,5 +1,13 @@
 # Release Log
 
+## 2023-12-06
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-components@0.13.0`
+
+Fix `<ImageField>`, `<EmbedField>`, and others to take a `resizable` prop instead of the incorrect "resizeable" spelling.
+
 ## 2023-11-14
 
 Type: Enhancement
