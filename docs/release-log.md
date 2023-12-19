@@ -1,5 +1,31 @@
 # Release Log
 
+## 2023-12-19
+
+Type: Enhancement
+
+Part of: `@hubspot/cms-dev-server@0.13.7`
+
+Change: Add field validation output to console and dev server render
+
+Example Usage: No change, user will see fields validation error overlay when viewing the "module" route in the dev server and errors/warnings in the developer console for proxy and module routes.
+
+---
+
+Type: Bug Fix
+
+Part of: `@hubspot/cms-dev-server@0.13.6`
+
+Change: Fix prop shape for GraphQL query data result for use with Storybook.
+
+---
+
+Type: Security Fix, Enhancement
+
+Part of: Platform Release
+
+Change: Ensure that serialized island props have `</script>` escaped to prevent XSS attacks with user generated content that maliciously closes the inline script block and tries to inject JS code.
+
 ## 2023-12-06
 
 Type: Bug Fix
