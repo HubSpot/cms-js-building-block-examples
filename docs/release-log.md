@@ -4,6 +4,14 @@
 
 Type: Bug Fix
 
+Part of: `@hubspot/cms-dev-server@0.13.9`
+
+Fixed proxying of root urls
+
+## 2023-01-02
+
+Type: Bug Fix
+
 Part of: `@hubspot/cms-dev-server@0.13.8`
 
 Fixed props passed to a JS partial when proxying a page
