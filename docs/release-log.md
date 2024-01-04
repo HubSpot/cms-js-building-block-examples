@@ -26,7 +26,9 @@ Change: Add field validation output to console and dev server render
 
 Example Usage: No change, user will see fields validation error overlay when viewing the "module" route in the dev server and errors/warnings in the developer console for proxy and module routes.
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/c6c524f1037e406aa8df52449b23c40f?sid=52e3155d-38b5-4b72-8fe3-9159e869f0b3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+[![Field validation thumbnail](https://cdn.loom.com/sessions/thumbnails/private/c6c524f1037e406aa8df52449b23c40f-with-play.gif?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4ubG9vbS5jb20vc2Vzc2lvbnMvdGh1bWJuYWlscy9wcml2YXRlL2M2YzUyNGYxMDM3ZTQwNmFhOGRmNTI0NDliMjNjNDBmLXdpdGgtcGxheS5naWYiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3MDQ0NzAwMTh9fX1dfQ__&Key-Pair-Id=APKAJQIC5BGSW7XXK7FQ&Signature=OoiPLEn8t8I%7EZ9o7jkOq67dpo3nQB92FZvTcEzwjtby5EUr7CF97psC3HjxrL-v51VCH1f1e28fQXrxNxCbFqylFOxGWceqoef8FwHQew08r3V-CtnHkyLjC63gBGz9egvl12WeMUooYmo4WhCMOh7gpSniEPicfgNqHmnnXndlcjSvdylVyvjSsSj598u6lGnD1YEqYXKgZzY75MxC9ifjqg4mKylaQf7kqDFhcwx1xCXVzpLm5Q3lalMNmVNQ9a33GTTpUWe6gww0BrUviwNvI3mgWn9UY1KY8DSewHh%7E8iM%7EQV%7EfTRHwIyMUvBuQ8eJ6u1cy9t9N0qYNSx9ybQw__)](https://www.loom.com/share/c6c524f1037e406aa8df52449b23c40f)
+
+[Field Validation - Watch Video](https://www.loom.com/share/c6c524f1037e406aa8df52449b23c40f)
 
 ---
 
