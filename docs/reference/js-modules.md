@@ -77,7 +77,7 @@ As an alternative to JSON, JS module fields are written using JSX. We believe th
 
 ```javascript
 import {
-  ModuleField,
+  ModuleFields,
   TextField,
   FieldGroup,
   BooleanField
@@ -111,7 +111,7 @@ const FullNameField = ({ includeMiddleName = false }) => (
 
 
 export const fields = (
-  <ModuleField>
+  <ModuleFields>
     <TextField
       name="example_field"
       label="Example Text Field"
@@ -133,11 +133,11 @@ export const fields = (
 
     {/Using the custom field component alongside other fields*/}
     <FullNameField includeMiddleName={false}>
-  </ModuleField>
+  </ModuleFields>
 );
 ```
 
-It's important to note that the root component of the `fields` export is required to be `ModuleField`. Addtionally we are making use of `FieldGroup` which is a component type that creates a [Field Group](https://developers.hubspot.com/docs/cms/building-blocks/module-theme-fields-overview#field-groups) that includes the nested fields.
+It's important to note that the root component of the `fields` export is required to be `ModuleFields`. Addtionally we are making use of `FieldGroup` which is a component type that creates a [Field Group](https://developers.hubspot.com/docs/cms/building-blocks/module-theme-fields-overview#field-groups) that includes the nested fields.
 
 In the `FullNameField` React component for the module fields defined above, props will have the following shape:
 
@@ -163,7 +163,7 @@ In addition to `ModuleFields` and `FieldGroup`, another special component type f
 
 ```javascript
 export const fields = (
-  <ModuleField>
+  <ModuleFields>
     <RepeatedFieldGroup
         name="default_todos"
         label="Default Todos"
@@ -190,7 +190,7 @@ export const fields = (
       />
       <BooleanField label="Todo Completed" name="completed" default={false} />
     </RepeatedFieldGroup>
-  </ModuleField>
+  </ModuleFields>
 )
 
 ```
