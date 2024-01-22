@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "rootDir": "routing-project/routing-app",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "skipLibCheck": true,
+    "allowJs": true
+  },
+  "include": ["routing-project/routing-app/**/*"],
+  "exclude": ["node_modules"],
+
+  "ts-node": {
+    "transpileOnly": true
+  }
+}
