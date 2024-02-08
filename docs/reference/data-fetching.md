@@ -4,7 +4,7 @@ Getting content and data into your JS Modules or JS Partials can take many forms
 
 ## HubSpot Content - Server Side
 
-In an ideal world the HubSpot GraphQL integration would be the go to for getting all of your HubSpot content into the JS Building Blocks. Currently however, GraphQL only supports querying HubDB and Custom Objects - refer to the [GraphQL](#graphql) documentation above. There are some key advantages to using the GraphQL integration with JS Building Blocks
+In an ideal world the HubSpot GraphQL integration would be the go to for getting all of your HubSpot content into the JS Building Blocks. Currently however, GraphQL only supports querying HubSpot CRM, HubDB, blog data - refer to the [GraphQL](/reference/js-modules.html#graphql) documentation elsewhere. There are some key advantages to using the GraphQL integration with JS Building Blocks
 
 - Co-located Query and Component
 - One single Query for needed associations e.g. contact->company
