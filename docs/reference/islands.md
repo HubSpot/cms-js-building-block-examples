@@ -12,8 +12,6 @@ import { Island } from '@hubspot/cms-components';
 import InteractiveComponent from '../InteractiveComponent?island';
 
 export default function MyPartial() {
-  let [count, setCount] = useState(0);
-
   return (
     <div>
       <p>
