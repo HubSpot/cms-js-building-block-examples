@@ -1,5 +1,3 @@
-# HubSpot CMS JS Building Blocks - Examples
-
 ## :warning: **NOTIFICATION: Repository Deprecation**
 
 **"CMS JS Building Blocks" is becoming "CMS React"!**
