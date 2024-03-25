@@ -3,9 +3,20 @@ import fieldTypesSidebar from '../field-types/typedoc-sidebar.json';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'HubSpot - JS Building Blocks',
-  description: 'Documentation for HubSpot CMS JS Building Blocks',
+  title: 'Redirecting to CMS React',
+  description: 'DEPRECATED CMS React documentation',
   base: '/cms-js-building-block-examples/',
+
+  transformHead: ({ pageData }) => {
+    const head: HeadConfig[] = []
+
+    // Redirects
+    head.push(['meta', { "http-equiv": 'refresh', content: "0; URL=http://github.hubspot.com/cms-react/" }]);
+    head.push(['link', { rel: 'canonical', href: "http://github.hubspot.com/cms-react/" }]);
+
+    return head;
+  },
+      
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
